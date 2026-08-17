@@ -72,23 +72,32 @@ def get_next_trading_day(date_str):
         if is_trading_day(date.strftime('%Y-%m-%d')):
             return date.strftime('%Y-%m-%d')
 
-def fetch_index_price(index_code):
-    """获取指数收盘价"""
-    if not AKSHARE_AVAILABLE:
-        # 模拟数据（用于测试）
-        return 5842.35
+def fetch_index_price(index_code, retries=5):
+    """获取指数收盘价（使用东方财富API，带重试和连接池）"""
+    import urllib.request
+    import ssl
     
-    try:
-        # 使用 AKShare 获取实时行情
-        if 'SH' in index_code or 'SZ' in index_code:
-            # A 股指数
-            df = ak.index_zh_a_hist(symbol=index_code.split('.')[0], period="daily")
-            if len(df) > 0:
-                return float(df.iloc[-1]['收盘'])
-        return 5842.35  # 默认值
-    except Exception as e:
-        print(f"获取行情失败：{e}")
-        return 5842.35
+    DEFAULT_PRICE = 5842.35
+    url = "https://push2.eastmoney.com/api/qt/stock/get?secid=1.000852&fields=f43"
+    
+    # 创建SSL上下文
+    ctx = ssl.create_default_context()
+    ctx.check_hostname = False
+    ctx.verify_mode = ssl.CERT_NONE
+    
+    for attempt in range(retries):
+        try:
+            req = urllib.request.Request(url, headers={'Referer': 'https://finance.eastmoney.com'})
+            with urllib.request.urlopen(req, timeout=15, context=ctx) as resp:
+                data = json.loads(resp.read())
+                return data['data']['f43'] / 100.0
+        except Exception as e:
+            if attempt < retries - 1:
+                import time
+                time.sleep(1)
+                continue
+            print(f"获取行情失败：{e}")
+            return DEFAULT_PRICE
 
 def calculate_product_status(product, current_date):
     """计算产品状态"""
@@ -175,13 +184,14 @@ def update_products():
     current_date = datetime.now().strftime('%Y-%m-%d')
     current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
     
+    # 统一获取一次行情
+    market_price = fetch_index_price('000852.SH')
+    print(f"市场行情: {market_price}")
+    
     # 更新每个产品
     for product in data['products']:
-        # 获取最新行情
-        underlying_code = product.get('underlying_code', '')
-        current_price = fetch_index_price(underlying_code)
-        
-        product['current_price'] = current_price
+        # 使用统一获取的行情价格
+        product['current_price'] = market_price
         product['last_update'] = current_time
         
         # 重新计算状态
