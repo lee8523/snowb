@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>华夏资本雪球产品</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', Arial, sans-serif;
+            background: #F2F2F7;
+            color: #1C1C1E;
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* 密码验证层 */
+        #password-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+        
+        .password-box {
+            background: white;
+            padding: 30px;
+            border-radius: 16px;
+            width: 90%;
+            max-width: 320px;
+            text-align: center;
+        }
+        
+        .password-box h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #1C1C1E;
+        }
+        
+        .password-box input {
+            width: 100%;
+            padding: 12px 16px;
+            font-size: 16px;
+            border: 1px solid #D1D1D6;
+            border-radius: 10px;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+        
+        .password-box button {
+            width: 100%;
+            padding: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            background: #007AFF;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        
+        .password-box button:active {
+            background: #0056b3;
+        }
+        
+        /* 头部 */
+        .header {
+            background: white;
+            padding: 16px 20px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 0.5px solid #D1D1D6;
+        }
+        
+        .header-content {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .header h1 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1C1C1E;
+        }
+        
+        .header .update-time {
+            font-size: 12px;
+            color: #8E8E93;
+        }
+        
+        .header .admin-link {
+            font-size: 14px;
+            color: #007AFF;
+            text-decoration: none;
+        }
+        
+        /* 产品列表 */
+        .product-list {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 14px;
+            padding: 16px;
+            margin-bottom: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .product-card:active {
+            transform: scale(0.98);
+        }
+        
+        .product-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+        
+        .product-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1C1C1E;
+            flex: 1;
+        }
+        
+        .product-code {
+            font-size: 12px;
+            color: #8E8E93;
+            margin-left: 8px;
+        }
+        
+        .status-badge {
+            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .status-knocked-out {
+            background: #E8F5E9;
+            color: #2E7D32;
+        }
+        
+        .status-active {
+            background: #E3F2FD;
+            color: #1976D2;
+        }
+        
+        .status-knocked-in {
+            background: #FFF8E1;
+            color: #F57F17;
+        }
+        
+        .status-pending {
+            background: #F5F5F5;
+            color: #757575;
+        }
+        
+        .status-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+        }
+        
+        .status-knocked-out .status-dot { background: #4CAF50; }
+        .status-active .status-dot { background: #2196F3; }
+        .status-knocked-in .status-dot { background: #FF9800; }
+        .status-pending .status-dot { background: #9E9E9E; }
+        
+        .product-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            font-size: 13px;
+            color: #3A3A3C;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        
+        .info-label {
+            color: #8E8E93;
+            min-width: 60px;
+        }
+        
+        .info-value {
+            font-weight: 500;
+        }
+        
+        .price-row {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 0.5px solid #F2F2F7;
+            font-size: 13px;
+        }
+        
+        .price-item {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+        
+        .price-label {
+            color: #8E8E93;
+            font-size: 11px;
+        }
+        
+        .price-value {
+            font-weight: 600;
+            color: #1C1C1E;
+        }
+        
+        .days-row {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 0.5px solid #F2F2F7;
+            font-size: 13px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .days-label {
+            color: #8E8E93;
+        }
+        
+        .days-value {
+            font-weight: 600;
+            color: #007AFF;
+        }
+        
+        /* 详情弹窗 */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(5px);
+            display: none;
+            align-items: flex-end;
+            justify-content: center;
+            z-index: 1000;
+        }
+        
+        .modal-overlay.active {
+            display: flex;
+        }
+        
+        .modal-content {
+            background: white;
+            width: 100%;
+            max-width: 600px;
+            max-height: 90vh;
+            border-radius: 20px 20px 0 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .modal-header {
+            padding: 20px;
+            border-bottom: 0.5px solid #D1D1D6;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .modal-title {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .modal-close {
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #8E8E93;
+            cursor: pointer;
+            padding: 4px 8px;
+        }
+        
+        .modal-body {
+            padding: 20px;
+            overflow-y: auto;
+            flex: 1;
+        }
+        
+        .section {
+            margin-bottom: 24px;
+        }
+        
+        
+        .section-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: #1C1C1E;
+            margin-bottom: 12px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #007AFF;
+        }
+        
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 0.5px solid #F2F2F7;
+            font-size: 14px;
+        }
+        
+        .detail-label {
+            color: #8E8E93;
+        }
+        
+        .detail-value {
+            font-weight: 500;
+            color: #1C1C1E;
+            text-align: right;
+        }
+        
+        /* 观察日历表格 */
+        .observation-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+            margin-top: 12px;
+        }
+        
+        .observation-table th,
+        .observation-table td {
+            padding: 10px 8px;
+            text-align: left;
+            border-bottom: 0.5px solid #F2F2F7;
+        }
+        
+        .observation-table th {
+            background: #F9F9F9;
+            font-weight: 600;
+            color: #8E8E93;
+            font-size: 12px;
+        }
+        
+        .observation-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .obs-status {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        
+        .obs-status.knocked-out {
+            background: #E8F5E9;
+            color: #2E7D32;
+        }
+        
+        .obs-status.not-knocked {
+            background: #FFF3E0;
+            color: #E65100;
+        }
+        
+        .obs-status.pending {
+            background: #E3F2FD;
+            color: #1976D2;
+        }
+        
+        .note {
+            background: #F2F2F7;
+            padding: 12px;
+            border-radius: 10px;
+            font-size: 12px;
+            color: #8E8E93;
+            margin-top: 12px;
+            line-height: 1.6;
+        }
+        
+        /* 加载状态 */
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #8E8E93;
+        }
+        
+        /* 响应式 */
+        @media (max-width: 375px) {
+            .product-info {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 密码验证 -->
+    <div id="password-overlay">
+        <div class="password-box">
+            <h2>🔐 身份验证</h2>
+            <input type="password" id="password-input" placeholder="请输入访问密码" />
+            <button onclick="verifyPassword()">进入</button>
+            <p id="password-error" style="color: red; font-size: 12px; margin-top: 10px; display: none;">密码错误</p>
+        </div>
+    </div>
+    
+    <!-- 头部 -->
+    <header class="header">
+        <div class="header-content">
+            <div>
+                <h1>华夏资本雪球产品</h1>
+                <p class="update-time" id="update-time">加载中...</p>
+            </div>
+            <a href="admin.html" class="admin-link">管理后台 →</a>
+        </div</header>
+    
+    <!-- 产品列表 -->
+    <main class="product-list" id="product-list">
+        <div class="loading">加载中...</div>
+    </main>
+    
+    <!-- 详情弹窗 -->
+    <div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="modal-title">产品详情</h2>
+                <button class="modal-close" onclick="closeModal()">×</button>
+            </div>
+            <div class="modal-body" id="modal-body">
+                <!-- 动态填充 -->
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // 密码验证
+        function verifyPassword() {
+            const input = document.getElementById('password-input').value;
+            const correctPassword = 'huaxia2026'; // 简单前端验证
+            
+            if (input === correctPassword) {
+                document.getElementById('password-overlay').style.display = 'none';
+                localStorage.setItem('authenticated', 'true');
+            } else {
+                document.getElementById('password-error').style.display = 'block';
+            }
+        }
+        
+        // 检查是否已验证
+        if (localStorage.getItem('authenticated') === 'true') {
+            document.getElementById('password-overlay').style.display = 'none';
+        }
+        
+        // 加载产品数据
+        let productsData = null;
+        
+        async function loadProducts() {
+            try {
+                const response = await fetch('data/products.json');
+                productsData = await response.json();
+                
+                document.getElementById('update-time').textContent = 
+                    `最后更新：${productsData.last_update}`;
+                
+                renderProductList(productsData.products);
+            } catch (error) {
+                document.getElementById('product-list').innerHTML = 
+                    `<div class="loading">加载失败，请刷新页面重试</div>`;
+                console.error('Error loading products:', error);
+            }
+        }
+        
+        // 渲染产品列表
+        function renderProductList(products) {
+            const container = document.getElementById('product-list');
+            
+            if (products.length === 0) {
+                container.innerHTML = '<div class="loading">暂无产品数据</div>';
+                return;
+            }
+            
+            container.innerHTML = products.map(product => {
+                const statusClass = getStatusClass(product.status);
+                const statusText = getStatusText(product.status);
+                
+                return `
+                    <div class="product-card" onclick="showProductDetail('${product.id}')">
+                        <div class="product-header">
+                            <div>
+                                <span class="product-name">${product.short_name}</span>
+                                <span class="product-code">${product.code}</span>
+                            </div>
+                            <span class="status-badge ${statusClass}">
+                                <span class="status-dot"></span>
+                                ${statusText}
+                            </span>
+                        </div>
+                        
+                        <div class="product-info">
+                            <div class="info-item">
+                                <span class="info-label">挂钩标的</span>
+                                <span class="info-value">${product.underlying}</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">当前价格</span>
+                                <span class="info-value">${product.current_price?.toFixed(2) || '-'}</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">产品类型</span>
+                                <span class="info-value">${product.type}</span>
+                            </div>
+                            <div class="info-item">
+                                <span class="info-label">期限</span>
+                                <span class="info-value">${product.term_months}个月</span>
+                            </div>
+                        </div>
+                        
+                        <div class="price-row">
+                            <div class="price-item">
+                                <span class="price-label">敲出价格</span>
+                                <span class="price-value">${product.knock_out_price?.toFixed(2) || '-'} (${product.knock_out_ratio}%)</span>
+                            </div>
+                            <div class="price-item">
+                                <span class="price-label">敲入价格</span>
+                                <span class="price-value">${product.knock_in_price?.toFixed(2) || '-'} (${product.knock_in_ratio}%)</span>
+                            </div>
+                        </div>
+                        
+                        <div class="days-row">
+                            <span class="days-label">距下次观察日</span>
+                            <span class="days-value">剩余 ${product.days_to_next || '-'} 天 → ${product.next_observation_date || '-'}</span>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+        
+        // 获取状态样式类
+        function getStatusClass(status) {
+            const map = {
+                '已敲出': 'status-knocked-out',
+                '存续中': 'status-active',
+                '已敲入': 'status-knocked-in',
+                '待期初': 'status-pending'
+            };
+            return map[status] || 'status-pending';
+        }
+        
+        // 获取状态文本
+        function getStatusText(status) {
+            const map = {
+                '已敲出': '🟢 已敲出',
+                '存续中': '🔵 存续中',
+                '已敲入': '🟡 已敲入',
+                '待期初': '⚪ 待期初'
+            };
+            return map[status] || status;
+        }
+        
+        // 显示产品详情
+        function showProductDetail(productId) {
+            const product = productsData.products.find(p => p.id === productId);
+            if (!product) return;
+            
+            const modal = document.getElementById('modal-overlay');
+            const title = document.getElementById('modal-title');
+            const body = document.getElementById('modal-body');
+            
+            title.textContent = product.short_name;
+            
+            body.innerHTML = `
+                <div class="section">
+                    <h3 class="section-title">基本信息</h3>
+                    <div class="detail-row">
+                        <span class="detail-label">产品代码</span>
+                        <span class="detail-value">${product.code}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">挂钩标的</span>
+                        <span class="detail-value">${product.underlying} (${product.underlying_code})</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">当前价格</span>
+                        <span class="detail-value">${product.current_price?.toFixed(2) || '-'}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">产品类型</span>
+                        <span class="detail-value">${product.type}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">产品状态</span>
+                        <span class="detail-value">${getStatusText(product.status)}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">成立日</span>
+                        <span class="detail-value">${product.establishment_date}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">期限</span>
+                        <span class="detail-value">${product.term_months}个月</span>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h3 class="section-title">价格条件</h3>
+                    <div class="detail-row">
+                        <span class="detail-label">期初价格</span>
+                        <span class="detail-value">${product.initial_price?.toFixed(2) || '-'}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">敲出价格</span>
+                        <span class="detail-value">${product.knock_out_price?.toFixed(2) || '-'} (${product.knock_out_ratio}%)</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">敲入价格</span>
+                        <span class="detail-value">${product.knock_in_price?.toFixed(2) || '-'} (${product.knock_in_ratio}%)</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">期初观察日</span>
+                        <span class="detail-value">${product.initial_observation_date}</span>
+                    </div>
+                    <div class="detail-row">
+                        <span class="detail-label">期末观察日</span>
+                        <span class="detail-value">${product.final_observation_date}</span>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h3 class="section-title">敲出观察日历</h3>
+                    <p style="font-size: 13px; color: #8E8E93; margin-bottom: 8px;">
+                        规则：从第 ${product.knock_out_start_month} 个月起，每月期初对日，遇非交易日顺延
+                    </p>
+                    <table class="observation-table">
+                        <thead>
+                            <tr>
+                                <th>期数</th>
+                                <th>观察日期</th>
+                                <th>状态</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            ${product.observation_history?.slice(0, 12).map(obs => `
+                                <tr>
+                                    <td>第${obs.period}期</td>
+                                    <td>${obs.date}</td>
+                                    <td><span class="obs-status ${obs.status === '已敲出' ? 'knocked-out' : obs.status === '未敲出' ? 'not-knocked' : 'pending'}">${obs.status}</span></td>
+                                </tr>
+                            `).join('') || '<tr><td colspan="3" style="text-align: center; padding: 20px;">暂无数据</td></tr>'}
+                        </tbody>
+                    </table>
+                    <div class="note">
+                        💡 说明：✅ 已敲出  ❌ 未敲出  ⏳ 待观察<br>
+                        遇非交易日自动顺延至下一交易日
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h3 class="section-title">敲出条件</h3>
+                    <p style="font-size: 14px; line-height: 1.6; color: #3A3A3C;">
+                        ${product.knock_out_condition || '暂无说明'}
+                    </p>
+                </div>
+            `;
+            
+            modal.classList.add('active');
+        }
+        
+        // 关闭弹窗
+        function closeModal(event) {
+            if (!event || event.target === document.getElementById('modal-overlay')) {
+                document.getElementById('modal-overlay').classList.remove('active');
+            }
+        }
+        
+        // 页面加载
+        document.addEventListener('DOMContentLoaded', loadProducts);
+    </script>
+</body>
+</html>
