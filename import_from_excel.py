@@ -30,6 +30,9 @@ import re
 from datetime import datetime, timedelta
 from openpyxl import load_workbook
 
+# 导入交易日历
+from trading_calendar import is_trading_day
+
 # 文件路径
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 UPLOAD_DIR = os.path.join(os.path.expanduser('~'), 'Downloads')
@@ -180,6 +183,36 @@ def parse_underlying(underlying_raw):
     
     return underlying, underlying_code
 
+def calc_observation_calendar(initial_date: str, start_month: int, term_months: int) -> list[dict]:
+    """生成敲出观察日历"""
+    import calendar as cal
+    
+    dt = datetime.strptime(initial_date, "%Y-%m-%d")
+    observations = []
+    
+    for m in range(start_month, term_months + 1):
+        new_month = dt.month + m
+        new_year = dt.year + (new_month - 1) // 12
+        new_month = (new_month - 1) % 12 + 1
+        _, last_day = cal.monthrange(new_year, new_month)
+        
+        obs = dt.replace(year=new_year, month=new_month, day=min(dt.day, last_day))
+        obs_str = obs.strftime("%Y-%m-%d")
+        
+        # 遇非交易日顺延
+        while not is_trading_day(obs_str):
+            obs += timedelta(days=1)
+            obs_str = obs.strftime("%Y-%m-%d")
+        
+        observations.append({
+            "period": m,
+            "date": obs_str,
+            "price": None,
+            "status": "待观察"
+        })
+    
+    return observations
+
 def import_products():
     """主导入函数"""
     print(f"正在读取 Excel 文件：{EXCEL_FILE}")
@@ -247,6 +280,15 @@ def import_products():
             # 首月敲出系数
             knock_out_ratio = knock_out_schedule[0]['ratio'] if knock_out_schedule else 100.0
             
+            # 生成观察日历
+            observation_history = []
+            if initial_obs_date:
+                observation_history = calc_observation_calendar(
+                    initial_obs_date,
+                    3,  # 敲出观察从第3个月开始
+                    term_months
+                )
+            
             # 确定状态
             current_date = datetime.now().strftime('%Y-%m-%d')
             if establish_date and current_date < establish_date:
@@ -254,17 +296,15 @@ def import_products():
             else:
                 status = '存续中'
             
-            # 计算下次观察日
-            next_obs = initial_obs_date
+            # 计算下次观察日（从观察日历取第一个）
+            next_obs = None
             days_to_next = 0
-            if establish_date and term_months:
-                try:
-                    est_date = datetime.strptime(establish_date, '%Y-%m-%d')
-                    next_date = est_date + timedelta(days=30 * 3)  # 3 个月后
-                    days_to_next = (next_date - datetime.now()).days
-                    next_obs = next_date.strftime('%Y-%m-%d')
-                except:
-                    pass
+            if observation_history:
+                next_obs = observation_history[0]['date']
+                days_to_next = max(0, (datetime.strptime(next_obs, '%Y-%m-%d') - datetime.now()).days)
+            elif initial_obs_date:
+                next_obs = initial_obs_date
+                days_to_next = max(0, (datetime.strptime(next_obs, '%Y-%m-%d') - datetime.now()).days)
             
             product = {
                 'id': product_code,
@@ -291,7 +331,7 @@ def import_products():
                 'knock_in_price': knock_in_price,
                 'next_observation_date': next_obs,
                 'days_to_next': max(0, days_to_next),
-                'observation_history': []
+                'observation_history': observation_history
             }
             
             products.append(product)

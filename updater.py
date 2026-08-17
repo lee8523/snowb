@@ -14,39 +14,21 @@ import shutil
 from datetime import datetime, date, timedelta
 from pathlib import Path
 
+import baostock as bs
+
+from trading_calendar import is_trading_day
+
 # ── 路径 ──
 BASE_DIR = Path(__file__).parent.resolve()
 DATA_DIR = BASE_DIR / "data"
 DATA_FILE = DATA_DIR / "products.json"
-CALENDAR_FILE = DATA_DIR / "trading_calendar.json"
 BACKUP_DIR = DATA_DIR / "backup"
 
-# ── 交易日历 ──
-_trading_set = set()
-if CALENDAR_FILE.exists():
-    with open(CALENDAR_FILE, "r", encoding="utf-8") as f:
-        _trading_set = set(json.load(f).get("trading_days", []))
-
-def is_trading_day(d: str) -> bool:
-    """判断是否为交易日（优先用日历，否则只排周末）"""
-    if _trading_set:
-        return d in _trading_set
-    return datetime.strptime(d, "%Y-%m-%d").weekday() < 5
-
-def next_trading_day(d: str) -> str:
-    """获取下一个交易日"""
-    dt = datetime.strptime(d, "%Y-%m-%d")
-    while True:
-        dt += timedelta(days=1)
-        s = dt.strftime("%Y-%m-%d")
-        if is_trading_day(s):
-            return s
 
 # ── 行情 ──
 def fetch_index_price(index_code="sh.000852") -> float | None:
     """获取指数最新收盘价，失败返回 None"""
     try:
-        import baostock as bs
         lg = bs.login()
         if lg.error_code != "0":
             return None
@@ -64,10 +46,9 @@ def fetch_index_price(index_code="sh.000852") -> float | None:
     except Exception:
         return None
 
+
 def fetch_kline(index_code="sh.000852", start_date: str = None, end_date: str = None) -> dict[str, float]:
     """拉取历史K线，返回 {date: close}"""
-    import baostock as bs
-    
     if end_date is None:
         end_date = date.today().strftime("%Y-%m-%d")
     if start_date is None:
@@ -90,6 +71,7 @@ def fetch_kline(index_code="sh.000852", start_date: str = None, end_date: str = 
     bs.logout()
     return price_map
 
+
 # ── 产品计算 ──
 def get_knock_out_ratio(product: dict, month: int) -> float:
     """获取指定月份的敲出系数，无逐月序列则返回固定系数"""
@@ -99,11 +81,13 @@ def get_knock_out_ratio(product: dict, month: int) -> float:
             return item.get("ratio", product.get("knock_out_ratio", 100))
     return product.get("knock_out_ratio", 100)
 
+
 def calc_knock_out_price(product: dict, month: int) -> float:
     """计算指定月份的敲出价格"""
     initial_price = product.get("initial_price", 10000)
     ratio = get_knock_out_ratio(product, month)
     return round(initial_price * (ratio / 100), 2)
+
 
 def calc_observation_calendar(initial_date: str, start_month: int, term_months: int) -> list[dict]:
     """生成敲出观察日历"""
@@ -135,6 +119,7 @@ def calc_observation_calendar(initial_date: str, start_month: int, term_months: 
     
     return observations
 
+
 def calc_status(product: dict, today: str) -> str:
     """
     计算产品状态：
@@ -149,7 +134,7 @@ def calc_status(product: dict, today: str) -> str:
     if initial_date and today < initial_date:
         return "待期初"
     
-    # 检查是否已敲出（用对应月份敲出价格）
+    # 检查是否已敲出
     for obs in product.get("observation_history", []):
         if obs.get("status") == "已敲出":
             return "已敲出"
@@ -163,16 +148,17 @@ def calc_status(product: dict, today: str) -> str:
     
     return "存续中"
 
+
 # ── IO ──
 def load_data() -> dict:
     with open(DATA_FILE, "r", encoding="utf-8") as f:
         return json.load(f)
 
+
 def save_data(data: dict):
     """保存数据，带备份"""
     BACKUP_DIR.mkdir(exist_ok=True)
     
-    # 备份旧文件
     if DATA_FILE.exists():
         ts = datetime.now().strftime("%Y%m%d_%H%M%S")
         backup_path = BACKUP_DIR / f"products_{ts}.json"
@@ -182,12 +168,12 @@ def save_data(data: dict):
     with open(DATA_FILE, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
+
 # ── 主流程 ──
 def update_initial_prices():
     """更新期初价：按期初观察日指数收盘价，重新计算敲入价格"""
     data = load_data()
     
-    # 收集所有期初观察日范围
     dates = [p.get("initial_observation_date") for p in data["products"] if p.get("initial_observation_date")]
     if not dates:
         print("无期初观察日需要更新")
@@ -208,7 +194,6 @@ def update_initial_prices():
         if obs in price_map:
             ip = round(price_map[obs], 2)
             p["initial_price"] = ip
-            # 敲入价格基于期初价计算
             p["knock_in_price"] = round(ip * (p.get("knock_in_ratio", 100) / 100), 2)
             updated += 1
             print(f"  {p['code']}: 期初价={ip}, 敲入={p['knock_in_price']}")
@@ -220,10 +205,12 @@ def update_initial_prices():
     if missing:
         print(f"缺失: {', '.join(f'{c}({d})' for c, d in missing)}")
 
+
 def update_daily():
     """每日更新：当前价格、状态、观察日历、距下次观察日天数"""
     data = load_data()
     today = date.today().strftime("%Y-%m-%d")
+    today_dt = date.today()
     
     market_price = fetch_index_price()
     if market_price is None:
@@ -243,7 +230,7 @@ def update_daily():
                 p.get("term_months", 36)
             )
         
-        # 更新观察状态（用对应月份敲出价格判断）
+        # 更新观察状态
         for obs in p.get("observation_history", []):
             if obs["date"] <= today and obs["status"] == "待观察":
                 ko_price = calc_knock_out_price(p, obs["period"])
@@ -257,15 +244,17 @@ def update_daily():
         # 计算状态
         p["status"] = calc_status(p, today)
         
-        # 距下次观察日
+        # 距下次观察日（用纯日期计算）
         for obs in p.get("observation_history", []):
             if obs["date"] >= today:
                 p["next_observation_date"] = obs["date"]
-                p["days_to_next"] = (datetime.strptime(obs["date"], "%Y-%m-%d") - datetime.now()).days
+                obs_date = datetime.strptime(obs["date"], "%Y-%m-%d").date()
+                p["days_to_next"] = (obs_date - today_dt).days
                 break
     
     save_data(data)
     print(f"\n每日更新完成: {len(data['products'])} 只产品")
+
 
 if __name__ == "__main__":
     import sys
