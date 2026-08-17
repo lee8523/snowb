@@ -32,16 +32,14 @@ from openpyxl import load_workbook
 
 # 文件路径
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-UPLOAD_DIR = '/mnt/user-data/uploads'
-OUTPUT_DIR = os.path.join(BASE_DIR, '..', 'data')
+UPLOAD_DIR = os.path.join(os.path.expanduser('~'), 'Downloads')
+OUTPUT_DIR = os.path.join(BASE_DIR, 'data')
 
 # 查找 Excel 文件
-excel_files = [f for f in os.listdir(UPLOAD_DIR) if f.endswith('.xlsx')]
-if not excel_files:
-    print(f"错误：在 {UPLOAD_DIR} 目录中未找到 Excel 文件")
+EXCEL_FILE = os.path.join(UPLOAD_DIR, '华夏资本产品列表-2026.08.16.xlsx')
+if not os.path.exists(EXCEL_FILE):
+    print(f"错误：未找到 Excel 文件 {EXCEL_FILE}")
     exit(1)
-
-EXCEL_FILE = os.path.join(UPLOAD_DIR, excel_files[0])
 OUTPUT_FILE = os.path.join(OUTPUT_DIR, 'products.json')
 
 print(f"找到 Excel 文件：{EXCEL_FILE}")
@@ -84,25 +82,42 @@ def parse_term(term_val):
     
     return 36
 
-def parse_knock_out_ratio(text):
-    """从敲出价格系数文本中提取初始敲出比例"""
+def parse_knock_out_schedule(text, term_months):
+    """解析敲出价格系数文本，生成逐月系数列表"""
     if not text:
-        return 100
+        return []
     
     text = str(text).strip()
     
-    # 尝试直接转换为浮点数
-    try:
-        return float(text)
-    except:
-        pass
+    # 匹配：从第【3】个月开始，【102%】每月递减【0.5%】，最后一个月为【66%】
+    # 或：最后一次敲出价为【66%】
+    pattern = r'从第【?(\d+)】?个月开始，【?(\d+(?:\.\d+)?)%】?每月递减【?(\d+(?:\.\d+)?)%】?，(?:最后一个月为|最后一次敲出价为)【?(\d+(?:\.\d+)?)%】?'
+    m = re.search(pattern, text)
     
-    # 从文本中提取第一个百分比数字，如"从第【3】个月开始，【102%】..."
-    match = re.search(r'(\d+(?:\.\d+)?)[%\s]', text)
-    if match:
-        return float(match.group(1))
+    if not m:
+        # 回退：尝试提取单个百分比
+        single = re.search(r'(\d+(?:\.\d+)?)\s*%', text)
+        if single:
+            ratio = float(single.group(1))
+            return [{"month": i, "ratio": ratio} for i in range(3, term_months + 1)]
+        return []
     
-    return 100
+    start_month = int(m.group(1))
+    first_ratio = float(m.group(2))
+    step = float(m.group(3))
+    last_ratio = float(m.group(4))
+    
+    schedule = []
+    for month in range(start_month, term_months + 1):
+        ratio = first_ratio - (month - start_month) * step
+        # 强制截断：最后一个月必须等于 last_ratio
+        if month == term_months:
+            ratio = last_ratio
+        elif ratio <= last_ratio:
+            ratio = last_ratio
+        schedule.append({"month": month, "ratio": round(ratio, 2)})
+    
+    return schedule
 
 def parse_knock_in_ratio(text):
     """从敲入价格系数文本中提取敲入比例"""
@@ -210,7 +225,7 @@ def import_products():
             term_months = parse_term(row[9])
             
             # 敲出敲入系数
-            knock_out_ratio = parse_knock_out_ratio(row[10])
+            knock_out_schedule = parse_knock_out_schedule(row[10], term_months)
             knock_in_ratio = parse_knock_in_ratio(row[11])
             
             # 派息价格
@@ -225,10 +240,12 @@ def import_products():
             knock_out_condition = str(row[14]).strip() if row[14] and str(row[14]) != '/' else ''
             knock_in_condition = str(row[16]).strip() if row[16] and str(row[16]) != '/' else ''
             
-            # 计算敲出敲入价格
-            initial_price = 10000.00  # 基准价格
-            knock_out_price = round(initial_price * (knock_out_ratio / 100), 2)
+            # 计算敲入价格和首月敲出价格（用于兼容）
+            initial_price = 10000.00  # 基准价格，后续会被 updater.py 覆盖
             knock_in_price = round(initial_price * (knock_in_ratio / 100), 2)
+            
+            # 首月敲出系数
+            knock_out_ratio = knock_out_schedule[0]['ratio'] if knock_out_schedule else 100.0
             
             # 确定状态
             current_date = datetime.now().strftime('%Y-%m-%d')
@@ -262,6 +279,7 @@ def import_products():
                 'final_observation_date': final_obs_date,
                 'establishment_date': establish_date,
                 'knock_out_ratio': knock_out_ratio,
+                'knock_out_schedule': knock_out_schedule,
                 'knock_in_ratio': knock_in_ratio,
                 'dividend_ratio': dividend_ratio,
                 'knock_out_start_month': 3,
@@ -270,7 +288,6 @@ def import_products():
                 'status': status,
                 'current_price': None,
                 'initial_price': initial_price,
-                'knock_out_price': knock_out_price,
                 'knock_in_price': knock_in_price,
                 'next_observation_date': next_obs,
                 'days_to_next': max(0, days_to_next),

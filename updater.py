@@ -91,6 +91,20 @@ def fetch_kline(index_code="sh.000852", start_date: str = None, end_date: str = 
     return price_map
 
 # ── 产品计算 ──
+def get_knock_out_ratio(product: dict, month: int) -> float:
+    """获取指定月份的敲出系数，无逐月序列则返回固定系数"""
+    schedule = product.get("knock_out_schedule", [])
+    for item in schedule:
+        if item.get("month") == month:
+            return item.get("ratio", product.get("knock_out_ratio", 100))
+    return product.get("knock_out_ratio", 100)
+
+def calc_knock_out_price(product: dict, month: int) -> float:
+    """计算指定月份的敲出价格"""
+    initial_price = product.get("initial_price", 10000)
+    ratio = get_knock_out_ratio(product, month)
+    return round(initial_price * (ratio / 100), 2)
+
 def calc_observation_calendar(initial_date: str, start_month: int, term_months: int) -> list[dict]:
     """生成敲出观察日历"""
     import calendar as cal
@@ -125,7 +139,7 @@ def calc_status(product: dict, today: str) -> str:
     """
     计算产品状态：
     - 待期初：今天 < 期初观察日
-    - 已敲出：任一观察日价格 >= 敲出价
+    - 已敲出：任一观察日价格 >= 对应月份敲出价
     - 存续中：到期前未敲出未敲入
     - 已敲入：期末观察日价格 < 敲入价（且未敲出）
     """
@@ -135,7 +149,7 @@ def calc_status(product: dict, today: str) -> str:
     if initial_date and today < initial_date:
         return "待期初"
     
-    # 检查是否已敲出
+    # 检查是否已敲出（用对应月份敲出价格）
     for obs in product.get("observation_history", []):
         if obs.get("status") == "已敲出":
             return "已敲出"
@@ -170,7 +184,7 @@ def save_data(data: dict):
 
 # ── 主流程 ──
 def update_initial_prices():
-    """更新期初价：按期初观察日指数收盘价，重新计算敲出/敲入价格"""
+    """更新期初价：按期初观察日指数收盘价，重新计算敲入价格"""
     data = load_data()
     
     # 收集所有期初观察日范围
@@ -194,10 +208,10 @@ def update_initial_prices():
         if obs in price_map:
             ip = round(price_map[obs], 2)
             p["initial_price"] = ip
-            p["knock_out_price"] = round(ip * (p.get("knock_out_ratio", 100) / 100), 2)
+            # 敲入价格基于期初价计算
             p["knock_in_price"] = round(ip * (p.get("knock_in_ratio", 100) / 100), 2)
             updated += 1
-            print(f"  {p['code']}: 期初价={ip}, 敲出={p['knock_out_price']}, 敲入={p['knock_in_price']}")
+            print(f"  {p['code']}: 期初价={ip}, 敲入={p['knock_in_price']}")
         else:
             missing.append((p["code"], obs))
     
@@ -229,10 +243,11 @@ def update_daily():
                 p.get("term_months", 36)
             )
         
-        # 更新观察状态
+        # 更新观察状态（用对应月份敲出价格判断）
         for obs in p.get("observation_history", []):
             if obs["date"] <= today and obs["status"] == "待观察":
-                if market_price >= p.get("knock_out_price", 0):
+                ko_price = calc_knock_out_price(p, obs["period"])
+                if market_price >= ko_price:
                     obs["status"] = "已敲出"
                     obs["price"] = market_price
                 else:
