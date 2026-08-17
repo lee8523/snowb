@@ -14,6 +14,14 @@ import os
 from datetime import datetime, timedelta
 import calendar
 
+# 加载交易日历
+CALENDAR_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'data', 'trading_calendar.json')
+_trading_set = set()
+if os.path.exists(CALENDAR_FILE):
+    with open(CALENDAR_FILE, 'r', encoding='utf-8') as f:
+        cal_data = json.load(f)
+        _trading_set = set(cal_data.get('trading_days', []))
+
 # 尝试导入 akshare，如果失败则使用模拟数据
 try:
     import akshare as ak
@@ -22,7 +30,7 @@ except ImportError:
     AKSHARE_AVAILABLE = False
 
 # 项目根目录
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_FILE = os.path.join(BASE_DIR, 'data', 'products.json')
 
 # A 股交易日历（简化版，实际需要更完整的日历）
@@ -50,7 +58,9 @@ def generate_trading_calendar(year):
 
 def is_trading_day(date_str):
     """判断是否为交易日"""
-    # 简化判断：排除周末
+    if _trading_set:
+        return date_str in _trading_set
+    # 回退：只排除周末
     date = datetime.strptime(date_str, '%Y-%m-%d')
     return date.weekday() < 5
 
@@ -82,11 +92,11 @@ def fetch_index_price(index_code):
 
 def calculate_product_status(product, current_date):
     """计算产品状态"""
-    initial_date = product['initial_observation_date']
-    establishment_date = product['establishment_date']
+    initial_date = product.get('initial_observation_date')
+    establishment_date = product.get('establishment_date')
     
     # 还未到期初观察日
-    if current_date < initial_date:
+    if not initial_date or current_date < initial_date:
         return '待期初'
     
     # 检查是否已敲出
@@ -108,27 +118,27 @@ def calculate_product_status(product, current_date):
 
 def generate_observation_calendar(product):
     """生成敲出观察日历"""
-    initial_date = datetime.strptime(product['initial_observation_date'], '%Y-%m-%d')
+    initial_date_str = product.get('initial_observation_date')
+    if not initial_date_str:
+        return []
+    
+    initial_date = datetime.strptime(initial_date_str, '%Y-%m-%d')
     knock_out_start_month = product.get('knock_out_start_month', 3)
     term_months = product.get('term_months', 36)
     
     observations = []
     
-    for for month in range(knock_out_start_month, term_months + 1):
+    for month in range(knock_out_start_month, term_months + 1):
         # 计算观察日（期初对日）
-        try:
-            obs_date = initial_date.replace(month=initial_date.month + month)
-        except ValueError:
-            # 处理月末日期
-            _, last_day = calendar.monthrange(
-                initial_date.year, 
-                initial_date.month + month
-            )
-            obs_date = initial_date.replace(
-                year=initial_date.year + (initial_date.month + month - 1) // 12,
-                month=(initial_date.month + month - 1) % 12 + 1,
-                day=min(initial_date.day, last_day)
-            )
+        new_month = initial_date.month + month
+        new_year = initial_date.year + (new_month - 1) // 12
+        new_month = (new_month - 1) % 12 + 1
+        _, last_day = calendar.monthrange(new_year, new_month)
+        obs_date = initial_date.replace(
+            year=new_year,
+            month=new_month,
+            day=min(initial_date.day, last_day)
+        )
         
         # 遇非交易日顺延
         while not is_trading_day(obs_date.strftime('%Y-%m-%d')):
@@ -150,7 +160,7 @@ def generate_observation_calendar(product):
         observations.append({
             'period': month,
             'date': obs_date_str,
-            'price': null,
+            'price': None,
             'status': status
         })
     
@@ -181,7 +191,6 @@ def update_products():
         product['observation_history'] = generate_observation_calendar(product)
         
         # 计算距下次观察日天数
-       有限公司
         if product.get('next_observation_date'):
             next_date = datetime.strptime(product['next_observation_date'], '%Y-%m-%d')
             product['days_to_next'] = (next_date - datetime.now()).days
