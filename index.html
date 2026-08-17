@@ -437,12 +437,10 @@
     <!-- 头部 -->
     <header class="header">
         <div class="header-content">
-            <div>
-                <h1>雪球产品展示系统</h1>
-                <p class="update-time" id="update-time">加载中...</p>
-            </div>
-            <a href="admin.html" class="admin-link">管理后台 →</a>
-        </div</header>
+            <h1>雪球产品展示系统</h1>
+            <p class="update-time" id="update-time">加载中...</p>
+        </div>
+    </header>
     
     <!-- 产品列表 -->
     <main class="product-list" id="product-list">
@@ -486,7 +484,7 @@
         
         async function loadProducts() {
             try {
-                const response = await fetch('data/products.json');
+                const response = await fetch('data/products.json?t=' + Date.now());
                 productsData = await response.json();
                 
                 document.getElementById('update-time').textContent = 
@@ -547,8 +545,17 @@
                         
                         <div class="price-row">
                             <div class="price-item">
-                                <span class="price-label">敲出价格</span>
-                                <span class="price-value">${product.knock_out_price?.toFixed(2) || '-'} (${product.knock_out_ratio}%)</span>
+                                <span class="price-label">最近敲出价格</span>
+                                <span class="price-value">${(() => {
+                                    const today = new Date().toISOString().split('T')[0];
+                                    const futureObs = product.observation_history?.find(obs => obs.date >= today);
+                                    if (futureObs) {
+                                        const ratio = product.knock_out_schedule?.find(s => s.month === futureObs.period)?.ratio || product.knock_out_ratio;
+                                        const price = (product.initial_price * ratio / 100).toFixed(2);
+                                        return price + ' (' + ratio + '%)';
+                                    }
+                                    return '-';
+                                })()}</span>
                             </div>
                             <div class="price-item">
                                 <span class="price-label">敲入价格</span>
@@ -670,7 +677,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            ${product.observation_history?.slice(0, 12).map(obs => {
+                            ${product.observation_history?.map(obs => {
                                 const koRatio = product.knock_out_schedule?.find(s => s.month === obs.period)?.ratio || product.knock_out_ratio;
                                 const koPrice = (product.initial_price * koRatio / 100).toFixed(2);
                                 return `
