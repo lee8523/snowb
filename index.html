@@ -507,7 +507,9 @@
                 return;
             }
             
-            container.innerHTML = products.map(product => {
+            container.innerHTML = products
+                .filter(product => product.initial_observation_date)
+                .map(product => {
                 const statusClass = getStatusClass(product.status);
                 const statusText = getStatusText(product.status);
                 
