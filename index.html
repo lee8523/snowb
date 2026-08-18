@@ -544,29 +544,50 @@
                         </div>
                         
                         <div class="price-row">
-                            <div class="price-item">
-                                <span class="price-label">最近敲出价格</span>
-                                <span class="price-value">${(() => {
-                                    const today = new Date().toISOString().split('T')[0];
-                                    const futureObs = product.observation_history?.find(obs => obs.date >= today);
-                                    if (futureObs) {
-                                        const ratio = product.knock_out_schedule?.find(s => s.month === futureObs.period)?.ratio || product.knock_out_ratio;
-                                        const price = (product.initial_price * ratio / 100).toFixed(2);
-                                        return price + ' (' + ratio + '%)';
-                                    }
-                                    return '-';
-                                })()}</span>
-                            </div>
-                            <div class="price-item">
-                                <span class="price-label">敲入价格</span>
-                                <span class="price-value">${product.knock_in_price?.toFixed(2) || '-'} (${product.knock_in_ratio}%)</span>
-                            </div>
+                            ${product.status === '已敲出' ? `
+                                <div class="price-item">
+                                    <span class="price-label">敲出日</span>
+                                    <span class="price-value">${product.observation_history?.find(obs => obs.status === '已敲出')?.date || '-'}</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-label">敲出价格</span>
+                                    <span class="price-value">${(() => {
+                                        const koObs = product.observation_history?.find(obs => obs.status === '已敲出');
+                                        if (koObs) {
+                                            const ratio = product.knock_out_schedule?.find(s => s.month === koObs.period)?.ratio || product.knock_out_ratio;
+                                            const price = (product.initial_price * ratio / 100).toFixed(2);
+                                            return price + ' (' + ratio + '%)';
+                                        }
+                                        return '-';
+                                    })()}</span>
+                                </div>
+                            ` : `
+                                <div class="price-item">
+                                    <span class="price-label">最近敲出价格</span>
+                                    <span class="price-value">${(() => {
+                                        const today = new Date().toISOString().split('T')[0];
+                                        const futureObs = product.observation_history?.find(obs => obs.date >= today);
+                                        if (futureObs) {
+                                            const ratio = product.knock_out_schedule?.find(s => s.month === futureObs.period)?.ratio || product.knock_out_ratio;
+                                            const price = (product.initial_price * ratio / 100).toFixed(2);
+                                            return price + ' (' + ratio + '%)';
+                                        }
+                                        return '-';
+                                    })()}</span>
+                                </div>
+                                <div class="price-item">
+                                    <span class="price-label">敲入价格</span>
+                                    <span class="price-value">${product.knock_in_price?.toFixed(2) || '-'} (${product.knock_in_ratio}%)</span>
+                                </div>
+                            `}
                         </div>
                         
+                        ${product.status !== '已敲出' ? `
                         <div class="days-row">
                             <span class="days-label">距下次观察日</span>
                             <span class="days-value">剩余 ${product.days_to_next || '-'} 天 → ${product.next_observation_date || '-'}</span>
                         </div>
+                        ` : ''}
                     </div>
                 `;
             }).join('');

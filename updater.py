@@ -207,7 +207,10 @@ def update_initial_prices():
 
 
 def update_daily():
-    """每日更新：当前价格、状态、观察日历、距下次观察日天数"""
+    """每日更新：当前价格、状态、观察日历、距下次观察日天数
+    
+    敲出判断：用观察日的历史收盘价，不是最新价格
+    """
     data = load_data()
     today = date.today().strftime("%Y-%m-%d")
     today_dt = date.today()
@@ -217,7 +220,22 @@ def update_daily():
         print("获取行情失败，跳过更新")
         return
     
-    print(f"中证1000: {market_price}")
+    print(f"中证1000最新价: {market_price}")
+    
+    # 收集所有已过但待观察（或需要重新判断）的观察日
+    pending_dates = set()
+    for p in data["products"]:
+        for obs in p.get("observation_history", []):
+            if obs["date"] <= today:
+                pending_dates.add(obs["date"])
+    
+    # 拉取历史K线（用于判断敲出）
+    price_map = {}
+    if pending_dates:
+        start = min(pending_dates)
+        end = max(pending_dates)
+        price_map = fetch_kline(start_date=start, end_date=end)
+        print(f"拉取历史K线: {start} ~ {end}, 共 {len(price_map)} 天")
     
     for p in data["products"]:
         p["current_price"] = market_price
@@ -230,27 +248,40 @@ def update_daily():
                 p.get("term_months", 36)
             )
         
-        # 更新观察状态
+        # 更新观察状态：用观察日历史收盘价判断
+        knocked_out = False
         for obs in p.get("observation_history", []):
-            if obs["date"] <= today and obs["status"] == "待观察":
+            if obs["date"] <= today and obs["status"] in ("待观察", "未敲出"):
                 ko_price = calc_knock_out_price(p, obs["period"])
-                if market_price >= ko_price:
+                obs_price = price_map.get(obs["date"])
+                
+                if obs_price is None:
+                    # 无历史数据，保持待观察
+                    continue
+                
+                if obs_price >= ko_price:
                     obs["status"] = "已敲出"
-                    obs["price"] = market_price
+                    obs["price"] = obs_price
+                    knocked_out = True
                 else:
                     obs["status"] = "未敲出"
-                    obs["price"] = market_price
+                    obs["price"] = obs_price
         
         # 计算状态
         p["status"] = calc_status(p, today)
         
-        # 距下次观察日（用纯日期计算）
-        for obs in p.get("observation_history", []):
-            if obs["date"] >= today:
-                p["next_observation_date"] = obs["date"]
-                obs_date = datetime.strptime(obs["date"], "%Y-%m-%d").date()
-                p["days_to_next"] = (obs_date - today_dt).days
-                break
+        # 已敲出产品：清空下次观察日
+        if knocked_out or p["status"] == "已敲出":
+            p["next_observation_date"] = None
+            p["days_to_next"] = None
+        else:
+            # 距下次观察日
+            for obs in p.get("observation_history", []):
+                if obs["date"] >= today:
+                    p["next_observation_date"] = obs["date"]
+                    obs_date = datetime.strptime(obs["date"], "%Y-%m-%d").date()
+                    p["days_to_next"] = (obs_date - today_dt).days
+                    break
     
     save_data(data)
     print(f"\n每日更新完成: {len(data['products'])} 只产品")
