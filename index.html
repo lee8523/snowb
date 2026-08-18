@@ -698,17 +698,26 @@
                             </tr>
                         </thead>
                         <tbody>
-                            ${product.observation_history?.map(obs => {
-                                const koRatio = product.knock_out_schedule?.find(s => s.month === obs.period)?.ratio || product.knock_out_ratio;
-                                const koPrice = (product.initial_price * koRatio / 100).toFixed(2);
-                                return `
-                                <tr>
-                                    <td>第${obs.period}期</td>
-                                    <td>${obs.date}</td>
-                                    <td>${koPrice} (${koRatio}%)</td>
-                                    <td><span class="obs-status ${obs.status === '已敲出' ? 'knocked-out' : obs.status === '未敲出' ? 'not-knocked' : 'pending'}">${obs.status}</span></td>
-                                </tr>
-                            `}).join('') || '<tr><td colspan="4" style="text-align: center; padding: 20px;">暂无数据</td></tr>'}
+                            ${(() => {
+                                // 已敲出产品：只展示到第一次敲出日
+                                let obsList = product.observation_history || [];
+                                const koIndex = obsList.findIndex(obs => obs.status === '已敲出');
+                                if (koIndex >= 0) {
+                                    obsList = obsList.slice(0, koIndex + 1);
+                                }
+                                return obsList.map(obs => {
+                                    const koRatio = product.knock_out_schedule?.find(s => s.month === obs.period)?.ratio || product.knock_out_ratio;
+                                    const koPrice = (product.initial_price * koRatio / 100).toFixed(2);
+                                    return `
+                                    <tr>
+                                        <td>第${obs.period}期</td>
+                                        <td>${obs.date}</td>
+                                        <td>${koPrice} (${koRatio}%)</td>
+                                        <td><span class="obs-status ${obs.status === '已敲出' ? 'knocked-out' : obs.status === '未敲出' ? 'not-knocked' : 'pending'}">${obs.status}</span></td>
+                                    </tr>
+                                `;
+                                }).join('') || '<tr><td colspan="4" style="text-align: center; padding: 20px;">暂无数据</td></tr>'
+                            })()}
                         </tbody>
                     </table>
                     <div class="note">
