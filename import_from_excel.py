@@ -236,7 +236,7 @@ def import_products():
             # 解析各列数据
             product_name = str(row[0]).strip() if row[0] else ''
             product_code = str(row[1]).strip() if row[1] else ''
-            product_short_name = str(row[2]).strip() if row[2] else ''
+            product_short_name = str(row[2]).strip().replace('华夏资本', '') if row[2] else ''
             
             # 挂钩标的
             underlying, underlying_code = parse_underlying(row[3])
