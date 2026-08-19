@@ -1,0 +1,7528 @@
+{
+  "last_update": "2026-08-18 17:43:15",
+  "products": [
+    {
+      "id": "SEA697",
+      "name": "华夏资本龙腾慧盈22号集合资产管理计划",
+      "short_name": "华夏资本龙腾慧盈22号",
+      "code": "SEA697",
+      "underlying": "中证1000指数（代码:000852.SH）",
+      "underlying_code": "",
+      "type": "欧式早利",
+      "term_months": 36,
+      "initial_observation_date": null,
+      "final_observation_date": null,
+      "establishment_date": "2026-08-21",
+      "knock_out_ratio": 102.0,
+      "knock_out_schedule": [
+        {
+          "month": 3,
+          "ratio": 102.0
+        },
+        {
+          "month": 4,
+          "ratio": 101.5
+        },
+        {
+          "month": 5,
+          "ratio": 101.0
+        },
+        {
+          "month": 6,
+          "ratio": 100.5
+        },
+        {
+          "month": 7,
+          "ratio": 100.0
+        },
+        {
+          "month": 8,
+          "ratio": 99.5
+        },
+        {
+          "month": 9,
+          "ratio": 99.0
+        },
+        {
+          "month": 10,
+          "ratio": 98.5
+        },
+        {
+          "month": 11,
+          "ratio": 98.0
+        },
+        {
+          "month": 12,
+          "ratio": 97.5
+        },
+        {
+          "month": 13,
+          "ratio": 97.0
+        },
+        {
+          "month": 14,
+          "ratio": 96.5
+        },
+        {
+          "month": 15,
+          "ratio": 96.0
+        },
+        {
+          "month": 16,
+          "ratio": 95.5
+        },
+        {
+          "month": 17,
+          "ratio": 95.0
+        },
+        {
+          "month": 18,
+          "ratio": 94.5
+        },
+        {
+          "month": 19,
+          "ratio": 94.0
+        },
+        {
+          "month": 20,
+          "ratio": 93.5
+        },
+        {
+          "month": 21,
+          "ratio": 93.0
+        },
+        {
+          "month": 22,
+          "ratio": 92.5
+        },
+        {
+          "month": 23,
+          "ratio": 92.0
+        },
+        {
+          "month": 24,
+          "ratio": 91.5
+        },
+        {
+          "month": 25,
+          "ratio": 91.0
+        },
+        {
+          "month": 26,
+          "ratio": 90.5
+        },
+        {
+          "month": 27,
+          "ratio": 90.0
+        },
+        {
+          "month": 28,
+          "ratio": 89.5
+        },
+        {
+          "month": 29,
+          "ratio": 89.0
+        },
+        {
+          "month": 30,
+          "ratio": 88.5
+        },
+        {
+          "month": 31,
+          "ratio": 88.0
+        },
+        {
+          "month": 32,
+          "ratio": 87.5
+        },
+        {
+          "month": 33,
+          "ratio": 87.0
+        },
+        {
+          "month": 34,
+          "ratio": 86.5
+        },
+        {
+          "month": 35,
+          "ratio": 86.0
+        },
+        {
+          "month": 36,
+          "ratio": 66.0
+        }
+      ],
+      "knock_in_ratio": 66.0,
+      "dividend_ratio": null,
+      "knock_out_start_month": 3,
+      "knock_out_condition": "若观察期内第i个月（i=3,4,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
+      "knock_in_condition": "若观察期内所有的第i个月（i=3,4,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
+      "status": "存续中",
+      "current_price": 7945.9644,
+      "initial_price": 10000.0,
+      "knock_in_price": 6600.0,
+      "next_observation_date": null,
+      "days_to_next": 0,
+      "observation_history": []
+    },
+    {
+      "id": "SCM776",
+      "name": "华夏资本龙腾慧盈21号集合资产管理计划",
+      "short_name": "华夏资本龙腾慧盈21号",
+      "code": "SCM776",
+      "underlying": "中证1000指数（代码:000852.SH）",
+      "underlying_code": "",
+      "type": "欧式早利",
+      "term_months": 36,
+      "initial_observation_date": "2026-08-07",
+      "final_observation_date": "2029-08-07",
+      "establishment_date": "2026-07-30",
+      "knock_out_ratio": 98.0,
+      "knock_out_schedule": [
+        {
+          "month": 3,
+          "ratio": 98.0
+        },
+        {
+          "month": 4,
+          "ratio": 97.5
+        },
+        {
+          "month": 5,
+          "ratio": 97.0
+        },
+        {
+          "month": 6,
+          "ratio": 96.5
+        },
+        {
+          "month": 7,
+          "ratio": 96.0
+        },
+        {
+          "month": 8,
+          "ratio": 95.5
+        },
+        {
+          "month": 9,
+          "ratio": 95.0
+        },
+        {
+          "month": 10,
+          "ratio": 94.5
+        },
+        {
+          "month": 11,
+          "ratio": 94.0
+        },
+        {
+          "month": 12,
+          "ratio": 93.5
+        },
+        {
+          "month": 13,
+          "ratio": 93.0
+        },
+        {
+          "month": 14,
+          "ratio": 92.5
+        },
+        {
+          "month": 15,
+          "ratio": 92.0
+        },
+        {
+          "month": 16,
+          "ratio": 91.5
+        },
+        {
+          "month": 17,
+          "ratio": 91.0
+        },
+        {
+          "month": 18,
+          "ratio": 90.5
+        },
+        {
+          "month": 19,
+          "ratio": 90.0
+        },
+        {
+          "month": 20,
+          "ratio": 89.5
+        },
+        {
+          "month": 21,
+          "ratio": 89.0
+        },
+        {
+          "month": 22,
+          "ratio": 88.5
+        },
+        {
+          "month": 23,
+          "ratio": 88.0
+        },
+        {
+          "month": 24,
+          "ratio": 87.5
+        },
+        {
+          "month": 25,
+          "ratio": 87.0
+        },
+        {
+          "month": 26,
+          "ratio": 86.5
+        },
+        {
+          "month": 27,
+          "ratio": 86.0
+        },
+        {
+          "month": 28,
+          "ratio": 85.5
+        },
+        {
+          "month": 29,
+          "ratio": 85.0
+        },
+        {
+          "month": 30,
+          "ratio": 84.5
+        },
+        {
+          "month": 31,
+          "ratio": 84.0
+        },
+        {
+          "month": 32,
+          "ratio": 83.5
+        },
+        {
+          "month": 33,
+          "ratio": 83.0
+        },
+        {
+          "month": 34,
+          "ratio": 82.5
+        },
+        {
+          "month": 35,
+          "ratio": 82.0
+        },
+        {
+          "month": 36,
+          "ratio": 66.0
+        }
+      ],
+      "knock_in_ratio": 66.0,
+      "dividend_ratio": null,
+      "knock_out_start_month": 3,
+      "knock_out_condition": "a) 若观察期内第i个月（i=3,4,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
+      "knock_in_condition": "若观察期内所有的第i个月（i=3,4,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
+      "status": "存续中",
+      "current_price": 7945.9644,
+      "initial_price": 7679.53,
+      "knock_in_price": 5068.49,
+      "next_observation_date": "2026-11-09",
+      "days_to_next": 83,
+      "observation_history": [
+        {
+          "period": 3,
+          "date": "2026-11-09",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 4,
+          "date": "2026-12-07",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 5,
+          "date": "2027-01-07",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 6,
+          "date": "2027-02-15",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 7,
+          "date": "2027-03-08",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 8,
+          "date": "2027-04-07",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 9,
+          "date": "2027-05-07",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 10,
+          "date": "2027-06-07",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 11,
+          "date": "2027-07-07",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 12,
+          "date": "2027-08-09",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 13,
+          "date": "2027-09-07",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 14,
+          "date": "2027-10-08",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 15,
+          "date": "2027-11-08",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 16,
+          "date": "2027-12-07",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 17,
+          "date": "2028-01-07",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 18,
+          "date": "2028-02-07",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 19,
+          "date": "2028-03-07",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 20,
+          "date": "2028-04-07",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 21,
+          "date": "2028-05-08",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 22,
+          "date": "2028-06-07",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 23,
+          "date": "2028-07-07",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 24,
+          "date": "2028-08-07",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 25,
+          "date": "2028-09-07",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 26,
+          "date": "2028-10-09",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 27,
+          "date": "2028-11-07",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 28,
+          "date": "2028-12-07",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 29,
+          "date": "2029-01-08",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 30,
+          "date": "2029-02-07",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 31,
+          "date": "2029-03-07",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 32,
+          "date": "2029-04-09",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 33,
+          "date": "2029-05-07",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 34,
+          "date": "2029-06-07",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 35,
+          "date": "2029-07-09",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 36,
+          "date": "2029-08-07",
+          "price": null,
+          "status": "待观察"
+        }
+      ]
+    },
+    {
+      "id": "SB8918",
+      "name": "华夏资本龙腾慧盈20号集合资产管理计划",
+      "short_name": "华夏资本龙腾慧盈20号",
+      "code": "SB8918",
+      "underlying": "中证1000指数（代码:000852.SH）",
+      "underlying_code": "",
+      "type": "欧式早利",
+      "term_months": 36,
+      "initial_observation_date": "2026-07-14",
+      "final_observation_date": "2029-07-16",
+      "establishment_date": "2026-07-07",
+      "knock_out_ratio": 96.0,
+      "knock_out_schedule": [
+        {
+          "month": 3,
+          "ratio": 96.0
+        },
+        {
+          "month": 4,
+          "ratio": 95.5
+        },
+        {
+          "month": 5,
+          "ratio": 95.0
+        },
+        {
+          "month": 6,
+          "ratio": 94.5
+        },
+        {
+          "month": 7,
+          "ratio": 94.0
+        },
+        {
+          "month": 8,
+          "ratio": 93.5
+        },
+        {
+          "month": 9,
+          "ratio": 93.0
+        },
+        {
+          "month": 10,
+          "ratio": 92.5
+        },
+        {
+          "month": 11,
+          "ratio": 92.0
+        },
+        {
+          "month": 12,
+          "ratio": 91.5
+        },
+        {
+          "month": 13,
+          "ratio": 91.0
+        },
+        {
+          "month": 14,
+          "ratio": 90.5
+        },
+        {
+          "month": 15,
+          "ratio": 90.0
+        },
+        {
+          "month": 16,
+          "ratio": 89.5
+        },
+        {
+          "month": 17,
+          "ratio": 89.0
+        },
+        {
+          "month": 18,
+          "ratio": 88.5
+        },
+        {
+          "month": 19,
+          "ratio": 88.0
+        },
+        {
+          "month": 20,
+          "ratio": 87.5
+        },
+        {
+          "month": 21,
+          "ratio": 87.0
+        },
+        {
+          "month": 22,
+          "ratio": 86.5
+        },
+        {
+          "month": 23,
+          "ratio": 86.0
+        },
+        {
+          "month": 24,
+          "ratio": 85.5
+        },
+        {
+          "month": 25,
+          "ratio": 85.0
+        },
+        {
+          "month": 26,
+          "ratio": 84.5
+        },
+        {
+          "month": 27,
+          "ratio": 84.0
+        },
+        {
+          "month": 28,
+          "ratio": 83.5
+        },
+        {
+          "month": 29,
+          "ratio": 83.0
+        },
+        {
+          "month": 30,
+          "ratio": 82.5
+        },
+        {
+          "month": 31,
+          "ratio": 82.0
+        },
+        {
+          "month": 32,
+          "ratio": 81.5
+        },
+        {
+          "month": 33,
+          "ratio": 81.0
+        },
+        {
+          "month": 34,
+          "ratio": 80.5
+        },
+        {
+          "month": 35,
+          "ratio": 80.0
+        },
+        {
+          "month": 36,
+          "ratio": 66.0
+        }
+      ],
+      "knock_in_ratio": 66.0,
+      "dividend_ratio": null,
+      "knock_out_start_month": 3,
+      "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
+      "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
+      "status": "存续中",
+      "current_price": 7945.9644,
+      "initial_price": 7925.12,
+      "knock_in_price": 5230.58,
+      "next_observation_date": "2026-10-14",
+      "days_to_next": 57,
+      "observation_history": [
+        {
+          "period": 3,
+          "date": "2026-10-14",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 4,
+          "date": "2026-11-16",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 5,
+          "date": "2026-12-14",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 6,
+          "date": "2027-01-14",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 7,
+          "date": "2027-02-15",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 8,
+          "date": "2027-03-15",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 9,
+          "date": "2027-04-14",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 10,
+          "date": "2027-05-14",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 11,
+          "date": "2027-06-14",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 12,
+          "date": "2027-07-14",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 13,
+          "date": "2027-08-16",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 14,
+          "date": "2027-09-14",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 15,
+          "date": "2027-10-14",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 16,
+          "date": "2027-11-15",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 17,
+          "date": "2027-12-14",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 18,
+          "date": "2028-01-14",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 19,
+          "date": "2028-02-14",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 20,
+          "date": "2028-03-14",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 21,
+          "date": "2028-04-14",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 22,
+          "date": "2028-05-15",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 23,
+          "date": "2028-06-14",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 24,
+          "date": "2028-07-14",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 25,
+          "date": "2028-08-14",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 26,
+          "date": "2028-09-14",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 27,
+          "date": "2028-10-16",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 28,
+          "date": "2028-11-14",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 29,
+          "date": "2028-12-14",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 30,
+          "date": "2029-01-15",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 31,
+          "date": "2029-02-19",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 32,
+          "date": "2029-03-14",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 33,
+          "date": "2029-04-16",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 34,
+          "date": "2029-05-14",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 35,
+          "date": "2029-06-14",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 36,
+          "date": "2029-07-16",
+          "price": null,
+          "status": "待观察"
+        }
+      ]
+    },
+    {
+      "id": "SAUE46",
+      "name": "华夏资本龙腾慧盈19号集合资产管理计划",
+      "short_name": "华夏资本龙腾慧盈19号",
+      "code": "SAUE46",
+      "underlying": "中证1000指数（代码:000852.SH）",
+      "underlying_code": "",
+      "type": "欧式早利",
+      "term_months": 36,
+      "initial_observation_date": "2026-06-25",
+      "final_observation_date": "2029-06-25",
+      "establishment_date": "2026-06-17",
+      "knock_out_ratio": 101.0,
+      "knock_out_schedule": [
+        {
+          "month": 3,
+          "ratio": 101.0
+        },
+        {
+          "month": 4,
+          "ratio": 100.0
+        },
+        {
+          "month": 5,
+          "ratio": 99.0
+        },
+        {
+          "month": 6,
+          "ratio": 98.0
+        },
+        {
+          "month": 7,
+          "ratio": 97.0
+        },
+        {
+          "month": 8,
+          "ratio": 96.0
+        },
+        {
+          "month": 9,
+          "ratio": 95.0
+        },
+        {
+          "month": 10,
+          "ratio": 94.0
+        },
+        {
+          "month": 11,
+          "ratio": 93.0
+        },
+        {
+          "month": 12,
+          "ratio": 92.0
+        },
+        {
+          "month": 13,
+          "ratio": 91.0
+        },
+        {
+          "month": 14,
+          "ratio": 90.0
+        },
+        {
+          "month": 15,
+          "ratio": 89.0
+        },
+        {
+          "month": 16,
+          "ratio": 88.0
+        },
+        {
+          "month": 17,
+          "ratio": 87.0
+        },
+        {
+          "month": 18,
+          "ratio": 86.0
+        },
+        {
+          "month": 19,
+          "ratio": 85.0
+        },
+        {
+          "month": 20,
+          "ratio": 84.0
+        },
+        {
+          "month": 21,
+          "ratio": 83.0
+        },
+        {
+          "month": 22,
+          "ratio": 82.0
+        },
+        {
+          "month": 23,
+          "ratio": 81.0
+        },
+        {
+          "month": 24,
+          "ratio": 80.0
+        },
+        {
+          "month": 25,
+          "ratio": 79.0
+        },
+        {
+          "month": 26,
+          "ratio": 78.0
+        },
+        {
+          "month": 27,
+          "ratio": 77.0
+        },
+        {
+          "month": 28,
+          "ratio": 76.0
+        },
+        {
+          "month": 29,
+          "ratio": 75.0
+        },
+        {
+          "month": 30,
+          "ratio": 74.0
+        },
+        {
+          "month": 31,
+          "ratio": 73.0
+        },
+        {
+          "month": 32,
+          "ratio": 72.0
+        },
+        {
+          "month": 33,
+          "ratio": 71.0
+        },
+        {
+          "month": 34,
+          "ratio": 70.0
+        },
+        {
+          "month": 35,
+          "ratio": 69.0
+        },
+        {
+          "month": 36,
+          "ratio": 66.0
+        }
+      ],
+      "knock_in_ratio": 66.0,
+      "dividend_ratio": null,
+      "knock_out_start_month": 3,
+      "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
+      "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
+      "status": "存续中",
+      "current_price": 7945.9644,
+      "initial_price": 8825.92,
+      "knock_in_price": 5825.11,
+      "next_observation_date": "2026-09-28",
+      "days_to_next": 41,
+      "observation_history": [
+        {
+          "period": 3,
+          "date": "2026-09-28",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 4,
+          "date": "2026-10-26",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 5,
+          "date": "2026-11-25",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 6,
+          "date": "2026-12-25",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 7,
+          "date": "2027-01-25",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 8,
+          "date": "2027-02-25",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 9,
+          "date": "2027-03-25",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 10,
+          "date": "2027-04-26",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 11,
+          "date": "2027-05-25",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 12,
+          "date": "2027-06-25",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 13,
+          "date": "2027-07-26",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 14,
+          "date": "2027-08-25",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 15,
+          "date": "2027-09-27",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 16,
+          "date": "2027-10-25",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 17,
+          "date": "2027-11-25",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 18,
+          "date": "2027-12-27",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 19,
+          "date": "2028-02-01",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 20,
+          "date": "2028-02-25",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 21,
+          "date": "2028-03-27",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 22,
+          "date": "2028-04-25",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 23,
+          "date": "2028-05-25",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 24,
+          "date": "2028-06-26",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 25,
+          "date": "2028-07-25",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 26,
+          "date": "2028-08-25",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 27,
+          "date": "2028-09-25",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 28,
+          "date": "2028-10-25",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 29,
+          "date": "2028-11-27",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 30,
+          "date": "2028-12-25",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 31,
+          "date": "2029-01-25",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 32,
+          "date": "2029-02-26",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 33,
+          "date": "2029-03-26",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 34,
+          "date": "2029-04-25",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 35,
+          "date": "2029-05-25",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 36,
+          "date": "2029-06-25",
+          "price": null,
+          "status": "待观察"
+        }
+      ]
+    },
+    {
+      "id": "SATG41",
+      "name": "华夏资本龙腾慧盈105号集合资产管理计划",
+      "short_name": "华夏资本龙腾慧盈105号",
+      "code": "SATG41",
+      "underlying": "中证1000指数（代码:000852.SH）",
+      "underlying_code": "",
+      "type": "欧式早利",
+      "term_months": 36,
+      "initial_observation_date": "2026-06-25",
+      "final_observation_date": "2029-06-25",
+      "establishment_date": "2026-06-17",
+      "knock_out_ratio": 102.0,
+      "knock_out_schedule": [
+        {
+          "month": 3,
+          "ratio": 102.0
+        },
+        {
+          "month": 4,
+          "ratio": 101.5
+        },
+        {
+          "month": 5,
+          "ratio": 101.0
+        },
+        {
+          "month": 6,
+          "ratio": 100.5
+        },
+        {
+          "month": 7,
+          "ratio": 100.0
+        },
+        {
+          "month": 8,
+          "ratio": 99.5
+        },
+        {
+          "month": 9,
+          "ratio": 99.0
+        },
+        {
+          "month": 10,
+          "ratio": 98.5
+        },
+        {
+          "month": 11,
+          "ratio": 98.0
+        },
+        {
+          "month": 12,
+          "ratio": 97.5
+        },
+        {
+          "month": 13,
+          "ratio": 97.0
+        },
+        {
+          "month": 14,
+          "ratio": 96.5
+        },
+        {
+          "month": 15,
+          "ratio": 96.0
+        },
+        {
+          "month": 16,
+          "ratio": 95.5
+        },
+        {
+          "month": 17,
+          "ratio": 95.0
+        },
+        {
+          "month": 18,
+          "ratio": 94.5
+        },
+        {
+          "month": 19,
+          "ratio": 94.0
+        },
+        {
+          "month": 20,
+          "ratio": 93.5
+        },
+        {
+          "month": 21,
+          "ratio": 93.0
+        },
+        {
+          "month": 22,
+          "ratio": 92.5
+        },
+        {
+          "month": 23,
+          "ratio": 92.0
+        },
+        {
+          "month": 24,
+          "ratio": 91.5
+        },
+        {
+          "month": 25,
+          "ratio": 91.0
+        },
+        {
+          "month": 26,
+          "ratio": 90.5
+        },
+        {
+          "month": 27,
+          "ratio": 90.0
+        },
+        {
+          "month": 28,
+          "ratio": 89.5
+        },
+        {
+          "month": 29,
+          "ratio": 89.0
+        },
+        {
+          "month": 30,
+          "ratio": 88.5
+        },
+        {
+          "month": 31,
+          "ratio": 88.0
+        },
+        {
+          "month": 32,
+          "ratio": 87.5
+        },
+        {
+          "month": 33,
+          "ratio": 87.0
+        },
+        {
+          "month": 34,
+          "ratio": 86.5
+        },
+        {
+          "month": 35,
+          "ratio": 86.0
+        },
+        {
+          "month": 36,
+          "ratio": 65.0
+        }
+      ],
+      "knock_in_ratio": 65.0,
+      "dividend_ratio": null,
+      "knock_out_start_month": 3,
+      "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
+      "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
+      "status": "存续中",
+      "current_price": 7945.9644,
+      "initial_price": 8825.92,
+      "knock_in_price": 5736.85,
+      "next_observation_date": "2026-09-28",
+      "days_to_next": 41,
+      "observation_history": [
+        {
+          "period": 3,
+          "date": "2026-09-28",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 4,
+          "date": "2026-10-26",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 5,
+          "date": "2026-11-25",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 6,
+          "date": "2026-12-25",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 7,
+          "date": "2027-01-25",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 8,
+          "date": "2027-02-25",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 9,
+          "date": "2027-03-25",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 10,
+          "date": "2027-04-26",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 11,
+          "date": "2027-05-25",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 12,
+          "date": "2027-06-25",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 13,
+          "date": "2027-07-26",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 14,
+          "date": "2027-08-25",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 15,
+          "date": "2027-09-27",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 16,
+          "date": "2027-10-25",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 17,
+          "date": "2027-11-25",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 18,
+          "date": "2027-12-27",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 19,
+          "date": "2028-02-01",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 20,
+          "date": "2028-02-25",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 21,
+          "date": "2028-03-27",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 22,
+          "date": "2028-04-25",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 23,
+          "date": "2028-05-25",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 24,
+          "date": "2028-06-26",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 25,
+          "date": "2028-07-25",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 26,
+          "date": "2028-08-25",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 27,
+          "date": "2028-09-25",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 28,
+          "date": "2028-10-25",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 29,
+          "date": "2028-11-27",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 30,
+          "date": "2028-12-25",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 31,
+          "date": "2029-01-25",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 32,
+          "date": "2029-02-26",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 33,
+          "date": "2029-03-26",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 34,
+          "date": "2029-04-25",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 35,
+          "date": "2029-05-25",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 36,
+          "date": "2029-06-25",
+          "price": null,
+          "status": "待观察"
+        }
+      ]
+    },
+    {
+      "id": "SAKZ34",
+      "name": "华夏资本龙腾慧盈18号集合资产管理计划",
+      "short_name": "华夏资本龙腾慧盈18号",
+      "code": "SAKZ34",
+      "underlying": "中证1000指数（代码:000852.SH）",
+      "underlying_code": "",
+      "type": "欧式早利",
+      "term_months": 36,
+      "initial_observation_date": "2026-06-17",
+      "final_observation_date": "2029-06-19",
+      "establishment_date": "2026-06-09",
+      "knock_out_ratio": 101.0,
+      "knock_out_schedule": [
+        {
+          "month": 3,
+          "ratio": 101.0
+        },
+        {
+          "month": 4,
+          "ratio": 100.5
+        },
+        {
+          "month": 5,
+          "ratio": 100.0
+        },
+        {
+          "month": 6,
+          "ratio": 99.5
+        },
+        {
+          "month": 7,
+          "ratio": 99.0
+        },
+        {
+          "month": 8,
+          "ratio": 98.5
+        },
+        {
+          "month": 9,
+          "ratio": 98.0
+        },
+        {
+          "month": 10,
+          "ratio": 97.5
+        },
+        {
+          "month": 11,
+          "ratio": 97.0
+        },
+        {
+          "month": 12,
+          "ratio": 96.5
+        },
+        {
+          "month": 13,
+          "ratio": 96.0
+        },
+        {
+          "month": 14,
+          "ratio": 95.5
+        },
+        {
+          "month": 15,
+          "ratio": 95.0
+        },
+        {
+          "month": 16,
+          "ratio": 94.5
+        },
+        {
+          "month": 17,
+          "ratio": 94.0
+        },
+        {
+          "month": 18,
+          "ratio": 93.5
+        },
+        {
+          "month": 19,
+          "ratio": 93.0
+        },
+        {
+          "month": 20,
+          "ratio": 92.5
+        },
+        {
+          "month": 21,
+          "ratio": 92.0
+        },
+        {
+          "month": 22,
+          "ratio": 91.5
+        },
+        {
+          "month": 23,
+          "ratio": 91.0
+        },
+        {
+          "month": 24,
+          "ratio": 90.5
+        },
+        {
+          "month": 25,
+          "ratio": 90.0
+        },
+        {
+          "month": 26,
+          "ratio": 89.5
+        },
+        {
+          "month": 27,
+          "ratio": 89.0
+        },
+        {
+          "month": 28,
+          "ratio": 88.5
+        },
+        {
+          "month": 29,
+          "ratio": 88.0
+        },
+        {
+          "month": 30,
+          "ratio": 87.5
+        },
+        {
+          "month": 31,
+          "ratio": 87.0
+        },
+        {
+          "month": 32,
+          "ratio": 86.5
+        },
+        {
+          "month": 33,
+          "ratio": 86.0
+        },
+        {
+          "month": 34,
+          "ratio": 85.5
+        },
+        {
+          "month": 35,
+          "ratio": 85.0
+        },
+        {
+          "month": 36,
+          "ratio": 66.0
+        }
+      ],
+      "knock_in_ratio": 66.0,
+      "dividend_ratio": null,
+      "knock_out_start_month": 3,
+      "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
+      "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
+      "status": "存续中",
+      "current_price": 7945.9644,
+      "initial_price": 8704.47,
+      "knock_in_price": 5744.95,
+      "next_observation_date": "2026-09-17",
+      "days_to_next": 30,
+      "observation_history": [
+        {
+          "period": 3,
+          "date": "2026-09-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 4,
+          "date": "2026-10-19",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 5,
+          "date": "2026-11-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 6,
+          "date": "2026-12-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 7,
+          "date": "2027-01-18",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 8,
+          "date": "2027-02-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 9,
+          "date": "2027-03-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 10,
+          "date": "2027-04-19",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 11,
+          "date": "2027-05-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 12,
+          "date": "2027-06-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 13,
+          "date": "2027-07-19",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 14,
+          "date": "2027-08-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 15,
+          "date": "2027-09-20",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 16,
+          "date": "2027-10-18",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 17,
+          "date": "2027-11-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 18,
+          "date": "2027-12-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 19,
+          "date": "2028-01-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 20,
+          "date": "2028-02-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 21,
+          "date": "2028-03-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 22,
+          "date": "2028-04-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 23,
+          "date": "2028-05-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 24,
+          "date": "2028-06-19",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 25,
+          "date": "2028-07-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 26,
+          "date": "2028-08-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 27,
+          "date": "2028-09-18",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 28,
+          "date": "2028-10-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 29,
+          "date": "2028-11-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 30,
+          "date": "2028-12-18",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 31,
+          "date": "2029-01-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 32,
+          "date": "2029-02-19",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 33,
+          "date": "2029-03-19",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 34,
+          "date": "2029-04-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 35,
+          "date": "2029-05-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 36,
+          "date": "2029-06-19",
+          "price": null,
+          "status": "待观察"
+        }
+      ]
+    },
+    {
+      "id": "SAES26",
+      "name": "华夏资本龙腾慧盈17号集合资产管理计划",
+      "short_name": "华夏资本龙腾慧盈17号",
+      "code": "SAES26",
+      "underlying": "中证1000指数（代码:000852.SH）",
+      "underlying_code": "",
+      "type": "欧式早利",
+      "term_months": 36,
+      "initial_observation_date": "2026-05-27",
+      "final_observation_date": "2029-05-28",
+      "establishment_date": "2026-05-20",
+      "knock_out_ratio": 101.0,
+      "knock_out_schedule": [
+        {
+          "month": 3,
+          "ratio": 101.0
+        },
+        {
+          "month": 4,
+          "ratio": 100.5
+        },
+        {
+          "month": 5,
+          "ratio": 100.0
+        },
+        {
+          "month": 6,
+          "ratio": 99.5
+        },
+        {
+          "month": 7,
+          "ratio": 99.0
+        },
+        {
+          "month": 8,
+          "ratio": 98.5
+        },
+        {
+          "month": 9,
+          "ratio": 98.0
+        },
+        {
+          "month": 10,
+          "ratio": 97.5
+        },
+        {
+          "month": 11,
+          "ratio": 97.0
+        },
+        {
+          "month": 12,
+          "ratio": 96.5
+        },
+        {
+          "month": 13,
+          "ratio": 96.0
+        },
+        {
+          "month": 14,
+          "ratio": 95.5
+        },
+        {
+          "month": 15,
+          "ratio": 95.0
+        },
+        {
+          "month": 16,
+          "ratio": 94.5
+        },
+        {
+          "month": 17,
+          "ratio": 94.0
+        },
+        {
+          "month": 18,
+          "ratio": 93.5
+        },
+        {
+          "month": 19,
+          "ratio": 93.0
+        },
+        {
+          "month": 20,
+          "ratio": 92.5
+        },
+        {
+          "month": 21,
+          "ratio": 92.0
+        },
+        {
+          "month": 22,
+          "ratio": 91.5
+        },
+        {
+          "month": 23,
+          "ratio": 91.0
+        },
+        {
+          "month": 24,
+          "ratio": 90.5
+        },
+        {
+          "month": 25,
+          "ratio": 90.0
+        },
+        {
+          "month": 26,
+          "ratio": 89.5
+        },
+        {
+          "month": 27,
+          "ratio": 89.0
+        },
+        {
+          "month": 28,
+          "ratio": 88.5
+        },
+        {
+          "month": 29,
+          "ratio": 88.0
+        },
+        {
+          "month": 30,
+          "ratio": 87.5
+        },
+        {
+          "month": 31,
+          "ratio": 87.0
+        },
+        {
+          "month": 32,
+          "ratio": 86.5
+        },
+        {
+          "month": 33,
+          "ratio": 86.0
+        },
+        {
+          "month": 34,
+          "ratio": 85.5
+        },
+        {
+          "month": 35,
+          "ratio": 85.0
+        },
+        {
+          "month": 36,
+          "ratio": 66.0
+        }
+      ],
+      "knock_in_ratio": 66.0,
+      "dividend_ratio": null,
+      "knock_out_start_month": 3,
+      "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
+      "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
+      "status": "存续中",
+      "current_price": 7945.9644,
+      "initial_price": 8546.51,
+      "knock_in_price": 5640.7,
+      "next_observation_date": "2026-08-27",
+      "days_to_next": 9,
+      "observation_history": [
+        {
+          "period": 3,
+          "date": "2026-08-27",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 4,
+          "date": "2026-09-28",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 5,
+          "date": "2026-10-27",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 6,
+          "date": "2026-11-27",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 7,
+          "date": "2026-12-28",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 8,
+          "date": "2027-01-27",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 9,
+          "date": "2027-03-01",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 10,
+          "date": "2027-03-29",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 11,
+          "date": "2027-04-27",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 12,
+          "date": "2027-05-27",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 13,
+          "date": "2027-06-28",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 14,
+          "date": "2027-07-27",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 15,
+          "date": "2027-08-27",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 16,
+          "date": "2027-09-27",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 17,
+          "date": "2027-10-27",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 18,
+          "date": "2027-11-29",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 19,
+          "date": "2027-12-27",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 20,
+          "date": "2028-02-01",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 21,
+          "date": "2028-02-28",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 22,
+          "date": "2028-03-27",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 23,
+          "date": "2028-04-27",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 24,
+          "date": "2028-05-31",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 25,
+          "date": "2028-06-27",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 26,
+          "date": "2028-07-27",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 27,
+          "date": "2028-08-28",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 28,
+          "date": "2028-09-27",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 29,
+          "date": "2028-10-27",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 30,
+          "date": "2028-11-27",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 31,
+          "date": "2028-12-27",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 32,
+          "date": "2029-01-29",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 33,
+          "date": "2029-02-27",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 34,
+          "date": "2029-03-27",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 35,
+          "date": "2029-04-27",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 36,
+          "date": "2029-05-28",
+          "price": null,
+          "status": "待观察"
+        }
+      ]
+    },
+    {
+      "id": "SBVF41",
+      "name": "华夏资本龙腾慧盈15号集合资产管理计划",
+      "short_name": "华夏资本龙腾慧盈15号",
+      "code": "SBVF41",
+      "underlying": "中证1000指数（代码:000852.SH）",
+      "underlying_code": "",
+      "type": "欧式凤凰",
+      "term_months": 36,
+      "initial_observation_date": null,
+      "final_observation_date": null,
+      "establishment_date": "2026-04-17",
+      "knock_out_ratio": 101.0,
+      "knock_out_schedule": [
+        {
+          "month": 3,
+          "ratio": 101.0
+        },
+        {
+          "month": 4,
+          "ratio": 100.5
+        },
+        {
+          "month": 5,
+          "ratio": 100.0
+        },
+        {
+          "month": 6,
+          "ratio": 99.5
+        },
+        {
+          "month": 7,
+          "ratio": 99.0
+        },
+        {
+          "month": 8,
+          "ratio": 98.5
+        },
+        {
+          "month": 9,
+          "ratio": 98.0
+        },
+        {
+          "month": 10,
+          "ratio": 97.5
+        },
+        {
+          "month": 11,
+          "ratio": 97.0
+        },
+        {
+          "month": 12,
+          "ratio": 96.5
+        },
+        {
+          "month": 13,
+          "ratio": 96.0
+        },
+        {
+          "month": 14,
+          "ratio": 95.5
+        },
+        {
+          "month": 15,
+          "ratio": 95.0
+        },
+        {
+          "month": 16,
+          "ratio": 94.5
+        },
+        {
+          "month": 17,
+          "ratio": 94.0
+        },
+        {
+          "month": 18,
+          "ratio": 93.5
+        },
+        {
+          "month": 19,
+          "ratio": 93.0
+        },
+        {
+          "month": 20,
+          "ratio": 92.5
+        },
+        {
+          "month": 21,
+          "ratio": 92.0
+        },
+        {
+          "month": 22,
+          "ratio": 91.5
+        },
+        {
+          "month": 23,
+          "ratio": 91.0
+        },
+        {
+          "month": 24,
+          "ratio": 90.5
+        },
+        {
+          "month": 25,
+          "ratio": 90.0
+        },
+        {
+          "month": 26,
+          "ratio": 89.5
+        },
+        {
+          "month": 27,
+          "ratio": 89.0
+        },
+        {
+          "month": 28,
+          "ratio": 88.5
+        },
+        {
+          "month": 29,
+          "ratio": 88.0
+        },
+        {
+          "month": 30,
+          "ratio": 87.5
+        },
+        {
+          "month": 31,
+          "ratio": 87.0
+        },
+        {
+          "month": 32,
+          "ratio": 86.5
+        },
+        {
+          "month": 33,
+          "ratio": 86.0
+        },
+        {
+          "month": 34,
+          "ratio": 85.5
+        },
+        {
+          "month": 35,
+          "ratio": 85.0
+        },
+        {
+          "month": 36,
+          "ratio": 70.0
+        }
+      ],
+      "knock_in_ratio": 70.0,
+      "dividend_ratio": 70.0,
+      "knock_out_start_month": 3,
+      "knock_out_condition": "若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
+      "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
+      "status": "存续中",
+      "current_price": 7945.9644,
+      "initial_price": 10000.0,
+      "knock_in_price": 7000.0,
+      "next_observation_date": null,
+      "days_to_next": 0,
+      "observation_history": []
+    },
+    {
+      "id": "SBVF42",
+      "name": "华夏资本龙腾慧盈16号集合资产管理计划",
+      "short_name": "华夏资本龙腾慧盈16号",
+      "code": "SBVF42",
+      "underlying": "中证1000指数（代码:000852.SH）",
+      "underlying_code": "",
+      "type": "欧式早利",
+      "term_months": 36,
+      "initial_observation_date": "2026-05-12",
+      "final_observation_date": "2029-05-14",
+      "establishment_date": "2026-04-30",
+      "knock_out_ratio": 101.0,
+      "knock_out_schedule": [
+        {
+          "month": 3,
+          "ratio": 101.0
+        },
+        {
+          "month": 4,
+          "ratio": 100.5
+        },
+        {
+          "month": 5,
+          "ratio": 100.0
+        },
+        {
+          "month": 6,
+          "ratio": 99.5
+        },
+        {
+          "month": 7,
+          "ratio": 99.0
+        },
+        {
+          "month": 8,
+          "ratio": 98.5
+        },
+        {
+          "month": 9,
+          "ratio": 98.0
+        },
+        {
+          "month": 10,
+          "ratio": 97.5
+        },
+        {
+          "month": 11,
+          "ratio": 97.0
+        },
+        {
+          "month": 12,
+          "ratio": 96.5
+        },
+        {
+          "month": 13,
+          "ratio": 96.0
+        },
+        {
+          "month": 14,
+          "ratio": 95.5
+        },
+        {
+          "month": 15,
+          "ratio": 95.0
+        },
+        {
+          "month": 16,
+          "ratio": 94.5
+        },
+        {
+          "month": 17,
+          "ratio": 94.0
+        },
+        {
+          "month": 18,
+          "ratio": 93.5
+        },
+        {
+          "month": 19,
+          "ratio": 93.0
+        },
+        {
+          "month": 20,
+          "ratio": 92.5
+        },
+        {
+          "month": 21,
+          "ratio": 92.0
+        },
+        {
+          "month": 22,
+          "ratio": 91.5
+        },
+        {
+          "month": 23,
+          "ratio": 91.0
+        },
+        {
+          "month": 24,
+          "ratio": 90.5
+        },
+        {
+          "month": 25,
+          "ratio": 90.0
+        },
+        {
+          "month": 26,
+          "ratio": 89.5
+        },
+        {
+          "month": 27,
+          "ratio": 89.0
+        },
+        {
+          "month": 28,
+          "ratio": 88.5
+        },
+        {
+          "month": 29,
+          "ratio": 88.0
+        },
+        {
+          "month": 30,
+          "ratio": 87.5
+        },
+        {
+          "month": 31,
+          "ratio": 87.0
+        },
+        {
+          "month": 32,
+          "ratio": 86.5
+        },
+        {
+          "month": 33,
+          "ratio": 86.0
+        },
+        {
+          "month": 34,
+          "ratio": 85.5
+        },
+        {
+          "month": 35,
+          "ratio": 85.0
+        },
+        {
+          "month": 36,
+          "ratio": 66.0
+        }
+      ],
+      "knock_in_ratio": 66.0,
+      "dividend_ratio": null,
+      "knock_out_start_month": 3,
+      "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
+      "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
+      "status": "存续中",
+      "current_price": 7945.9644,
+      "initial_price": 8821.89,
+      "knock_in_price": 5822.45,
+      "next_observation_date": "2026-09-14",
+      "days_to_next": 27,
+      "observation_history": [
+        {
+          "period": 3,
+          "date": "2026-08-12",
+          "price": 7793.7165,
+          "status": "未敲出"
+        },
+        {
+          "period": 4,
+          "date": "2026-09-14",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 5,
+          "date": "2026-10-12",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 6,
+          "date": "2026-11-12",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 7,
+          "date": "2026-12-14",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 8,
+          "date": "2027-01-12",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 9,
+          "date": "2027-02-15",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 10,
+          "date": "2027-03-12",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 11,
+          "date": "2027-04-12",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 12,
+          "date": "2027-05-12",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 13,
+          "date": "2027-06-14",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 14,
+          "date": "2027-07-12",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 15,
+          "date": "2027-08-12",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 16,
+          "date": "2027-09-13",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 17,
+          "date": "2027-10-12",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 18,
+          "date": "2027-11-12",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 19,
+          "date": "2027-12-13",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 20,
+          "date": "2028-01-12",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 21,
+          "date": "2028-02-14",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 22,
+          "date": "2028-03-13",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 23,
+          "date": "2028-04-12",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 24,
+          "date": "2028-05-12",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 25,
+          "date": "2028-06-12",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 26,
+          "date": "2028-07-12",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 27,
+          "date": "2028-08-14",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 28,
+          "date": "2028-09-12",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 29,
+          "date": "2028-10-12",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 30,
+          "date": "2028-11-13",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 31,
+          "date": "2028-12-12",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 32,
+          "date": "2029-01-12",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 33,
+          "date": "2029-02-19",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 34,
+          "date": "2029-03-12",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 35,
+          "date": "2029-04-12",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 36,
+          "date": "2029-05-14",
+          "price": null,
+          "status": "待观察"
+        }
+      ]
+    },
+    {
+      "id": "SBUD46",
+      "name": "华夏资本龙腾慧盈13号集合资产管理计划",
+      "short_name": "华夏资本龙腾慧盈13号",
+      "code": "SBUD46",
+      "underlying": "中证1000指数（代码:000852.SH）",
+      "underlying_code": "",
+      "type": "欧式早利",
+      "term_months": 36,
+      "initial_observation_date": "2026-04-16",
+      "final_observation_date": "2029-04-16",
+      "establishment_date": "2026-04-09",
+      "knock_out_ratio": 101.0,
+      "knock_out_schedule": [
+        {
+          "month": 3,
+          "ratio": 101.0
+        },
+        {
+          "month": 4,
+          "ratio": 100.5
+        },
+        {
+          "month": 5,
+          "ratio": 100.0
+        },
+        {
+          "month": 6,
+          "ratio": 99.5
+        },
+        {
+          "month": 7,
+          "ratio": 99.0
+        },
+        {
+          "month": 8,
+          "ratio": 98.5
+        },
+        {
+          "month": 9,
+          "ratio": 98.0
+        },
+        {
+          "month": 10,
+          "ratio": 97.5
+        },
+        {
+          "month": 11,
+          "ratio": 97.0
+        },
+        {
+          "month": 12,
+          "ratio": 96.5
+        },
+        {
+          "month": 13,
+          "ratio": 96.0
+        },
+        {
+          "month": 14,
+          "ratio": 95.5
+        },
+        {
+          "month": 15,
+          "ratio": 95.0
+        },
+        {
+          "month": 16,
+          "ratio": 94.5
+        },
+        {
+          "month": 17,
+          "ratio": 94.0
+        },
+        {
+          "month": 18,
+          "ratio": 93.5
+        },
+        {
+          "month": 19,
+          "ratio": 93.0
+        },
+        {
+          "month": 20,
+          "ratio": 92.5
+        },
+        {
+          "month": 21,
+          "ratio": 92.0
+        },
+        {
+          "month": 22,
+          "ratio": 91.5
+        },
+        {
+          "month": 23,
+          "ratio": 91.0
+        },
+        {
+          "month": 24,
+          "ratio": 90.5
+        },
+        {
+          "month": 25,
+          "ratio": 90.0
+        },
+        {
+          "month": 26,
+          "ratio": 89.5
+        },
+        {
+          "month": 27,
+          "ratio": 89.0
+        },
+        {
+          "month": 28,
+          "ratio": 88.5
+        },
+        {
+          "month": 29,
+          "ratio": 88.0
+        },
+        {
+          "month": 30,
+          "ratio": 87.5
+        },
+        {
+          "month": 31,
+          "ratio": 87.0
+        },
+        {
+          "month": 32,
+          "ratio": 86.5
+        },
+        {
+          "month": 33,
+          "ratio": 86.0
+        },
+        {
+          "month": 34,
+          "ratio": 85.5
+        },
+        {
+          "month": 35,
+          "ratio": 85.0
+        },
+        {
+          "month": 36,
+          "ratio": 66.0
+        }
+      ],
+      "knock_in_ratio": 66.0,
+      "dividend_ratio": null,
+      "knock_out_start_month": 3,
+      "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
+      "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
+      "status": "存续中",
+      "current_price": 7945.9644,
+      "initial_price": 8232.98,
+      "knock_in_price": 5433.77,
+      "next_observation_date": "2026-09-16",
+      "days_to_next": 29,
+      "observation_history": [
+        {
+          "period": 3,
+          "date": "2026-07-16",
+          "price": 7631.7622,
+          "status": "未敲出"
+        },
+        {
+          "period": 4,
+          "date": "2026-08-17",
+          "price": 7968.383,
+          "status": "未敲出"
+        },
+        {
+          "period": 5,
+          "date": "2026-09-16",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 6,
+          "date": "2026-10-16",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 7,
+          "date": "2026-11-16",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 8,
+          "date": "2026-12-16",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 9,
+          "date": "2027-01-18",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 10,
+          "date": "2027-02-16",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 11,
+          "date": "2027-03-16",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 12,
+          "date": "2027-04-16",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 13,
+          "date": "2027-05-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 14,
+          "date": "2027-06-16",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 15,
+          "date": "2027-07-16",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 16,
+          "date": "2027-08-16",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 17,
+          "date": "2027-09-20",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 18,
+          "date": "2027-10-18",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 19,
+          "date": "2027-11-16",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 20,
+          "date": "2027-12-16",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 21,
+          "date": "2028-01-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 22,
+          "date": "2028-02-16",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 23,
+          "date": "2028-03-16",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 24,
+          "date": "2028-04-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 25,
+          "date": "2028-05-16",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 26,
+          "date": "2028-06-16",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 27,
+          "date": "2028-07-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 28,
+          "date": "2028-08-16",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 29,
+          "date": "2028-09-18",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 30,
+          "date": "2028-10-16",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 31,
+          "date": "2028-11-16",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 32,
+          "date": "2028-12-18",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 33,
+          "date": "2029-01-16",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 34,
+          "date": "2029-02-19",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 35,
+          "date": "2029-03-16",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 36,
+          "date": "2029-04-16",
+          "price": null,
+          "status": "待观察"
+        }
+      ]
+    },
+    {
+      "id": "SBSN00",
+      "name": "华夏资本龙腾慧盈101号集合资产管理计划",
+      "short_name": "华夏资本龙腾慧盈101号",
+      "code": "SBSN00",
+      "underlying": "中证1000指数（代码:000852.SH）",
+      "underlying_code": "",
+      "type": "欧式早利",
+      "term_months": 36,
+      "initial_observation_date": "2026-04-02",
+      "final_observation_date": "2029-04-02",
+      "establishment_date": "2026-03-26",
+      "knock_out_ratio": 101.0,
+      "knock_out_schedule": [
+        {
+          "month": 3,
+          "ratio": 101.0
+        },
+        {
+          "month": 4,
+          "ratio": 100.5
+        },
+        {
+          "month": 5,
+          "ratio": 100.0
+        },
+        {
+          "month": 6,
+          "ratio": 99.5
+        },
+        {
+          "month": 7,
+          "ratio": 99.0
+        },
+        {
+          "month": 8,
+          "ratio": 98.5
+        },
+        {
+          "month": 9,
+          "ratio": 98.0
+        },
+        {
+          "month": 10,
+          "ratio": 97.5
+        },
+        {
+          "month": 11,
+          "ratio": 97.0
+        },
+        {
+          "month": 12,
+          "ratio": 96.5
+        },
+        {
+          "month": 13,
+          "ratio": 96.0
+        },
+        {
+          "month": 14,
+          "ratio": 95.5
+        },
+        {
+          "month": 15,
+          "ratio": 95.0
+        },
+        {
+          "month": 16,
+          "ratio": 94.5
+        },
+        {
+          "month": 17,
+          "ratio": 94.0
+        },
+        {
+          "month": 18,
+          "ratio": 93.5
+        },
+        {
+          "month": 19,
+          "ratio": 93.0
+        },
+        {
+          "month": 20,
+          "ratio": 92.5
+        },
+        {
+          "month": 21,
+          "ratio": 92.0
+        },
+        {
+          "month": 22,
+          "ratio": 91.5
+        },
+        {
+          "month": 23,
+          "ratio": 91.0
+        },
+        {
+          "month": 24,
+          "ratio": 90.5
+        },
+        {
+          "month": 25,
+          "ratio": 90.0
+        },
+        {
+          "month": 26,
+          "ratio": 89.5
+        },
+        {
+          "month": 27,
+          "ratio": 89.0
+        },
+        {
+          "month": 28,
+          "ratio": 88.5
+        },
+        {
+          "month": 29,
+          "ratio": 88.0
+        },
+        {
+          "month": 30,
+          "ratio": 87.5
+        },
+        {
+          "month": 31,
+          "ratio": 87.0
+        },
+        {
+          "month": 32,
+          "ratio": 86.5
+        },
+        {
+          "month": 33,
+          "ratio": 86.0
+        },
+        {
+          "month": 34,
+          "ratio": 85.5
+        },
+        {
+          "month": 35,
+          "ratio": 85.0
+        },
+        {
+          "month": 36,
+          "ratio": 66.0
+        }
+      ],
+      "knock_in_ratio": 66.0,
+      "dividend_ratio": null,
+      "knock_out_start_month": 3,
+      "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
+      "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
+      "status": "已敲出",
+      "current_price": 7945.9644,
+      "initial_price": 7623.42,
+      "knock_in_price": 5031.46,
+      "next_observation_date": null,
+      "days_to_next": null,
+      "observation_history": [
+        {
+          "period": 3,
+          "date": "2026-07-02",
+          "price": 7968.383,
+          "status": "已敲出"
+        },
+        {
+          "period": 4,
+          "date": "2026-08-03",
+          "price": 7968.383,
+          "status": "已敲出"
+        },
+        {
+          "period": 5,
+          "date": "2026-09-02",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 6,
+          "date": "2026-10-08",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 7,
+          "date": "2026-11-02",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 8,
+          "date": "2026-12-02",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 9,
+          "date": "2027-01-04",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 10,
+          "date": "2027-02-02",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 11,
+          "date": "2027-03-02",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 12,
+          "date": "2027-04-02",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 13,
+          "date": "2027-05-06",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 14,
+          "date": "2027-06-02",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 15,
+          "date": "2027-07-02",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 16,
+          "date": "2027-08-02",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 17,
+          "date": "2027-09-02",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 18,
+          "date": "2027-10-08",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 19,
+          "date": "2027-11-02",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 20,
+          "date": "2027-12-02",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 21,
+          "date": "2028-01-03",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 22,
+          "date": "2028-02-02",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 23,
+          "date": "2028-03-02",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 24,
+          "date": "2028-04-03",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 25,
+          "date": "2028-05-08",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 26,
+          "date": "2028-06-02",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 27,
+          "date": "2028-07-03",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 28,
+          "date": "2028-08-02",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 29,
+          "date": "2028-09-04",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 30,
+          "date": "2028-10-09",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 31,
+          "date": "2028-11-02",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 32,
+          "date": "2028-12-04",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 33,
+          "date": "2029-01-02",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 34,
+          "date": "2029-02-02",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 35,
+          "date": "2029-03-02",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 36,
+          "date": "2029-04-02",
+          "price": null,
+          "status": "待观察"
+        }
+      ]
+    },
+    {
+      "id": "SBRJ02",
+      "name": "华夏资本龙腾慧盈12号集合资产管理计划",
+      "short_name": "华夏资本龙腾慧盈12号",
+      "code": "SBRJ02",
+      "underlying": "中证1000指数（代码:000852.SH）",
+      "underlying_code": "",
+      "type": "欧式早利",
+      "term_months": 36,
+      "initial_observation_date": "2026-03-17",
+      "final_observation_date": "2029-03-19",
+      "establishment_date": "2026-03-11",
+      "knock_out_ratio": 101.0,
+      "knock_out_schedule": [
+        {
+          "month": 3,
+          "ratio": 101.0
+        },
+        {
+          "month": 4,
+          "ratio": 100.5
+        },
+        {
+          "month": 5,
+          "ratio": 100.0
+        },
+        {
+          "month": 6,
+          "ratio": 99.5
+        },
+        {
+          "month": 7,
+          "ratio": 99.0
+        },
+        {
+          "month": 8,
+          "ratio": 98.5
+        },
+        {
+          "month": 9,
+          "ratio": 98.0
+        },
+        {
+          "month": 10,
+          "ratio": 97.5
+        },
+        {
+          "month": 11,
+          "ratio": 97.0
+        },
+        {
+          "month": 12,
+          "ratio": 96.5
+        },
+        {
+          "month": 13,
+          "ratio": 96.0
+        },
+        {
+          "month": 14,
+          "ratio": 95.5
+        },
+        {
+          "month": 15,
+          "ratio": 95.0
+        },
+        {
+          "month": 16,
+          "ratio": 94.5
+        },
+        {
+          "month": 17,
+          "ratio": 94.0
+        },
+        {
+          "month": 18,
+          "ratio": 93.5
+        },
+        {
+          "month": 19,
+          "ratio": 93.0
+        },
+        {
+          "month": 20,
+          "ratio": 92.5
+        },
+        {
+          "month": 21,
+          "ratio": 92.0
+        },
+        {
+          "month": 22,
+          "ratio": 91.5
+        },
+        {
+          "month": 23,
+          "ratio": 91.0
+        },
+        {
+          "month": 24,
+          "ratio": 90.5
+        },
+        {
+          "month": 25,
+          "ratio": 90.0
+        },
+        {
+          "month": 26,
+          "ratio": 89.5
+        },
+        {
+          "month": 27,
+          "ratio": 89.0
+        },
+        {
+          "month": 28,
+          "ratio": 88.5
+        },
+        {
+          "month": 29,
+          "ratio": 88.0
+        },
+        {
+          "month": 30,
+          "ratio": 87.5
+        },
+        {
+          "month": 31,
+          "ratio": 87.0
+        },
+        {
+          "month": 32,
+          "ratio": 86.5
+        },
+        {
+          "month": 33,
+          "ratio": 86.0
+        },
+        {
+          "month": 34,
+          "ratio": 85.5
+        },
+        {
+          "month": 35,
+          "ratio": 85.0
+        },
+        {
+          "month": 36,
+          "ratio": 66.0
+        }
+      ],
+      "knock_in_ratio": 66.0,
+      "dividend_ratio": null,
+      "knock_out_start_month": 3,
+      "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
+      "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
+      "status": "已敲出",
+      "current_price": 7945.9644,
+      "initial_price": 8019.86,
+      "knock_in_price": 5293.11,
+      "next_observation_date": null,
+      "days_to_next": null,
+      "observation_history": [
+        {
+          "period": 3,
+          "date": "2026-06-17",
+          "price": 8704.4677,
+          "status": "已敲出"
+        },
+        {
+          "period": 4,
+          "date": "2026-07-17",
+          "price": 7167.9959,
+          "status": "未敲出"
+        },
+        {
+          "period": 5,
+          "date": "2026-08-17",
+          "price": 7968.383,
+          "status": "未敲出"
+        },
+        {
+          "period": 6,
+          "date": "2026-09-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 7,
+          "date": "2026-10-19",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 8,
+          "date": "2026-11-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 9,
+          "date": "2026-12-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 10,
+          "date": "2027-01-18",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 11,
+          "date": "2027-02-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 12,
+          "date": "2027-03-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 13,
+          "date": "2027-04-19",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 14,
+          "date": "2027-05-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 15,
+          "date": "2027-06-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 16,
+          "date": "2027-07-19",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 17,
+          "date": "2027-08-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 18,
+          "date": "2027-09-20",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 19,
+          "date": "2027-10-18",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 20,
+          "date": "2027-11-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 21,
+          "date": "2027-12-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 22,
+          "date": "2028-01-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 23,
+          "date": "2028-02-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 24,
+          "date": "2028-03-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 25,
+          "date": "2028-04-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 26,
+          "date": "2028-05-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 27,
+          "date": "2028-06-19",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 28,
+          "date": "2028-07-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 29,
+          "date": "2028-08-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 30,
+          "date": "2028-09-18",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 31,
+          "date": "2028-10-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 32,
+          "date": "2028-11-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 33,
+          "date": "2028-12-18",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 34,
+          "date": "2029-01-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 35,
+          "date": "2029-02-19",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 36,
+          "date": "2029-03-19",
+          "price": null,
+          "status": "待观察"
+        }
+      ]
+    },
+    {
+      "id": "SBQC59",
+      "name": "华夏资本龙腾慧盈11号集合资产管理计划",
+      "short_name": "华夏资本龙腾慧盈11号",
+      "code": "SBQC59",
+      "underlying": "中证1000指数（代码:000852.SH）",
+      "underlying_code": "",
+      "type": "欧式早利",
+      "term_months": 36,
+      "initial_observation_date": "2026-02-12",
+      "final_observation_date": "2029-02-20",
+      "establishment_date": "2026-02-05",
+      "knock_out_ratio": 101.0,
+      "knock_out_schedule": [
+        {
+          "month": 3,
+          "ratio": 101.0
+        },
+        {
+          "month": 4,
+          "ratio": 100.5
+        },
+        {
+          "month": 5,
+          "ratio": 100.0
+        },
+        {
+          "month": 6,
+          "ratio": 99.5
+        },
+        {
+          "month": 7,
+          "ratio": 99.0
+        },
+        {
+          "month": 8,
+          "ratio": 98.5
+        },
+        {
+          "month": 9,
+          "ratio": 98.0
+        },
+        {
+          "month": 10,
+          "ratio": 97.5
+        },
+        {
+          "month": 11,
+          "ratio": 97.0
+        },
+        {
+          "month": 12,
+          "ratio": 96.5
+        },
+        {
+          "month": 13,
+          "ratio": 96.0
+        },
+        {
+          "month": 14,
+          "ratio": 95.5
+        },
+        {
+          "month": 15,
+          "ratio": 95.0
+        },
+        {
+          "month": 16,
+          "ratio": 94.5
+        },
+        {
+          "month": 17,
+          "ratio": 94.0
+        },
+        {
+          "month": 18,
+          "ratio": 93.5
+        },
+        {
+          "month": 19,
+          "ratio": 93.0
+        },
+        {
+          "month": 20,
+          "ratio": 92.5
+        },
+        {
+          "month": 21,
+          "ratio": 92.0
+        },
+        {
+          "month": 22,
+          "ratio": 91.5
+        },
+        {
+          "month": 23,
+          "ratio": 91.0
+        },
+        {
+          "month": 24,
+          "ratio": 90.5
+        },
+        {
+          "month": 25,
+          "ratio": 90.0
+        },
+        {
+          "month": 26,
+          "ratio": 89.5
+        },
+        {
+          "month": 27,
+          "ratio": 89.0
+        },
+        {
+          "month": 28,
+          "ratio": 88.5
+        },
+        {
+          "month": 29,
+          "ratio": 88.0
+        },
+        {
+          "month": 30,
+          "ratio": 87.5
+        },
+        {
+          "month": 31,
+          "ratio": 87.0
+        },
+        {
+          "month": 32,
+          "ratio": 86.5
+        },
+        {
+          "month": 33,
+          "ratio": 86.0
+        },
+        {
+          "month": 34,
+          "ratio": 85.5
+        },
+        {
+          "month": 35,
+          "ratio": 85.0
+        },
+        {
+          "month": 36,
+          "ratio": 65.0
+        }
+      ],
+      "knock_in_ratio": 65.0,
+      "dividend_ratio": null,
+      "knock_out_start_month": 3,
+      "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
+      "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
+      "status": "已敲出",
+      "current_price": 7945.9644,
+      "initial_price": 8314.83,
+      "knock_in_price": 5404.64,
+      "next_observation_date": null,
+      "days_to_next": null,
+      "observation_history": [
+        {
+          "period": 3,
+          "date": "2026-05-12",
+          "price": 8821.8874,
+          "status": "已敲出"
+        },
+        {
+          "period": 4,
+          "date": "2026-06-12",
+          "price": 8202.7991,
+          "status": "未敲出"
+        },
+        {
+          "period": 5,
+          "date": "2026-07-13",
+          "price": 7787.8529,
+          "status": "未敲出"
+        },
+        {
+          "period": 6,
+          "date": "2026-08-12",
+          "price": 7793.7165,
+          "status": "未敲出"
+        },
+        {
+          "period": 7,
+          "date": "2026-09-14",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 8,
+          "date": "2026-10-12",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 9,
+          "date": "2026-11-12",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 10,
+          "date": "2026-12-14",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 11,
+          "date": "2027-01-12",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 12,
+          "date": "2027-02-15",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 13,
+          "date": "2027-03-12",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 14,
+          "date": "2027-04-12",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 15,
+          "date": "2027-05-12",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 16,
+          "date": "2027-06-14",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 17,
+          "date": "2027-07-12",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 18,
+          "date": "2027-08-12",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 19,
+          "date": "2027-09-13",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 20,
+          "date": "2027-10-12",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 21,
+          "date": "2027-11-12",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 22,
+          "date": "2027-12-13",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 23,
+          "date": "2028-01-12",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 24,
+          "date": "2028-02-14",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 25,
+          "date": "2028-03-13",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 26,
+          "date": "2028-04-12",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 27,
+          "date": "2028-05-12",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 28,
+          "date": "2028-06-12",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 29,
+          "date": "2028-07-12",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 30,
+          "date": "2028-08-14",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 31,
+          "date": "2028-09-12",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 32,
+          "date": "2028-10-12",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 33,
+          "date": "2028-11-13",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 34,
+          "date": "2028-12-12",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 35,
+          "date": "2029-01-12",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 36,
+          "date": "2029-02-19",
+          "price": null,
+          "status": "待观察"
+        }
+      ]
+    },
+    {
+      "id": "SBPX05",
+      "name": "华夏资本龙腾慧盈10号集合资产管理计划",
+      "short_name": "华夏资本龙腾慧盈10号",
+      "code": "SBPX05",
+      "underlying": "中证1000指数（代码:000852.SH）",
+      "underlying_code": "",
+      "type": "欧式早利",
+      "term_months": 36,
+      "initial_observation_date": "2026-02-09",
+      "final_observation_date": "2029-02-09",
+      "establishment_date": "2026-02-03",
+      "knock_out_ratio": 101.0,
+      "knock_out_schedule": [
+        {
+          "month": 3,
+          "ratio": 101.0
+        },
+        {
+          "month": 4,
+          "ratio": 100.5
+        },
+        {
+          "month": 5,
+          "ratio": 100.0
+        },
+        {
+          "month": 6,
+          "ratio": 99.5
+        },
+        {
+          "month": 7,
+          "ratio": 99.0
+        },
+        {
+          "month": 8,
+          "ratio": 98.5
+        },
+        {
+          "month": 9,
+          "ratio": 98.0
+        },
+        {
+          "month": 10,
+          "ratio": 97.5
+        },
+        {
+          "month": 11,
+          "ratio": 97.0
+        },
+        {
+          "month": 12,
+          "ratio": 96.5
+        },
+        {
+          "month": 13,
+          "ratio": 96.0
+        },
+        {
+          "month": 14,
+          "ratio": 95.5
+        },
+        {
+          "month": 15,
+          "ratio": 95.0
+        },
+        {
+          "month": 16,
+          "ratio": 94.5
+        },
+        {
+          "month": 17,
+          "ratio": 94.0
+        },
+        {
+          "month": 18,
+          "ratio": 93.5
+        },
+        {
+          "month": 19,
+          "ratio": 93.0
+        },
+        {
+          "month": 20,
+          "ratio": 92.5
+        },
+        {
+          "month": 21,
+          "ratio": 92.0
+        },
+        {
+          "month": 22,
+          "ratio": 91.5
+        },
+        {
+          "month": 23,
+          "ratio": 91.0
+        },
+        {
+          "month": 24,
+          "ratio": 90.5
+        },
+        {
+          "month": 25,
+          "ratio": 90.0
+        },
+        {
+          "month": 26,
+          "ratio": 89.5
+        },
+        {
+          "month": 27,
+          "ratio": 89.0
+        },
+        {
+          "month": 28,
+          "ratio": 88.5
+        },
+        {
+          "month": 29,
+          "ratio": 88.0
+        },
+        {
+          "month": 30,
+          "ratio": 87.5
+        },
+        {
+          "month": 31,
+          "ratio": 87.0
+        },
+        {
+          "month": 32,
+          "ratio": 86.5
+        },
+        {
+          "month": 33,
+          "ratio": 86.0
+        },
+        {
+          "month": 34,
+          "ratio": 85.5
+        },
+        {
+          "month": 35,
+          "ratio": 85.0
+        },
+        {
+          "month": 36,
+          "ratio": 66.0
+        }
+      ],
+      "knock_in_ratio": 66.0,
+      "dividend_ratio": null,
+      "knock_out_start_month": 3,
+      "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
+      "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
+      "status": "已敲出",
+      "current_price": 7945.9644,
+      "initial_price": 8233.78,
+      "knock_in_price": 5434.29,
+      "next_observation_date": null,
+      "days_to_next": null,
+      "observation_history": [
+        {
+          "period": 3,
+          "date": "2026-05-11",
+          "price": 8866.7792,
+          "status": "已敲出"
+        },
+        {
+          "period": 4,
+          "date": "2026-06-09",
+          "price": 8318.6978,
+          "status": "已敲出"
+        },
+        {
+          "period": 5,
+          "date": "2026-07-09",
+          "price": 8300.077,
+          "status": "已敲出"
+        },
+        {
+          "period": 6,
+          "date": "2026-08-10",
+          "price": 7733.8995,
+          "status": "未敲出"
+        },
+        {
+          "period": 7,
+          "date": "2026-09-09",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 8,
+          "date": "2026-10-09",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 9,
+          "date": "2026-11-09",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 10,
+          "date": "2026-12-09",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 11,
+          "date": "2027-01-11",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 12,
+          "date": "2027-02-15",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 13,
+          "date": "2027-03-09",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 14,
+          "date": "2027-04-09",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 15,
+          "date": "2027-05-10",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 16,
+          "date": "2027-06-14",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 17,
+          "date": "2027-07-09",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 18,
+          "date": "2027-08-09",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 19,
+          "date": "2027-09-09",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 20,
+          "date": "2027-10-11",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 21,
+          "date": "2027-11-09",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 22,
+          "date": "2027-12-09",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 23,
+          "date": "2028-01-10",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 24,
+          "date": "2028-02-09",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 25,
+          "date": "2028-03-09",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 26,
+          "date": "2028-04-10",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 27,
+          "date": "2028-05-09",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 28,
+          "date": "2028-06-09",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 29,
+          "date": "2028-07-10",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 30,
+          "date": "2028-08-09",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 31,
+          "date": "2028-09-11",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 32,
+          "date": "2028-10-09",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 33,
+          "date": "2028-11-09",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 34,
+          "date": "2028-12-11",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 35,
+          "date": "2029-01-09",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 36,
+          "date": "2029-02-09",
+          "price": null,
+          "status": "待观察"
+        }
+      ]
+    },
+    {
+      "id": "SBNR10",
+      "name": "华夏资本龙腾慧盈9号集合资产管理计划",
+      "short_name": "华夏资本龙腾慧盈9号",
+      "code": "SBNR10",
+      "underlying": "中证1000指数（代码:000852.SH）",
+      "underlying_code": "",
+      "type": "欧式",
+      "term_months": 36,
+      "initial_observation_date": "2026-01-26",
+      "final_observation_date": "2029-01-26",
+      "establishment_date": "2026-01-20",
+      "knock_out_ratio": 103.0,
+      "knock_out_schedule": [
+        {
+          "month": 3,
+          "ratio": 103.0
+        },
+        {
+          "month": 4,
+          "ratio": 102.25
+        },
+        {
+          "month": 5,
+          "ratio": 101.5
+        },
+        {
+          "month": 6,
+          "ratio": 100.75
+        },
+        {
+          "month": 7,
+          "ratio": 100.0
+        },
+        {
+          "month": 8,
+          "ratio": 99.25
+        },
+        {
+          "month": 9,
+          "ratio": 98.5
+        },
+        {
+          "month": 10,
+          "ratio": 97.75
+        },
+        {
+          "month": 11,
+          "ratio": 97.0
+        },
+        {
+          "month": 12,
+          "ratio": 96.25
+        },
+        {
+          "month": 13,
+          "ratio": 95.5
+        },
+        {
+          "month": 14,
+          "ratio": 94.75
+        },
+        {
+          "month": 15,
+          "ratio": 94.0
+        },
+        {
+          "month": 16,
+          "ratio": 93.25
+        },
+        {
+          "month": 17,
+          "ratio": 92.5
+        },
+        {
+          "month": 18,
+          "ratio": 91.75
+        },
+        {
+          "month": 19,
+          "ratio": 91.0
+        },
+        {
+          "month": 20,
+          "ratio": 90.25
+        },
+        {
+          "month": 21,
+          "ratio": 89.5
+        },
+        {
+          "month": 22,
+          "ratio": 88.75
+        },
+        {
+          "month": 23,
+          "ratio": 88.0
+        },
+        {
+          "month": 24,
+          "ratio": 87.25
+        },
+        {
+          "month": 25,
+          "ratio": 86.5
+        },
+        {
+          "month": 26,
+          "ratio": 85.75
+        },
+        {
+          "month": 27,
+          "ratio": 85.0
+        },
+        {
+          "month": 28,
+          "ratio": 84.25
+        },
+        {
+          "month": 29,
+          "ratio": 83.5
+        },
+        {
+          "month": 30,
+          "ratio": 82.75
+        },
+        {
+          "month": 31,
+          "ratio": 82.0
+        },
+        {
+          "month": 32,
+          "ratio": 81.25
+        },
+        {
+          "month": 33,
+          "ratio": 80.5
+        },
+        {
+          "month": 34,
+          "ratio": 79.75
+        },
+        {
+          "month": 35,
+          "ratio": 79.0
+        },
+        {
+          "month": 36,
+          "ratio": 70.0
+        }
+      ],
+      "knock_in_ratio": 70.0,
+      "dividend_ratio": null,
+      "knock_out_start_month": 3,
+      "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
+      "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
+      "status": "已敲出",
+      "current_price": 7945.9644,
+      "initial_price": 8365.43,
+      "knock_in_price": 5855.8,
+      "next_observation_date": null,
+      "days_to_next": null,
+      "observation_history": [
+        {
+          "period": 3,
+          "date": "2026-04-27",
+          "price": 8338.7263,
+          "status": "未敲出"
+        },
+        {
+          "period": 4,
+          "date": "2026-05-26",
+          "price": 8687.2528,
+          "status": "已敲出"
+        },
+        {
+          "period": 5,
+          "date": "2026-06-26",
+          "price": 8601.4075,
+          "status": "已敲出"
+        },
+        {
+          "period": 6,
+          "date": "2026-07-27",
+          "price": 7228.7845,
+          "status": "未敲出"
+        },
+        {
+          "period": 7,
+          "date": "2026-08-26",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 8,
+          "date": "2026-09-28",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 9,
+          "date": "2026-10-26",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 10,
+          "date": "2026-11-26",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 11,
+          "date": "2026-12-28",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 12,
+          "date": "2027-01-26",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 13,
+          "date": "2027-02-26",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 14,
+          "date": "2027-03-26",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 15,
+          "date": "2027-04-26",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 16,
+          "date": "2027-05-26",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 17,
+          "date": "2027-06-28",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 18,
+          "date": "2027-07-26",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 19,
+          "date": "2027-08-26",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 20,
+          "date": "2027-09-27",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 21,
+          "date": "2027-10-26",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 22,
+          "date": "2027-11-26",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 23,
+          "date": "2027-12-27",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 24,
+          "date": "2028-02-01",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 25,
+          "date": "2028-02-28",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 26,
+          "date": "2028-03-27",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 27,
+          "date": "2028-04-26",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 28,
+          "date": "2028-05-26",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 29,
+          "date": "2028-06-26",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 30,
+          "date": "2028-07-26",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 31,
+          "date": "2028-08-28",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 32,
+          "date": "2028-09-26",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 33,
+          "date": "2028-10-26",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 34,
+          "date": "2028-11-27",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 35,
+          "date": "2028-12-26",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 36,
+          "date": "2029-01-26",
+          "price": null,
+          "status": "待观察"
+        }
+      ]
+    },
+    {
+      "id": "SBMW10",
+      "name": "华夏资本龙腾慧盈8号集合资产管理计划",
+      "short_name": "华夏资本龙腾慧盈8号",
+      "code": "SBMW10",
+      "underlying": "中证1000指数（代码:000852.SH）",
+      "underlying_code": "",
+      "type": "欧式凤凰",
+      "term_months": 36,
+      "initial_observation_date": "2026-01-19",
+      "final_observation_date": "2029-01-19",
+      "establishment_date": "2026-01-09",
+      "knock_out_ratio": 101.0,
+      "knock_out_schedule": [
+        {
+          "month": 3,
+          "ratio": 101.0
+        },
+        {
+          "month": 4,
+          "ratio": 100.5
+        },
+        {
+          "month": 5,
+          "ratio": 100.0
+        },
+        {
+          "month": 6,
+          "ratio": 99.5
+        },
+        {
+          "month": 7,
+          "ratio": 99.0
+        },
+        {
+          "month": 8,
+          "ratio": 98.5
+        },
+        {
+          "month": 9,
+          "ratio": 98.0
+        },
+        {
+          "month": 10,
+          "ratio": 97.5
+        },
+        {
+          "month": 11,
+          "ratio": 97.0
+        },
+        {
+          "month": 12,
+          "ratio": 96.5
+        },
+        {
+          "month": 13,
+          "ratio": 96.0
+        },
+        {
+          "month": 14,
+          "ratio": 95.5
+        },
+        {
+          "month": 15,
+          "ratio": 95.0
+        },
+        {
+          "month": 16,
+          "ratio": 94.5
+        },
+        {
+          "month": 17,
+          "ratio": 94.0
+        },
+        {
+          "month": 18,
+          "ratio": 93.5
+        },
+        {
+          "month": 19,
+          "ratio": 93.0
+        },
+        {
+          "month": 20,
+          "ratio": 92.5
+        },
+        {
+          "month": 21,
+          "ratio": 92.0
+        },
+        {
+          "month": 22,
+          "ratio": 91.5
+        },
+        {
+          "month": 23,
+          "ratio": 91.0
+        },
+        {
+          "month": 24,
+          "ratio": 90.5
+        },
+        {
+          "month": 25,
+          "ratio": 90.0
+        },
+        {
+          "month": 26,
+          "ratio": 89.5
+        },
+        {
+          "month": 27,
+          "ratio": 89.0
+        },
+        {
+          "month": 28,
+          "ratio": 88.5
+        },
+        {
+          "month": 29,
+          "ratio": 88.0
+        },
+        {
+          "month": 30,
+          "ratio": 87.5
+        },
+        {
+          "month": 31,
+          "ratio": 87.0
+        },
+        {
+          "month": 32,
+          "ratio": 86.5
+        },
+        {
+          "month": 33,
+          "ratio": 86.0
+        },
+        {
+          "month": 34,
+          "ratio": 85.5
+        },
+        {
+          "month": 35,
+          "ratio": 85.0
+        },
+        {
+          "month": 36,
+          "ratio": 70.0
+        }
+      ],
+      "knock_in_ratio": 70.0,
+      "dividend_ratio": 70.0,
+      "knock_out_start_month": 3,
+      "knock_out_condition": "若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
+      "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
+      "status": "已敲出",
+      "current_price": 7945.9644,
+      "initial_price": 8265.65,
+      "knock_in_price": 5785.95,
+      "next_observation_date": null,
+      "days_to_next": null,
+      "observation_history": [
+        {
+          "period": 3,
+          "date": "2026-04-20",
+          "price": 8357.8139,
+          "status": "已敲出"
+        },
+        {
+          "period": 4,
+          "date": "2026-05-19",
+          "price": 8808.6445,
+          "status": "已敲出"
+        },
+        {
+          "period": 5,
+          "date": "2026-06-22",
+          "price": 8865.676,
+          "status": "已敲出"
+        },
+        {
+          "period": 6,
+          "date": "2026-07-20",
+          "price": 6965.3757,
+          "status": "未敲出"
+        },
+        {
+          "period": 7,
+          "date": "2026-08-19",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 8,
+          "date": "2026-09-21",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 9,
+          "date": "2026-10-19",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 10,
+          "date": "2026-11-19",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 11,
+          "date": "2026-12-21",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 12,
+          "date": "2027-01-19",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 13,
+          "date": "2027-02-19",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 14,
+          "date": "2027-03-19",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 15,
+          "date": "2027-04-19",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 16,
+          "date": "2027-05-19",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 17,
+          "date": "2027-06-21",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 18,
+          "date": "2027-07-19",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 19,
+          "date": "2027-08-19",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 20,
+          "date": "2027-09-20",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 21,
+          "date": "2027-10-19",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 22,
+          "date": "2027-11-19",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 23,
+          "date": "2027-12-20",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 24,
+          "date": "2028-01-19",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 25,
+          "date": "2028-02-21",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 26,
+          "date": "2028-03-20",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 27,
+          "date": "2028-04-19",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 28,
+          "date": "2028-05-19",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 29,
+          "date": "2028-06-19",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 30,
+          "date": "2028-07-19",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 31,
+          "date": "2028-08-21",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 32,
+          "date": "2028-09-19",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 33,
+          "date": "2028-10-19",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 34,
+          "date": "2028-11-20",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 35,
+          "date": "2028-12-19",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 36,
+          "date": "2029-01-19",
+          "price": null,
+          "status": "待观察"
+        }
+      ]
+    },
+    {
+      "id": "SBLL41",
+      "name": "华夏资本龙腾慧盈7号集合资产管理计划",
+      "short_name": "华夏资本龙腾慧盈7号",
+      "code": "SBLL41",
+      "underlying": "中证1000指数（代码:000852.SH）",
+      "underlying_code": "",
+      "type": "欧式",
+      "term_months": 36,
+      "initial_observation_date": "2025-12-22",
+      "final_observation_date": "2028-12-22",
+      "establishment_date": "2025-12-12",
+      "knock_out_ratio": 101.0,
+      "knock_out_schedule": [
+        {
+          "month": 3,
+          "ratio": 101.0
+        },
+        {
+          "month": 4,
+          "ratio": 100.5
+        },
+        {
+          "month": 5,
+          "ratio": 100.0
+        },
+        {
+          "month": 6,
+          "ratio": 99.5
+        },
+        {
+          "month": 7,
+          "ratio": 99.0
+        },
+        {
+          "month": 8,
+          "ratio": 98.5
+        },
+        {
+          "month": 9,
+          "ratio": 98.0
+        },
+        {
+          "month": 10,
+          "ratio": 97.5
+        },
+        {
+          "month": 11,
+          "ratio": 97.0
+        },
+        {
+          "month": 12,
+          "ratio": 96.5
+        },
+        {
+          "month": 13,
+          "ratio": 96.0
+        },
+        {
+          "month": 14,
+          "ratio": 95.5
+        },
+        {
+          "month": 15,
+          "ratio": 95.0
+        },
+        {
+          "month": 16,
+          "ratio": 94.5
+        },
+        {
+          "month": 17,
+          "ratio": 94.0
+        },
+        {
+          "month": 18,
+          "ratio": 93.5
+        },
+        {
+          "month": 19,
+          "ratio": 93.0
+        },
+        {
+          "month": 20,
+          "ratio": 92.5
+        },
+        {
+          "month": 21,
+          "ratio": 92.0
+        },
+        {
+          "month": 22,
+          "ratio": 91.5
+        },
+        {
+          "month": 23,
+          "ratio": 91.0
+        },
+        {
+          "month": 24,
+          "ratio": 90.5
+        },
+        {
+          "month": 25,
+          "ratio": 90.0
+        },
+        {
+          "month": 26,
+          "ratio": 89.5
+        },
+        {
+          "month": 27,
+          "ratio": 89.0
+        },
+        {
+          "month": 28,
+          "ratio": 88.5
+        },
+        {
+          "month": 29,
+          "ratio": 88.0
+        },
+        {
+          "month": 30,
+          "ratio": 87.5
+        },
+        {
+          "month": 31,
+          "ratio": 87.0
+        },
+        {
+          "month": 32,
+          "ratio": 86.5
+        },
+        {
+          "month": 33,
+          "ratio": 86.0
+        },
+        {
+          "month": 34,
+          "ratio": 85.5
+        },
+        {
+          "month": 35,
+          "ratio": 85.0
+        },
+        {
+          "month": 36,
+          "ratio": 70.0
+        }
+      ],
+      "knock_in_ratio": 70.0,
+      "dividend_ratio": null,
+      "knock_out_start_month": 3,
+      "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
+      "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
+      "status": "已敲出",
+      "current_price": 7945.9644,
+      "initial_price": 7408.35,
+      "knock_in_price": 5185.85,
+      "next_observation_date": null,
+      "days_to_next": null,
+      "observation_history": [
+        {
+          "period": 3,
+          "date": "2026-03-23",
+          "price": 7968.383,
+          "status": "已敲出"
+        },
+        {
+          "period": 4,
+          "date": "2026-04-22",
+          "price": 7968.383,
+          "status": "已敲出"
+        },
+        {
+          "period": 5,
+          "date": "2026-05-22",
+          "price": 7968.383,
+          "status": "已敲出"
+        },
+        {
+          "period": 6,
+          "date": "2026-06-22",
+          "price": 7968.383,
+          "status": "已敲出"
+        },
+        {
+          "period": 7,
+          "date": "2026-07-22",
+          "price": 7968.383,
+          "status": "已敲出"
+        },
+        {
+          "period": 8,
+          "date": "2026-08-24",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 9,
+          "date": "2026-09-22",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 10,
+          "date": "2026-10-22",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 11,
+          "date": "2026-11-23",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 12,
+          "date": "2026-12-22",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 13,
+          "date": "2027-01-22",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 14,
+          "date": "2027-02-22",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 15,
+          "date": "2027-03-22",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 16,
+          "date": "2027-04-22",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 17,
+          "date": "2027-05-24",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 18,
+          "date": "2027-06-22",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 19,
+          "date": "2027-07-22",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 20,
+          "date": "2027-08-23",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 21,
+          "date": "2027-09-22",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 22,
+          "date": "2027-10-22",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 23,
+          "date": "2027-11-22",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 24,
+          "date": "2027-12-22",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 25,
+          "date": "2028-01-24",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 26,
+          "date": "2028-02-22",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 27,
+          "date": "2028-03-22",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 28,
+          "date": "2028-04-24",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 29,
+          "date": "2028-05-22",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 30,
+          "date": "2028-06-22",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 31,
+          "date": "2028-07-24",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 32,
+          "date": "2028-08-22",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 33,
+          "date": "2028-09-22",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 34,
+          "date": "2028-10-23",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 35,
+          "date": "2028-11-22",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 36,
+          "date": "2028-12-22",
+          "price": null,
+          "status": "待观察"
+        }
+      ]
+    },
+    {
+      "id": "SBJW19",
+      "name": "华夏资本龙腾慧盈6号单一资产管理计划",
+      "short_name": "华夏资本龙腾慧盈6号",
+      "code": "SBJW19",
+      "underlying": "中证1000指数（代码:000852.SH）",
+      "underlying_code": "",
+      "type": "FCN",
+      "term_months": 36,
+      "initial_observation_date": null,
+      "final_observation_date": null,
+      "establishment_date": "2026-12-02",
+      "knock_out_ratio": 101.0,
+      "knock_out_schedule": [
+        {
+          "month": 3,
+          "ratio": 101.0
+        },
+        {
+          "month": 4,
+          "ratio": 100.5
+        },
+        {
+          "month": 5,
+          "ratio": 100.0
+        },
+        {
+          "month": 6,
+          "ratio": 99.5
+        },
+        {
+          "month": 7,
+          "ratio": 99.0
+        },
+        {
+          "month": 8,
+          "ratio": 98.5
+        },
+        {
+          "month": 9,
+          "ratio": 98.0
+        },
+        {
+          "month": 10,
+          "ratio": 97.5
+        },
+        {
+          "month": 11,
+          "ratio": 97.0
+        },
+        {
+          "month": 12,
+          "ratio": 96.5
+        },
+        {
+          "month": 13,
+          "ratio": 96.0
+        },
+        {
+          "month": 14,
+          "ratio": 95.5
+        },
+        {
+          "month": 15,
+          "ratio": 95.0
+        },
+        {
+          "month": 16,
+          "ratio": 94.5
+        },
+        {
+          "month": 17,
+          "ratio": 94.0
+        },
+        {
+          "month": 18,
+          "ratio": 93.5
+        },
+        {
+          "month": 19,
+          "ratio": 93.0
+        },
+        {
+          "month": 20,
+          "ratio": 92.5
+        },
+        {
+          "month": 21,
+          "ratio": 92.0
+        },
+        {
+          "month": 22,
+          "ratio": 91.5
+        },
+        {
+          "month": 23,
+          "ratio": 91.0
+        },
+        {
+          "month": 24,
+          "ratio": 90.5
+        },
+        {
+          "month": 25,
+          "ratio": 90.0
+        },
+        {
+          "month": 26,
+          "ratio": 89.5
+        },
+        {
+          "month": 27,
+          "ratio": 89.0
+        },
+        {
+          "month": 28,
+          "ratio": 88.5
+        },
+        {
+          "month": 29,
+          "ratio": 88.0
+        },
+        {
+          "month": 30,
+          "ratio": 87.5
+        },
+        {
+          "month": 31,
+          "ratio": 87.0
+        },
+        {
+          "month": 32,
+          "ratio": 86.5
+        },
+        {
+          "month": 33,
+          "ratio": 86.0
+        },
+        {
+          "month": 34,
+          "ratio": 85.5
+        },
+        {
+          "month": 35,
+          "ratio": 85.0
+        },
+        {
+          "month": 36,
+          "ratio": 70.0
+        }
+      ],
+      "knock_in_ratio": 70.0,
+      "dividend_ratio": 0.0,
+      "knock_out_start_month": 3,
+      "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
+      "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
+      "status": "存续中",
+      "current_price": 7945.9644,
+      "initial_price": 10000.0,
+      "knock_in_price": 7000.0,
+      "next_observation_date": null,
+      "days_to_next": 0,
+      "observation_history": []
+    },
+    {
+      "id": "SBJG49",
+      "name": "华夏资本龙腾慧盈5号集合资产管理计划",
+      "short_name": "华夏资本龙腾慧盈5号",
+      "code": "SBJG49",
+      "underlying": "中证1000指数（代码:000852.SH）",
+      "underlying_code": "",
+      "type": "欧式凤凰",
+      "term_months": 36,
+      "initial_observation_date": "2025-11-28",
+      "final_observation_date": "2028-11-28",
+      "establishment_date": "2025-11-21",
+      "knock_out_ratio": 101.0,
+      "knock_out_schedule": [
+        {
+          "month": 3,
+          "ratio": 101.0
+        },
+        {
+          "month": 4,
+          "ratio": 100.25
+        },
+        {
+          "month": 5,
+          "ratio": 99.5
+        },
+        {
+          "month": 6,
+          "ratio": 98.75
+        },
+        {
+          "month": 7,
+          "ratio": 98.0
+        },
+        {
+          "month": 8,
+          "ratio": 97.25
+        },
+        {
+          "month": 9,
+          "ratio": 96.5
+        },
+        {
+          "month": 10,
+          "ratio": 95.75
+        },
+        {
+          "month": 11,
+          "ratio": 95.0
+        },
+        {
+          "month": 12,
+          "ratio": 94.25
+        },
+        {
+          "month": 13,
+          "ratio": 93.5
+        },
+        {
+          "month": 14,
+          "ratio": 92.75
+        },
+        {
+          "month": 15,
+          "ratio": 92.0
+        },
+        {
+          "month": 16,
+          "ratio": 91.25
+        },
+        {
+          "month": 17,
+          "ratio": 90.5
+        },
+        {
+          "month": 18,
+          "ratio": 89.75
+        },
+        {
+          "month": 19,
+          "ratio": 89.0
+        },
+        {
+          "month": 20,
+          "ratio": 88.25
+        },
+        {
+          "month": 21,
+          "ratio": 87.5
+        },
+        {
+          "month": 22,
+          "ratio": 86.75
+        },
+        {
+          "month": 23,
+          "ratio": 86.0
+        },
+        {
+          "month": 24,
+          "ratio": 85.25
+        },
+        {
+          "month": 25,
+          "ratio": 84.5
+        },
+        {
+          "month": 26,
+          "ratio": 83.75
+        },
+        {
+          "month": 27,
+          "ratio": 83.0
+        },
+        {
+          "month": 28,
+          "ratio": 82.25
+        },
+        {
+          "month": 29,
+          "ratio": 81.5
+        },
+        {
+          "month": 30,
+          "ratio": 80.75
+        },
+        {
+          "month": 31,
+          "ratio": 80.0
+        },
+        {
+          "month": 32,
+          "ratio": 79.25
+        },
+        {
+          "month": 33,
+          "ratio": 78.5
+        },
+        {
+          "month": 34,
+          "ratio": 77.75
+        },
+        {
+          "month": 35,
+          "ratio": 77.0
+        },
+        {
+          "month": 36,
+          "ratio": 70.0
+        }
+      ],
+      "knock_in_ratio": 70.0,
+      "dividend_ratio": 70.0,
+      "knock_out_start_month": 3,
+      "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
+      "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
+      "status": "已敲出",
+      "current_price": 7945.9644,
+      "initial_price": 7334.21,
+      "knock_in_price": 5133.95,
+      "next_observation_date": null,
+      "days_to_next": null,
+      "observation_history": [
+        {
+          "period": 3,
+          "date": "2026-03-02",
+          "price": 7968.383,
+          "status": "已敲出"
+        },
+        {
+          "period": 4,
+          "date": "2026-03-30",
+          "price": 7968.383,
+          "status": "已敲出"
+        },
+        {
+          "period": 5,
+          "date": "2026-04-28",
+          "price": 7968.383,
+          "status": "已敲出"
+        },
+        {
+          "period": 6,
+          "date": "2026-05-28",
+          "price": 7968.383,
+          "status": "已敲出"
+        },
+        {
+          "period": 7,
+          "date": "2026-06-29",
+          "price": 7968.383,
+          "status": "已敲出"
+        },
+        {
+          "period": 8,
+          "date": "2026-07-28",
+          "price": 7968.383,
+          "status": "已敲出"
+        },
+        {
+          "period": 9,
+          "date": "2026-08-28",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 10,
+          "date": "2026-09-28",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 11,
+          "date": "2026-10-28",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 12,
+          "date": "2026-11-30",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 13,
+          "date": "2026-12-28",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 14,
+          "date": "2027-01-28",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 15,
+          "date": "2027-03-01",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 16,
+          "date": "2027-03-29",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 17,
+          "date": "2027-04-28",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 18,
+          "date": "2027-05-28",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 19,
+          "date": "2027-06-28",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 20,
+          "date": "2027-07-28",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 21,
+          "date": "2027-08-30",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 22,
+          "date": "2027-09-28",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 23,
+          "date": "2027-10-28",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 24,
+          "date": "2027-11-29",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 25,
+          "date": "2027-12-28",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 26,
+          "date": "2028-02-01",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 27,
+          "date": "2028-02-28",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 28,
+          "date": "2028-03-28",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 29,
+          "date": "2028-04-28",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 30,
+          "date": "2028-05-31",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 31,
+          "date": "2028-06-28",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 32,
+          "date": "2028-07-28",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 33,
+          "date": "2028-08-28",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 34,
+          "date": "2028-09-28",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 35,
+          "date": "2028-10-30",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 36,
+          "date": "2028-11-28",
+          "price": null,
+          "status": "待观察"
+        }
+      ]
+    },
+    {
+      "id": "SBJA70",
+      "name": "华夏资本龙腾慧盈3号集合资产管理计划",
+      "short_name": "华夏资本龙腾慧盈3号",
+      "code": "SBJA70",
+      "underlying": "中证1000指数（代码:000852.SH）",
+      "underlying_code": "",
+      "type": "欧式",
+      "term_months": 36,
+      "initial_observation_date": "2025-11-05",
+      "final_observation_date": "2028-11-06",
+      "establishment_date": "2025-10-30",
+      "knock_out_ratio": 101.0,
+      "knock_out_schedule": [
+        {
+          "month": 3,
+          "ratio": 101.0
+        },
+        {
+          "month": 4,
+          "ratio": 100.5
+        },
+        {
+          "month": 5,
+          "ratio": 100.0
+        },
+        {
+          "month": 6,
+          "ratio": 99.5
+        },
+        {
+          "month": 7,
+          "ratio": 99.0
+        },
+        {
+          "month": 8,
+          "ratio": 98.5
+        },
+        {
+          "month": 9,
+          "ratio": 98.0
+        },
+        {
+          "month": 10,
+          "ratio": 97.5
+        },
+        {
+          "month": 11,
+          "ratio": 97.0
+        },
+        {
+          "month": 12,
+          "ratio": 96.5
+        },
+        {
+          "month": 13,
+          "ratio": 96.0
+        },
+        {
+          "month": 14,
+          "ratio": 95.5
+        },
+        {
+          "month": 15,
+          "ratio": 95.0
+        },
+        {
+          "month": 16,
+          "ratio": 94.5
+        },
+        {
+          "month": 17,
+          "ratio": 94.0
+        },
+        {
+          "month": 18,
+          "ratio": 93.5
+        },
+        {
+          "month": 19,
+          "ratio": 93.0
+        },
+        {
+          "month": 20,
+          "ratio": 92.5
+        },
+        {
+          "month": 21,
+          "ratio": 92.0
+        },
+        {
+          "month": 22,
+          "ratio": 91.5
+        },
+        {
+          "month": 23,
+          "ratio": 91.0
+        },
+        {
+          "month": 24,
+          "ratio": 90.5
+        },
+        {
+          "month": 25,
+          "ratio": 90.0
+        },
+        {
+          "month": 26,
+          "ratio": 89.5
+        },
+        {
+          "month": 27,
+          "ratio": 89.0
+        },
+        {
+          "month": 28,
+          "ratio": 88.5
+        },
+        {
+          "month": 29,
+          "ratio": 88.0
+        },
+        {
+          "month": 30,
+          "ratio": 87.5
+        },
+        {
+          "month": 31,
+          "ratio": 87.0
+        },
+        {
+          "month": 32,
+          "ratio": 86.5
+        },
+        {
+          "month": 33,
+          "ratio": 86.0
+        },
+        {
+          "month": 34,
+          "ratio": 85.5
+        },
+        {
+          "month": 35,
+          "ratio": 85.0
+        },
+        {
+          "month": 36,
+          "ratio": 70.0
+        }
+      ],
+      "knock_in_ratio": 70.0,
+      "dividend_ratio": null,
+      "knock_out_start_month": 3,
+      "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
+      "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
+      "status": "已敲出",
+      "current_price": 7945.9644,
+      "initial_price": 7464.86,
+      "knock_in_price": 5225.4,
+      "next_observation_date": null,
+      "days_to_next": null,
+      "observation_history": [
+        {
+          "period": 3,
+          "date": "2026-02-05",
+          "price": 7968.383,
+          "status": "已敲出"
+        },
+        {
+          "period": 4,
+          "date": "2026-03-05",
+          "price": 7968.383,
+          "status": "已敲出"
+        },
+        {
+          "period": 5,
+          "date": "2026-04-07",
+          "price": 7968.383,
+          "status": "已敲出"
+        },
+        {
+          "period": 6,
+          "date": "2026-05-06",
+          "price": 7968.383,
+          "status": "已敲出"
+        },
+        {
+          "period": 7,
+          "date": "2026-06-05",
+          "price": 7968.383,
+          "status": "已敲出"
+        },
+        {
+          "period": 8,
+          "date": "2026-07-06",
+          "price": 7968.383,
+          "status": "已敲出"
+        },
+        {
+          "period": 9,
+          "date": "2026-08-05",
+          "price": 7968.383,
+          "status": "已敲出"
+        },
+        {
+          "period": 10,
+          "date": "2026-09-07",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 11,
+          "date": "2026-10-08",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 12,
+          "date": "2026-11-05",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 13,
+          "date": "2026-12-07",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 14,
+          "date": "2027-01-05",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 15,
+          "date": "2027-02-15",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 16,
+          "date": "2027-03-05",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 17,
+          "date": "2027-04-07",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 18,
+          "date": "2027-05-06",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 19,
+          "date": "2027-06-07",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 20,
+          "date": "2027-07-05",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 21,
+          "date": "2027-08-05",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 22,
+          "date": "2027-09-06",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 23,
+          "date": "2027-10-08",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 24,
+          "date": "2027-11-05",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 25,
+          "date": "2027-12-06",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 26,
+          "date": "2028-01-05",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 27,
+          "date": "2028-02-07",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 28,
+          "date": "2028-03-06",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 29,
+          "date": "2028-04-07",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 30,
+          "date": "2028-05-08",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 31,
+          "date": "2028-06-05",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 32,
+          "date": "2028-07-05",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 33,
+          "date": "2028-08-07",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 34,
+          "date": "2028-09-05",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 35,
+          "date": "2028-10-09",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 36,
+          "date": "2028-11-06",
+          "price": null,
+          "status": "待观察"
+        }
+      ]
+    },
+    {
+      "id": "SBGS61",
+      "name": "华夏资本龙腾慧盈2号集合资产管理计划",
+      "short_name": "华夏资本龙腾慧盈2号",
+      "code": "SBGS61",
+      "underlying": "中证1000指数（代码:000852.SH）",
+      "underlying_code": "",
+      "type": "欧式",
+      "term_months": 36,
+      "initial_observation_date": "2025-10-17",
+      "final_observation_date": "2028-10-17",
+      "establishment_date": "2025-10-13",
+      "knock_out_ratio": 101.0,
+      "knock_out_schedule": [
+        {
+          "month": 3,
+          "ratio": 101.0
+        },
+        {
+          "month": 4,
+          "ratio": 100.5
+        },
+        {
+          "month": 5,
+          "ratio": 100.0
+        },
+        {
+          "month": 6,
+          "ratio": 99.5
+        },
+        {
+          "month": 7,
+          "ratio": 99.0
+        },
+        {
+          "month": 8,
+          "ratio": 98.5
+        },
+        {
+          "month": 9,
+          "ratio": 98.0
+        },
+        {
+          "month": 10,
+          "ratio": 97.5
+        },
+        {
+          "month": 11,
+          "ratio": 97.0
+        },
+        {
+          "month": 12,
+          "ratio": 96.5
+        },
+        {
+          "month": 13,
+          "ratio": 96.0
+        },
+        {
+          "month": 14,
+          "ratio": 95.5
+        },
+        {
+          "month": 15,
+          "ratio": 95.0
+        },
+        {
+          "month": 16,
+          "ratio": 94.5
+        },
+        {
+          "month": 17,
+          "ratio": 94.0
+        },
+        {
+          "month": 18,
+          "ratio": 93.5
+        },
+        {
+          "month": 19,
+          "ratio": 93.0
+        },
+        {
+          "month": 20,
+          "ratio": 92.5
+        },
+        {
+          "month": 21,
+          "ratio": 92.0
+        },
+        {
+          "month": 22,
+          "ratio": 91.5
+        },
+        {
+          "month": 23,
+          "ratio": 91.0
+        },
+        {
+          "month": 24,
+          "ratio": 90.5
+        },
+        {
+          "month": 25,
+          "ratio": 90.0
+        },
+        {
+          "month": 26,
+          "ratio": 89.5
+        },
+        {
+          "month": 27,
+          "ratio": 89.0
+        },
+        {
+          "month": 28,
+          "ratio": 88.5
+        },
+        {
+          "month": 29,
+          "ratio": 88.0
+        },
+        {
+          "month": 30,
+          "ratio": 87.5
+        },
+        {
+          "month": 31,
+          "ratio": 87.0
+        },
+        {
+          "month": 32,
+          "ratio": 86.5
+        },
+        {
+          "month": 33,
+          "ratio": 86.0
+        },
+        {
+          "month": 34,
+          "ratio": 85.5
+        },
+        {
+          "month": 35,
+          "ratio": 85.0
+        },
+        {
+          "month": 36,
+          "ratio": 70.0
+        }
+      ],
+      "knock_in_ratio": 70.0,
+      "dividend_ratio": null,
+      "knock_out_start_month": 3,
+      "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
+      "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
+      "status": "已敲出",
+      "current_price": 7945.9644,
+      "initial_price": 7185.48,
+      "knock_in_price": 5029.84,
+      "next_observation_date": null,
+      "days_to_next": null,
+      "observation_history": [
+        {
+          "period": 3,
+          "date": "2026-01-19",
+          "price": 7968.383,
+          "status": "已敲出"
+        },
+        {
+          "period": 4,
+          "date": "2026-02-23",
+          "price": 7968.383,
+          "status": "已敲出"
+        },
+        {
+          "period": 5,
+          "date": "2026-03-17",
+          "price": 7968.383,
+          "status": "已敲出"
+        },
+        {
+          "period": 6,
+          "date": "2026-04-17",
+          "price": 7968.383,
+          "status": "已敲出"
+        },
+        {
+          "period": 7,
+          "date": "2026-05-18",
+          "price": 7968.383,
+          "status": "已敲出"
+        },
+        {
+          "period": 8,
+          "date": "2026-06-17",
+          "price": 7968.383,
+          "status": "已敲出"
+        },
+        {
+          "period": 9,
+          "date": "2026-07-17",
+          "price": 7968.383,
+          "status": "已敲出"
+        },
+        {
+          "period": 10,
+          "date": "2026-08-17",
+          "price": 7968.383,
+          "status": "已敲出"
+        },
+        {
+          "period": 11,
+          "date": "2026-09-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 12,
+          "date": "2026-10-19",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 13,
+          "date": "2026-11-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 14,
+          "date": "2026-12-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 15,
+          "date": "2027-01-18",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 16,
+          "date": "2027-02-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 17,
+          "date": "2027-03-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 18,
+          "date": "2027-04-19",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 19,
+          "date": "2027-05-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 20,
+          "date": "2027-06-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 21,
+          "date": "2027-07-19",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 22,
+          "date": "2027-08-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 23,
+          "date": "2027-09-20",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 24,
+          "date": "2027-10-18",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 25,
+          "date": "2027-11-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 26,
+          "date": "2027-12-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 27,
+          "date": "2028-01-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 28,
+          "date": "2028-02-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 29,
+          "date": "2028-03-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 30,
+          "date": "2028-04-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 31,
+          "date": "2028-05-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 32,
+          "date": "2028-06-19",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 33,
+          "date": "2028-07-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 34,
+          "date": "2028-08-17",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 35,
+          "date": "2028-09-18",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 36,
+          "date": "2028-10-17",
+          "price": null,
+          "status": "待观察"
+        }
+      ]
+    },
+    {
+      "id": "SBFY83",
+      "name": "华夏资本龙腾慧盈1号集合资产管理计划",
+      "short_name": "华夏资本龙腾慧盈1号",
+      "code": "SBFY83",
+      "underlying": "中证1000指数（代码:000852.SH）",
+      "underlying_code": "",
+      "type": "欧式",
+      "term_months": 36,
+      "initial_observation_date": "2025-09-29",
+      "final_observation_date": "2028-09-29",
+      "establishment_date": "2025-09-22",
+      "knock_out_ratio": 101.0,
+      "knock_out_schedule": [
+        {
+          "month": 3,
+          "ratio": 101.0
+        },
+        {
+          "month": 4,
+          "ratio": 100.5
+        },
+        {
+          "month": 5,
+          "ratio": 100.0
+        },
+        {
+          "month": 6,
+          "ratio": 99.5
+        },
+        {
+          "month": 7,
+          "ratio": 99.0
+        },
+        {
+          "month": 8,
+          "ratio": 98.5
+        },
+        {
+          "month": 9,
+          "ratio": 98.0
+        },
+        {
+          "month": 10,
+          "ratio": 97.5
+        },
+        {
+          "month": 11,
+          "ratio": 97.0
+        },
+        {
+          "month": 12,
+          "ratio": 96.5
+        },
+        {
+          "month": 13,
+          "ratio": 96.0
+        },
+        {
+          "month": 14,
+          "ratio": 95.5
+        },
+        {
+          "month": 15,
+          "ratio": 95.0
+        },
+        {
+          "month": 16,
+          "ratio": 94.5
+        },
+        {
+          "month": 17,
+          "ratio": 94.0
+        },
+        {
+          "month": 18,
+          "ratio": 93.5
+        },
+        {
+          "month": 19,
+          "ratio": 93.0
+        },
+        {
+          "month": 20,
+          "ratio": 92.5
+        },
+        {
+          "month": 21,
+          "ratio": 92.0
+        },
+        {
+          "month": 22,
+          "ratio": 91.5
+        },
+        {
+          "month": 23,
+          "ratio": 91.0
+        },
+        {
+          "month": 24,
+          "ratio": 90.5
+        },
+        {
+          "month": 25,
+          "ratio": 90.0
+        },
+        {
+          "month": 26,
+          "ratio": 89.5
+        },
+        {
+          "month": 27,
+          "ratio": 89.0
+        },
+        {
+          "month": 28,
+          "ratio": 88.5
+        },
+        {
+          "month": 29,
+          "ratio": 88.0
+        },
+        {
+          "month": 30,
+          "ratio": 87.5
+        },
+        {
+          "month": 31,
+          "ratio": 87.0
+        },
+        {
+          "month": 32,
+          "ratio": 86.5
+        },
+        {
+          "month": 33,
+          "ratio": 86.0
+        },
+        {
+          "month": 34,
+          "ratio": 85.5
+        },
+        {
+          "month": 35,
+          "ratio": 85.0
+        },
+        {
+          "month": 36,
+          "ratio": 70.0
+        }
+      ],
+      "knock_in_ratio": 70.0,
+      "dividend_ratio": null,
+      "knock_out_start_month": 3,
+      "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
+      "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
+      "status": "已敲出",
+      "current_price": 7945.9644,
+      "initial_price": 7497.83,
+      "knock_in_price": 5248.48,
+      "next_observation_date": null,
+      "days_to_next": null,
+      "observation_history": [
+        {
+          "period": 3,
+          "date": "2025-12-29",
+          "price": 7968.383,
+          "status": "已敲出"
+        },
+        {
+          "period": 4,
+          "date": "2026-01-29",
+          "price": 7968.383,
+          "status": "已敲出"
+        },
+        {
+          "period": 5,
+          "date": "2026-03-02",
+          "price": 7968.383,
+          "status": "已敲出"
+        },
+        {
+          "period": 6,
+          "date": "2026-03-30",
+          "price": 7968.383,
+          "status": "已敲出"
+        },
+        {
+          "period": 7,
+          "date": "2026-04-29",
+          "price": 7968.383,
+          "status": "已敲出"
+        },
+        {
+          "period": 8,
+          "date": "2026-05-29",
+          "price": 7968.383,
+          "status": "已敲出"
+        },
+        {
+          "period": 9,
+          "date": "2026-06-29",
+          "price": 7968.383,
+          "status": "已敲出"
+        },
+        {
+          "period": 10,
+          "date": "2026-07-29",
+          "price": 7968.383,
+          "status": "已敲出"
+        },
+        {
+          "period": 11,
+          "date": "2026-08-31",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 12,
+          "date": "2026-09-29",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 13,
+          "date": "2026-10-29",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 14,
+          "date": "2026-11-30",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 15,
+          "date": "2026-12-29",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 16,
+          "date": "2027-01-29",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 17,
+          "date": "2027-03-01",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 18,
+          "date": "2027-03-29",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 19,
+          "date": "2027-04-29",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 20,
+          "date": "2027-05-31",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 21,
+          "date": "2027-06-29",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 22,
+          "date": "2027-07-29",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 23,
+          "date": "2027-08-30",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 24,
+          "date": "2027-09-29",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 25,
+          "date": "2027-10-29",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 26,
+          "date": "2027-11-29",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 27,
+          "date": "2027-12-29",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 28,
+          "date": "2028-02-01",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 29,
+          "date": "2028-02-29",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 30,
+          "date": "2028-03-29",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 31,
+          "date": "2028-05-08",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 32,
+          "date": "2028-05-31",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 33,
+          "date": "2028-06-29",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 34,
+          "date": "2028-07-31",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 35,
+          "date": "2028-08-29",
+          "price": null,
+          "status": "待观察"
+        },
+        {
+          "period": 36,
+          "date": "2028-09-29",
+          "price": null,
+          "status": "待观察"
+        }
+      ]
+    }
+  ],
+  "config": {
+    "password": "huaxia2026",
+    "update_time": "16:00",
+    "timezone": "Asia/Shanghai",
+    "display_fields": {
+      "list_view": [
+        "name",
+        "code",
+        "underlying",
+        "current_price",
+        "status",
+        "type",
+        "term_months",
+        "knock_out_ratio",
+        "knock_in_ratio",
+        "days_to_next"
+      ],
+      "detail_view": "all"
+    }
+  }
+}

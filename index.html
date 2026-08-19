@@ -529,7 +529,7 @@
                         <div class="product-info">
                             <div class="info-item">
                                 <span class="info-label">挂钩标的</span>
-                                <span class="info-value">${product.underlying}</span>
+                                <span class="info-value">${product.underlying?.replace('（代码:000852.SH）', '') || '-'}</span>
                             </div>
                             <div class="info-item">
                                 <span class="info-label">当前价格</span>
@@ -637,7 +637,7 @@
                     </div>
                     <div class="detail-row">
                         <span class="detail-label">挂钩标的</span>
-                        <span class="detail-value">${product.underlying} (${product.underlying_code})</span>
+                        <span class="detail-value">${product.underlying?.replace('（代码:000852.SH）', '') || '-'}</span>
                     </div>
                     <div class="detail-row">
                         <span class="detail-label">当前价格</span>
