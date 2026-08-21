@@ -1,9 +1,9 @@
 {
-  "last_update": "2026-08-21 12:32:21",
+  "last_update": "2026-08-19 19:23:56",
   "products": [
     {
       "id": "SEA697",
-      "name": "华夏资本龙腾慧盈22号集合资产管理计划",
+      "name": "龙腾慧盈22号集合资产管理计划",
       "short_name": "龙腾慧盈22号",
       "code": "SEA697",
       "underlying": "中证1000指数（代码:000852.SH）",
@@ -154,6 +154,16 @@
       ],
       "knock_in_ratio": 66.0,
       "dividend_ratio": null,
+      "knock_out_start_month": 3,
+      "knock_out_condition": "若观察期内第i个月（i=3,4,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
+      "knock_in_condition": "若观察期内所有的第i个月（i=3,4,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
+      "status": "存续中",
+      "current_price": 7517.7684,
+      "initial_price": 10000.0,
+      "knock_in_price": 6600.0,
+      "next_observation_date": null,
+      "days_to_next": 0,
+      "observation_history": [],
       "yield_type": "knock_out",
       "knock_out_yield": [
         {
@@ -167,21 +177,11 @@
           "bi": 5.0
         }
       ],
-      "monthly_dividend": null,
-      "knock_out_start_month": 3,
-      "knock_out_condition": "若观察期内第i个月（i=3,4,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
-      "knock_in_condition": "若观察期内所有的第i个月（i=3,4,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
-      "status": "存续中",
-      "current_price": 7583.2599,
-      "initial_price": 10000.0,
-      "knock_in_price": 6600.0,
-      "next_observation_date": null,
-      "days_to_next": 0,
-      "observation_history": []
+      "monthly_dividend": null
     },
     {
       "id": "SCM776",
-      "name": "华夏资本龙腾慧盈21号集合资产管理计划",
+      "name": "龙腾慧盈21号集合资产管理计划",
       "short_name": "龙腾慧盈21号",
       "code": "SCM776",
       "underlying": "中证1000指数（代码:000852.SH）",
@@ -332,29 +332,15 @@
       ],
       "knock_in_ratio": 66.0,
       "dividend_ratio": null,
-      "yield_type": "knock_out",
-      "knock_out_yield": [
-        {
-          "start_month": 3,
-          "end_month": 18,
-          "bi": 16.1
-        },
-        {
-          "start_month": 19,
-          "end_month": 36,
-          "bi": 5.0
-        }
-      ],
-      "monthly_dividend": null,
       "knock_out_start_month": 3,
       "knock_out_condition": "a) 若观察期内第i个月（i=3,4,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,4,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "存续中",
-      "current_price": 7583.2599,
+      "current_price": 7517.7684,
       "initial_price": 7679.53,
       "knock_in_price": 5068.49,
       "next_observation_date": "2026-11-09",
-      "days_to_next": 80,
+      "days_to_next": 82,
       "observation_history": [
         {
           "period": 3,
@@ -560,11 +546,25 @@
           "price": null,
           "status": "待观察"
         }
-      ]
+      ],
+      "yield_type": "knock_out",
+      "knock_out_yield": [
+        {
+          "start_month": 3,
+          "end_month": 18,
+          "bi": 16.1
+        },
+        {
+          "start_month": 19,
+          "end_month": 36,
+          "bi": 5.0
+        }
+      ],
+      "monthly_dividend": null
     },
     {
       "id": "SB8918",
-      "name": "华夏资本龙腾慧盈20号集合资产管理计划",
+      "name": "龙腾慧盈20号集合资产管理计划",
       "short_name": "龙腾慧盈20号",
       "code": "SB8918",
       "underlying": "中证1000指数（代码:000852.SH）",
@@ -715,29 +715,15 @@
       ],
       "knock_in_ratio": 66.0,
       "dividend_ratio": null,
-      "yield_type": "knock_out",
-      "knock_out_yield": [
-        {
-          "start_month": 3,
-          "end_month": 18,
-          "bi": 15.4
-        },
-        {
-          "start_month": 19,
-          "end_month": 36,
-          "bi": 5.0
-        }
-      ],
-      "monthly_dividend": null,
       "knock_out_start_month": 3,
       "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "存续中",
-      "current_price": 7583.2599,
+      "current_price": 7517.7684,
       "initial_price": 7925.12,
       "knock_in_price": 5230.58,
       "next_observation_date": "2026-10-14",
-      "days_to_next": 54,
+      "days_to_next": 56,
       "observation_history": [
         {
           "period": 3,
@@ -943,11 +929,25 @@
           "price": null,
           "status": "待观察"
         }
-      ]
+      ],
+      "yield_type": "knock_out",
+      "knock_out_yield": [
+        {
+          "start_month": 3,
+          "end_month": 18,
+          "bi": 15.4
+        },
+        {
+          "start_month": 19,
+          "end_month": 36,
+          "bi": 5.0
+        }
+      ],
+      "monthly_dividend": null
     },
     {
       "id": "SAUE46",
-      "name": "华夏资本龙腾慧盈19号集合资产管理计划",
+      "name": "龙腾慧盈19号集合资产管理计划",
       "short_name": "龙腾慧盈19号",
       "code": "SAUE46",
       "underlying": "中证1000指数（代码:000852.SH）",
@@ -1098,29 +1098,15 @@
       ],
       "knock_in_ratio": 66.0,
       "dividend_ratio": null,
-      "yield_type": "knock_out",
-      "knock_out_yield": [
-        {
-          "start_month": 3,
-          "end_month": 18,
-          "bi": 14.0
-        },
-        {
-          "start_month": 19,
-          "end_month": 36,
-          "bi": 5.0
-        }
-      ],
-      "monthly_dividend": null,
       "knock_out_start_month": 3,
       "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "存续中",
-      "current_price": 7583.2599,
+      "current_price": 7517.7684,
       "initial_price": 8825.92,
       "knock_in_price": 5825.11,
       "next_observation_date": "2026-09-28",
-      "days_to_next": 38,
+      "days_to_next": 40,
       "observation_history": [
         {
           "period": 3,
@@ -1326,11 +1312,25 @@
           "price": null,
           "status": "待观察"
         }
-      ]
+      ],
+      "yield_type": "knock_out",
+      "knock_out_yield": [
+        {
+          "start_month": 3,
+          "end_month": 18,
+          "bi": 14.0
+        },
+        {
+          "start_month": 19,
+          "end_month": 36,
+          "bi": 5.0
+        }
+      ],
+      "monthly_dividend": null
     },
     {
       "id": "SATG41",
-      "name": "华夏资本龙腾慧盈105号集合资产管理计划",
+      "name": "龙腾慧盈105号集合资产管理计划",
       "short_name": "龙腾慧盈105号",
       "code": "SATG41",
       "underlying": "中证1000指数（代码:000852.SH）",
@@ -1481,29 +1481,15 @@
       ],
       "knock_in_ratio": 65.0,
       "dividend_ratio": null,
-      "yield_type": "knock_out",
-      "knock_out_yield": [
-        {
-          "start_month": 3,
-          "end_month": 12,
-          "bi": 20.8
-        },
-        {
-          "start_month": 13,
-          "end_month": 36,
-          "bi": 5.0
-        }
-      ],
-      "monthly_dividend": null,
       "knock_out_start_month": 3,
       "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "存续中",
-      "current_price": 7583.2599,
+      "current_price": 7517.7684,
       "initial_price": 8825.92,
       "knock_in_price": 5736.85,
       "next_observation_date": "2026-09-28",
-      "days_to_next": 38,
+      "days_to_next": 40,
       "observation_history": [
         {
           "period": 3,
@@ -1709,11 +1695,25 @@
           "price": null,
           "status": "待观察"
         }
-      ]
+      ],
+      "yield_type": "knock_out",
+      "knock_out_yield": [
+        {
+          "start_month": 3,
+          "end_month": 12,
+          "bi": 20.8
+        },
+        {
+          "start_month": 13,
+          "end_month": 36,
+          "bi": 5.0
+        }
+      ],
+      "monthly_dividend": null
     },
     {
       "id": "SAKZ34",
-      "name": "华夏资本龙腾慧盈18号集合资产管理计划",
+      "name": "龙腾慧盈18号集合资产管理计划",
       "short_name": "龙腾慧盈18号",
       "code": "SAKZ34",
       "underlying": "中证1000指数（代码:000852.SH）",
@@ -1864,29 +1864,15 @@
       ],
       "knock_in_ratio": 66.0,
       "dividend_ratio": null,
-      "yield_type": "knock_out",
-      "knock_out_yield": [
-        {
-          "start_month": 3,
-          "end_month": 18,
-          "bi": 19.0
-        },
-        {
-          "start_month": 19,
-          "end_month": 36,
-          "bi": 5.0
-        }
-      ],
-      "monthly_dividend": null,
       "knock_out_start_month": 3,
       "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "存续中",
-      "current_price": 7583.2599,
+      "current_price": 7517.7684,
       "initial_price": 8704.47,
       "knock_in_price": 5744.95,
       "next_observation_date": "2026-09-17",
-      "days_to_next": 27,
+      "days_to_next": 29,
       "observation_history": [
         {
           "period": 3,
@@ -2092,11 +2078,25 @@
           "price": null,
           "status": "待观察"
         }
-      ]
+      ],
+      "yield_type": "knock_out",
+      "knock_out_yield": [
+        {
+          "start_month": 3,
+          "end_month": 18,
+          "bi": 19.0
+        },
+        {
+          "start_month": 19,
+          "end_month": 36,
+          "bi": 5.0
+        }
+      ],
+      "monthly_dividend": null
     },
     {
       "id": "SAES26",
-      "name": "华夏资本龙腾慧盈17号集合资产管理计划",
+      "name": "龙腾慧盈17号集合资产管理计划",
       "short_name": "龙腾慧盈17号",
       "code": "SAES26",
       "underlying": "中证1000指数（代码:000852.SH）",
@@ -2247,29 +2247,15 @@
       ],
       "knock_in_ratio": 66.0,
       "dividend_ratio": null,
-      "yield_type": "knock_out",
-      "knock_out_yield": [
-        {
-          "start_month": 3,
-          "end_month": 18,
-          "bi": 19.9
-        },
-        {
-          "start_month": 19,
-          "end_month": 36,
-          "bi": 5.0
-        }
-      ],
-      "monthly_dividend": null,
       "knock_out_start_month": 3,
       "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "存续中",
-      "current_price": 7583.2599,
+      "current_price": 7517.7684,
       "initial_price": 8546.51,
       "knock_in_price": 5640.7,
       "next_observation_date": "2026-08-27",
-      "days_to_next": 6,
+      "days_to_next": 8,
       "observation_history": [
         {
           "period": 3,
@@ -2475,11 +2461,25 @@
           "price": null,
           "status": "待观察"
         }
-      ]
+      ],
+      "yield_type": "knock_out",
+      "knock_out_yield": [
+        {
+          "start_month": 3,
+          "end_month": 18,
+          "bi": 19.9
+        },
+        {
+          "start_month": 19,
+          "end_month": 36,
+          "bi": 5.0
+        }
+      ],
+      "monthly_dividend": null
     },
     {
       "id": "SBVF41",
-      "name": "华夏资本龙腾慧盈15号集合资产管理计划",
+      "name": "龙腾慧盈15号集合资产管理计划",
       "short_name": "龙腾慧盈15号",
       "code": "SBVF41",
       "underlying": "中证1000指数（代码:000852.SH）",
@@ -2630,23 +2630,23 @@
       ],
       "knock_in_ratio": 70.0,
       "dividend_ratio": 70.0,
-      "yield_type": "monthly_dividend",
-      "knock_out_yield": [],
-      "monthly_dividend": 0.88,
       "knock_out_start_month": 3,
       "knock_out_condition": "若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "存续中",
-      "current_price": 7583.2599,
+      "current_price": 7517.7684,
       "initial_price": 10000.0,
       "knock_in_price": 7000.0,
       "next_observation_date": null,
       "days_to_next": 0,
-      "observation_history": []
+      "observation_history": [],
+      "yield_type": "monthly_dividend",
+      "knock_out_yield": [],
+      "monthly_dividend": 0.88
     },
     {
       "id": "SBVF42",
-      "name": "华夏资本龙腾慧盈16号集合资产管理计划",
+      "name": "龙腾慧盈16号集合资产管理计划",
       "short_name": "龙腾慧盈16号",
       "code": "SBVF42",
       "underlying": "中证1000指数（代码:000852.SH）",
@@ -2797,34 +2797,20 @@
       ],
       "knock_in_ratio": 66.0,
       "dividend_ratio": null,
-      "yield_type": "knock_out",
-      "knock_out_yield": [
-        {
-          "start_month": 3,
-          "end_month": 18,
-          "bi": 18.3
-        },
-        {
-          "start_month": 19,
-          "end_month": 36,
-          "bi": 5.0
-        }
-      ],
-      "monthly_dividend": null,
       "knock_out_start_month": 3,
       "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "存续中",
-      "current_price": 7583.2599,
+      "current_price": 7517.7684,
       "initial_price": 8821.89,
       "knock_in_price": 5822.45,
       "next_observation_date": "2026-09-14",
-      "days_to_next": 24,
+      "days_to_next": 26,
       "observation_history": [
         {
           "period": 3,
           "date": "2026-08-12",
-          "price": 7793.72,
+          "price": 7793.7165,
           "status": "未敲出"
         },
         {
@@ -3025,11 +3011,25 @@
           "price": null,
           "status": "待观察"
         }
-      ]
+      ],
+      "yield_type": "knock_out",
+      "knock_out_yield": [
+        {
+          "start_month": 3,
+          "end_month": 18,
+          "bi": 18.3
+        },
+        {
+          "start_month": 19,
+          "end_month": 36,
+          "bi": 5.0
+        }
+      ],
+      "monthly_dividend": null
     },
     {
       "id": "SBUD46",
-      "name": "华夏资本龙腾慧盈13号集合资产管理计划",
+      "name": "龙腾慧盈13号集合资产管理计划",
       "short_name": "龙腾慧盈13号",
       "code": "SBUD46",
       "underlying": "中证1000指数（代码:000852.SH）",
@@ -3180,40 +3180,26 @@
       ],
       "knock_in_ratio": 66.0,
       "dividend_ratio": null,
-      "yield_type": "knock_out",
-      "knock_out_yield": [
-        {
-          "start_month": 3,
-          "end_month": 24,
-          "bi": 15.0
-        },
-        {
-          "start_month": 25,
-          "end_month": 36,
-          "bi": 5.0
-        }
-      ],
-      "monthly_dividend": null,
       "knock_out_start_month": 3,
       "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "存续中",
-      "current_price": 7583.2599,
+      "current_price": 7517.7684,
       "initial_price": 8232.98,
       "knock_in_price": 5433.77,
       "next_observation_date": "2026-09-16",
-      "days_to_next": 26,
+      "days_to_next": 28,
       "observation_history": [
         {
           "period": 3,
           "date": "2026-07-16",
-          "price": 7631.76,
+          "price": 7631.7622,
           "status": "未敲出"
         },
         {
           "period": 4,
           "date": "2026-08-17",
-          "price": 7968.38,
+          "price": 7968.383,
           "status": "未敲出"
         },
         {
@@ -3408,11 +3394,25 @@
           "price": null,
           "status": "待观察"
         }
-      ]
+      ],
+      "yield_type": "knock_out",
+      "knock_out_yield": [
+        {
+          "start_month": 3,
+          "end_month": 24,
+          "bi": 15.0
+        },
+        {
+          "start_month": 25,
+          "end_month": 36,
+          "bi": 5.0
+        }
+      ],
+      "monthly_dividend": null
     },
     {
       "id": "SBSN00",
-      "name": "华夏资本龙腾慧盈101号集合资产管理计划",
+      "name": "龙腾慧盈101号集合资产管理计划",
       "short_name": "龙腾慧盈101号",
       "code": "SBSN00",
       "underlying": "中证1000指数（代码:000852.SH）",
@@ -3563,25 +3563,11 @@
       ],
       "knock_in_ratio": 66.0,
       "dividend_ratio": null,
-      "yield_type": "knock_out",
-      "knock_out_yield": [
-        {
-          "start_month": 3,
-          "end_month": 24,
-          "bi": 13.0
-        },
-        {
-          "start_month": 25,
-          "end_month": 36,
-          "bi": 5.0
-        }
-      ],
-      "monthly_dividend": null,
       "knock_out_start_month": 3,
       "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "已敲出",
-      "current_price": 7583.2599,
+      "current_price": 7517.7684,
       "initial_price": 7623.42,
       "knock_in_price": 5031.46,
       "next_observation_date": null,
@@ -3791,11 +3777,25 @@
           "price": null,
           "status": "待观察"
         }
-      ]
+      ],
+      "yield_type": "knock_out",
+      "knock_out_yield": [
+        {
+          "start_month": 3,
+          "end_month": 24,
+          "bi": 13.0
+        },
+        {
+          "start_month": 25,
+          "end_month": 36,
+          "bi": 5.0
+        }
+      ],
+      "monthly_dividend": null
     },
     {
       "id": "SBRJ02",
-      "name": "华夏资本龙腾慧盈12号集合资产管理计划",
+      "name": "龙腾慧盈12号集合资产管理计划",
       "short_name": "龙腾慧盈12号",
       "code": "SBRJ02",
       "underlying": "中证1000指数（代码:000852.SH）",
@@ -3946,30 +3946,11 @@
       ],
       "knock_in_ratio": 66.0,
       "dividend_ratio": null,
-      "yield_type": "knock_out",
-      "knock_out_yield": [
-        {
-          "start_month": 3,
-          "end_month": 12,
-          "bi": 16.0
-        },
-        {
-          "start_month": 13,
-          "end_month": 24,
-          "bi": 8.0
-        },
-        {
-          "start_month": 25,
-          "end_month": 36,
-          "bi": 5.0
-        }
-      ],
-      "monthly_dividend": null,
       "knock_out_start_month": 3,
       "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "已敲出",
-      "current_price": 7583.2599,
+      "current_price": 7517.7684,
       "initial_price": 8019.86,
       "knock_in_price": 5293.11,
       "next_observation_date": null,
@@ -3984,13 +3965,13 @@
         {
           "period": 4,
           "date": "2026-07-17",
-          "price": 7168.0,
+          "price": 7167.9959,
           "status": "未敲出"
         },
         {
           "period": 5,
           "date": "2026-08-17",
-          "price": 7968.38,
+          "price": 7968.383,
           "status": "未敲出"
         },
         {
@@ -4179,11 +4160,30 @@
           "price": null,
           "status": "待观察"
         }
-      ]
+      ],
+      "yield_type": "knock_out",
+      "knock_out_yield": [
+        {
+          "start_month": 3,
+          "end_month": 12,
+          "bi": 16.0
+        },
+        {
+          "start_month": 13,
+          "end_month": 24,
+          "bi": 8.0
+        },
+        {
+          "start_month": 25,
+          "end_month": 36,
+          "bi": 5.0
+        }
+      ],
+      "monthly_dividend": null
     },
     {
       "id": "SBQC59",
-      "name": "华夏资本龙腾慧盈11号集合资产管理计划",
+      "name": "龙腾慧盈11号集合资产管理计划",
       "short_name": "龙腾慧盈11号",
       "code": "SBQC59",
       "underlying": "中证1000指数（代码:000852.SH）",
@@ -4334,30 +4334,11 @@
       ],
       "knock_in_ratio": 65.0,
       "dividend_ratio": null,
-      "yield_type": "knock_out",
-      "knock_out_yield": [
-        {
-          "start_month": 3,
-          "end_month": 12,
-          "bi": 14.5
-        },
-        {
-          "start_month": 13,
-          "end_month": 24,
-          "bi": 8.0
-        },
-        {
-          "start_month": 25,
-          "end_month": 36,
-          "bi": 5.0
-        }
-      ],
-      "monthly_dividend": null,
       "knock_out_start_month": 3,
       "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "已敲出",
-      "current_price": 7583.2599,
+      "current_price": 7517.7684,
       "initial_price": 8314.83,
       "knock_in_price": 5404.64,
       "next_observation_date": null,
@@ -4372,19 +4353,19 @@
         {
           "period": 4,
           "date": "2026-06-12",
-          "price": 8202.8,
+          "price": 8202.7991,
           "status": "未敲出"
         },
         {
           "period": 5,
           "date": "2026-07-13",
-          "price": 7787.85,
+          "price": 7787.8529,
           "status": "未敲出"
         },
         {
           "period": 6,
           "date": "2026-08-12",
-          "price": 7793.72,
+          "price": 7793.7165,
           "status": "未敲出"
         },
         {
@@ -4567,11 +4548,30 @@
           "price": null,
           "status": "待观察"
         }
-      ]
+      ],
+      "yield_type": "knock_out",
+      "knock_out_yield": [
+        {
+          "start_month": 3,
+          "end_month": 12,
+          "bi": 14.5
+        },
+        {
+          "start_month": 13,
+          "end_month": 24,
+          "bi": 8.0
+        },
+        {
+          "start_month": 25,
+          "end_month": 36,
+          "bi": 5.0
+        }
+      ],
+      "monthly_dividend": null
     },
     {
       "id": "SBPX05",
-      "name": "华夏资本龙腾慧盈10号集合资产管理计划",
+      "name": "龙腾慧盈10号集合资产管理计划",
       "short_name": "龙腾慧盈10号",
       "code": "SBPX05",
       "underlying": "中证1000指数（代码:000852.SH）",
@@ -4722,30 +4722,11 @@
       ],
       "knock_in_ratio": 66.0,
       "dividend_ratio": null,
-      "yield_type": "knock_out",
-      "knock_out_yield": [
-        {
-          "start_month": 3,
-          "end_month": 12,
-          "bi": 16.0
-        },
-        {
-          "start_month": 13,
-          "end_month": 24,
-          "bi": 8.0
-        },
-        {
-          "start_month": 25,
-          "end_month": 36,
-          "bi": 5.0
-        }
-      ],
-      "monthly_dividend": null,
       "knock_out_start_month": 3,
       "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "已敲出",
-      "current_price": 7583.2599,
+      "current_price": 7517.7684,
       "initial_price": 8233.78,
       "knock_in_price": 5434.29,
       "next_observation_date": null,
@@ -4772,7 +4753,7 @@
         {
           "period": 6,
           "date": "2026-08-10",
-          "price": 7733.9,
+          "price": 7733.8995,
           "status": "未敲出"
         },
         {
@@ -4955,11 +4936,30 @@
           "price": null,
           "status": "待观察"
         }
-      ]
+      ],
+      "yield_type": "knock_out",
+      "knock_out_yield": [
+        {
+          "start_month": 3,
+          "end_month": 12,
+          "bi": 16.0
+        },
+        {
+          "start_month": 13,
+          "end_month": 24,
+          "bi": 8.0
+        },
+        {
+          "start_month": 25,
+          "end_month": 36,
+          "bi": 5.0
+        }
+      ],
+      "monthly_dividend": null
     },
     {
       "id": "SBNR10",
-      "name": "华夏资本龙腾慧盈9号集合资产管理计划",
+      "name": "龙腾慧盈9号集合资产管理计划",
       "short_name": "龙腾慧盈9号",
       "code": "SBNR10",
       "underlying": "中证1000指数（代码:000852.SH）",
@@ -5110,20 +5110,11 @@
       ],
       "knock_in_ratio": 70.0,
       "dividend_ratio": null,
-      "yield_type": "knock_out",
-      "knock_out_yield": [
-        {
-          "start_month": 3,
-          "end_month": 36,
-          "bi": 13.4
-        }
-      ],
-      "monthly_dividend": null,
       "knock_out_start_month": 3,
       "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "已敲出",
-      "current_price": 7583.2599,
+      "current_price": 7517.7684,
       "initial_price": 8365.43,
       "knock_in_price": 5855.8,
       "next_observation_date": null,
@@ -5132,7 +5123,7 @@
         {
           "period": 3,
           "date": "2026-04-27",
-          "price": 8338.73,
+          "price": 8338.7263,
           "status": "未敲出"
         },
         {
@@ -5150,7 +5141,7 @@
         {
           "period": 6,
           "date": "2026-07-27",
-          "price": 7228.78,
+          "price": 7228.7845,
           "status": "未敲出"
         },
         {
@@ -5333,11 +5324,20 @@
           "price": null,
           "status": "待观察"
         }
-      ]
+      ],
+      "yield_type": "knock_out",
+      "knock_out_yield": [
+        {
+          "start_month": 3,
+          "end_month": 36,
+          "bi": 13.4
+        }
+      ],
+      "monthly_dividend": null
     },
     {
       "id": "SBMW10",
-      "name": "华夏资本龙腾慧盈8号集合资产管理计划",
+      "name": "龙腾慧盈8号集合资产管理计划",
       "short_name": "龙腾慧盈8号",
       "code": "SBMW10",
       "underlying": "中证1000指数（代码:000852.SH）",
@@ -5488,14 +5488,11 @@
       ],
       "knock_in_ratio": 70.0,
       "dividend_ratio": 70.0,
-      "yield_type": "monthly_dividend",
-      "knock_out_yield": [],
-      "monthly_dividend": 0.925,
       "knock_out_start_month": 3,
       "knock_out_condition": "若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "已敲出",
-      "current_price": 7583.2599,
+      "current_price": 7517.7684,
       "initial_price": 8265.65,
       "knock_in_price": 5785.95,
       "next_observation_date": null,
@@ -5522,13 +5519,13 @@
         {
           "period": 6,
           "date": "2026-07-20",
-          "price": 6965.38,
+          "price": 6965.3757,
           "status": "未敲出"
         },
         {
           "period": 7,
           "date": "2026-08-19",
-          "price": 7517.77,
+          "price": 7517.7684,
           "status": "未敲出"
         },
         {
@@ -5705,11 +5702,14 @@
           "price": null,
           "status": "待观察"
         }
-      ]
+      ],
+      "yield_type": "monthly_dividend",
+      "knock_out_yield": [],
+      "monthly_dividend": 0.925
     },
     {
       "id": "SBLL41",
-      "name": "华夏资本龙腾慧盈7号集合资产管理计划",
+      "name": "龙腾慧盈7号集合资产管理计划",
       "short_name": "龙腾慧盈7号",
       "code": "SBLL41",
       "underlying": "中证1000指数（代码:000852.SH）",
@@ -5860,20 +5860,11 @@
       ],
       "knock_in_ratio": 70.0,
       "dividend_ratio": null,
-      "yield_type": "knock_out",
-      "knock_out_yield": [
-        {
-          "start_month": 3,
-          "end_month": 36,
-          "bi": 15.72
-        }
-      ],
-      "monthly_dividend": null,
       "knock_out_start_month": 3,
       "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "已敲出",
-      "current_price": 7583.2599,
+      "current_price": 7517.7684,
       "initial_price": 7408.35,
       "knock_in_price": 5185.85,
       "next_observation_date": null,
@@ -6083,11 +6074,20 @@
           "price": null,
           "status": "待观察"
         }
-      ]
+      ],
+      "yield_type": "knock_out",
+      "knock_out_yield": [
+        {
+          "start_month": 3,
+          "end_month": 36,
+          "bi": 15.72
+        }
+      ],
+      "monthly_dividend": null
     },
     {
       "id": "SBJW19",
-      "name": "华夏资本龙腾慧盈6号单一资产管理计划",
+      "name": "龙腾慧盈6号单一资产管理计划",
       "short_name": "龙腾慧盈6号",
       "code": "SBJW19",
       "underlying": "中证1000指数（代码:000852.SH）",
@@ -6238,23 +6238,23 @@
       ],
       "knock_in_ratio": 70.0,
       "dividend_ratio": 0.0,
-      "yield_type": "monthly_dividend",
-      "knock_out_yield": [],
-      "monthly_dividend": 1.0,
       "knock_out_start_month": 3,
       "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "存续中",
-      "current_price": 7583.2599,
+      "current_price": 7517.7684,
       "initial_price": 10000.0,
       "knock_in_price": 7000.0,
       "next_observation_date": null,
       "days_to_next": 0,
-      "observation_history": []
+      "observation_history": [],
+      "yield_type": "monthly_dividend",
+      "knock_out_yield": [],
+      "monthly_dividend": 1.0
     },
     {
       "id": "SBJG49",
-      "name": "华夏资本龙腾慧盈5号集合资产管理计划",
+      "name": "龙腾慧盈5号集合资产管理计划",
       "short_name": "龙腾慧盈5号",
       "code": "SBJG49",
       "underlying": "中证1000指数（代码:000852.SH）",
@@ -6405,14 +6405,11 @@
       ],
       "knock_in_ratio": 70.0,
       "dividend_ratio": 70.0,
-      "yield_type": "monthly_dividend",
-      "knock_out_yield": [],
-      "monthly_dividend": 1.0,
       "knock_out_start_month": 3,
       "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "已敲出",
-      "current_price": 7583.2599,
+      "current_price": 7517.7684,
       "initial_price": 7334.21,
       "knock_in_price": 5133.95,
       "next_observation_date": null,
@@ -6622,11 +6619,14 @@
           "price": null,
           "status": "待观察"
         }
-      ]
+      ],
+      "yield_type": "monthly_dividend",
+      "knock_out_yield": [],
+      "monthly_dividend": 1.0
     },
     {
       "id": "SBJA70",
-      "name": "华夏资本龙腾慧盈3号集合资产管理计划",
+      "name": "龙腾慧盈3号集合资产管理计划",
       "short_name": "龙腾慧盈3号",
       "code": "SBJA70",
       "underlying": "中证1000指数（代码:000852.SH）",
@@ -6777,20 +6777,11 @@
       ],
       "knock_in_ratio": 70.0,
       "dividend_ratio": null,
-      "yield_type": "knock_out",
-      "knock_out_yield": [
-        {
-          "start_month": 3,
-          "end_month": 36,
-          "bi": 14.7
-        }
-      ],
-      "monthly_dividend": null,
       "knock_out_start_month": 3,
       "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "已敲出",
-      "current_price": 7583.2599,
+      "current_price": 7517.7684,
       "initial_price": 7464.86,
       "knock_in_price": 5225.4,
       "next_observation_date": null,
@@ -7000,11 +6991,20 @@
           "price": null,
           "status": "待观察"
         }
-      ]
+      ],
+      "yield_type": "knock_out",
+      "knock_out_yield": [
+        {
+          "start_month": 3,
+          "end_month": 36,
+          "bi": 14.7
+        }
+      ],
+      "monthly_dividend": null
     },
     {
       "id": "SBGS61",
-      "name": "华夏资本龙腾慧盈2号集合资产管理计划",
+      "name": "龙腾慧盈2号集合资产管理计划",
       "short_name": "龙腾慧盈2号",
       "code": "SBGS61",
       "underlying": "中证1000指数（代码:000852.SH）",
@@ -7155,20 +7155,11 @@
       ],
       "knock_in_ratio": 70.0,
       "dividend_ratio": null,
-      "yield_type": "knock_out",
-      "knock_out_yield": [
-        {
-          "start_month": 3,
-          "end_month": 36,
-          "bi": 13.1
-        }
-      ],
-      "monthly_dividend": null,
       "knock_out_start_month": 3,
       "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "已敲出",
-      "current_price": 7583.2599,
+      "current_price": 7517.7684,
       "initial_price": 7185.48,
       "knock_in_price": 5029.84,
       "next_observation_date": null,
@@ -7378,11 +7369,20 @@
           "price": null,
           "status": "待观察"
         }
-      ]
+      ],
+      "yield_type": "knock_out",
+      "knock_out_yield": [
+        {
+          "start_month": 3,
+          "end_month": 36,
+          "bi": 13.1
+        }
+      ],
+      "monthly_dividend": null
     },
     {
       "id": "SBFY83",
-      "name": "华夏资本龙腾慧盈1号集合资产管理计划",
+      "name": "龙腾慧盈1号集合资产管理计划",
       "short_name": "龙腾慧盈1号",
       "code": "SBFY83",
       "underlying": "中证1000指数（代码:000852.SH）",
@@ -7533,20 +7533,11 @@
       ],
       "knock_in_ratio": 70.0,
       "dividend_ratio": null,
-      "yield_type": "knock_out",
-      "knock_out_yield": [
-        {
-          "start_month": 3,
-          "end_month": 36,
-          "bi": 12.5
-        }
-      ],
-      "monthly_dividend": null,
       "knock_out_start_month": 3,
       "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "已敲出",
-      "current_price": 7583.2599,
+      "current_price": 7517.7684,
       "initial_price": 7497.83,
       "knock_in_price": 5248.48,
       "next_observation_date": null,
@@ -7756,7 +7747,16 @@
           "price": null,
           "status": "待观察"
         }
-      ]
+      ],
+      "yield_type": "knock_out",
+      "knock_out_yield": [
+        {
+          "start_month": 3,
+          "end_month": 36,
+          "bi": 12.5
+        }
+      ],
+      "monthly_dividend": null
     }
   ],
   "config": {

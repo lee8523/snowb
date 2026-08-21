@@ -11,10 +11,13 @@
 import json
 import os
 import shutil
+import sys
 from datetime import datetime, date, timedelta
 from pathlib import Path
 
-import baostock as bs
+# 共享行情模块（submodule）
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'vendor', 'market-data'))
+import market_data as md
 
 from trading_calendar import is_trading_day
 
@@ -24,52 +27,8 @@ DATA_DIR = BASE_DIR / "data"
 DATA_FILE = DATA_DIR / "products.json"
 BACKUP_DIR = DATA_DIR / "backup"
 
-
-# ── 行情 ──
-def fetch_index_price(index_code="sh.000852") -> float | None:
-    """获取指数最新收盘价，失败返回 None"""
-    try:
-        lg = bs.login()
-        if lg.error_code != "0":
-            return None
-        
-        today = date.today().strftime("%Y-%m-%d")
-        rs = bs.query_history_k_data_plus(
-            index_code, "date,close",
-            start_date=today, end_date=today, frequency="d"
-        )
-        price = None
-        while (rs.error_code == "0") & rs.next():
-            price = float(rs.get_row_data()[1])
-        bs.logout()
-        return price
-    except Exception:
-        return None
-
-
-def fetch_kline(index_code="sh.000852", start_date: str = None, end_date: str = None) -> dict[str, float]:
-    """拉取历史K线，返回 {date: close}"""
-    if end_date is None:
-        end_date = date.today().strftime("%Y-%m-%d")
-    if start_date is None:
-        start_date = (date.today() - timedelta(days=365)).strftime("%Y-%m-%d")
-    
-    lg = bs.login()
-    if lg.error_code != "0":
-        raise RuntimeError(f"baostock登录失败: {lg.error_msg}")
-    
-    rs = bs.query_history_k_data_plus(
-        index_code, "date,close",
-        start_date=start_date, end_date=end_date, frequency="d"
-    )
-    
-    price_map = {}
-    while (rs.error_code == "0") & rs.next():
-        row = rs.get_row_data()
-        price_map[row[0]] = float(row[1])
-    
-    bs.logout()
-    return price_map
+# 挂钩指数（中证1000）
+INDEX_CODE = "000852"
 
 
 # ── 产品计算 ──
@@ -181,7 +140,7 @@ def update_initial_prices():
     
     start = min(dates)
     end = max(dates)
-    price_map = fetch_kline(start_date=start, end_date=end)
+    price_map = md.fetch_kline(INDEX_CODE, start, end)
     
     updated = 0
     missing = []
@@ -215,10 +174,10 @@ def update_daily():
     today = date.today().strftime("%Y-%m-%d")
     today_dt = date.today()
     
-    market_price = fetch_index_price()
+    market_price, _ = md.fetch_price(INDEX_CODE)
     if market_price is None:
-        print("获取行情失败，跳过更新")
-        return
+        print("获取行情失败（所有数据源均不可用），终止更新")
+        sys.exit(1)
     
     print(f"中证1000最新价: {market_price}")
     
@@ -234,7 +193,7 @@ def update_daily():
     if pending_dates:
         start = min(pending_dates)
         end = max(pending_dates)
-        price_map = fetch_kline(start_date=start, end_date=end)
+        price_map = md.fetch_kline(INDEX_CODE, start, end)
         print(f"拉取历史K线: {start} ~ {end}, 共 {len(price_map)} 天")
     
     for p in data["products"]:

@@ -1,0 +1,3 @@
+[submodule "vendor/market-data"]
+	path = vendor/market-data
+	url = https://github.com/lee8523/market-data.git
