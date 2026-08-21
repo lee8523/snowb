@@ -27,6 +27,7 @@ Excel 列结构:
 import json
 import os
 import re
+import shutil
 from datetime import datetime, timedelta
 from openpyxl import load_workbook
 
@@ -368,6 +369,32 @@ def import_products():
             print(f"  ⚠ 导入第{row_idx}行失败：{e}")
             continue
     
+    # 增量合并：若已有数据，保留运行时字段（期初价/状态/观察历史/行情），只更新静态字段
+    old_by_code = {}
+    if os.path.exists(OUTPUT_FILE):
+        try:
+            with open(OUTPUT_FILE, encoding='utf-8') as f:
+                old_by_code = {p.get('code'): p for p in json.load(f).get('products', [])}
+        except Exception:
+            old_by_code = {}
+
+    # 运行时字段（由 updater.py 维护，导入时不得覆盖）
+    RUNTIME_FIELDS = ['initial_price', 'status', 'observation_history', 'current_price',
+                      'days_to_next', 'next_observation_date', 'knock_out_price', 'knock_in_price']
+    for p in products:
+        old = old_by_code.get(p['code'])
+        if old:
+            for f in RUNTIME_FIELDS:
+                if f in old:
+                    p[f] = old[f]
+
+    # 自动备份现有数据
+    if os.path.exists(OUTPUT_FILE):
+        backup_dir = os.path.join(OUTPUT_DIR, 'backup')
+        os.makedirs(backup_dir, exist_ok=True)
+        ts = datetime.now().strftime('%Y%m%d_%H%M%S')
+        shutil.copy2(OUTPUT_FILE, os.path.join(backup_dir, f'products_{ts}.json'))
+
     # 创建输出数据结构
     output_data = {
         'last_update': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
