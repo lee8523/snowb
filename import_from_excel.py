@@ -122,6 +122,27 @@ def parse_knock_out_schedule(text, term_months):
     
     return schedule
 
+def parse_yield(text):
+    """解析敲出业绩报酬计提基准 Bi（第14列）
+    返回 (yield_type, knock_out_yield_schedule, monthly_dividend)
+    - 敲出型（分段/单段）：yield_type='knock_out'，schedule=[{start_month,end_month,bi}]
+    - 凤凰型（月度派息基准）：yield_type='monthly_dividend'，monthly_dividend=数值（去掉 ×n）
+    """
+    if not text:
+        return None, [], None
+    text = str(text).strip()
+    # 凤凰型：如 【0.88】%*n
+    if re.search(r'%\s*\*\s*n', text):
+        m = re.search(r'【?\s*([\d.]+)\s*】?\s*%?\s*\*', text)
+        bi = float(m.group(1)) if m else None
+        return 'monthly_dividend', [], bi
+    # 分段/单段型：如 i=【3】-【12】，Bi=【25.4%】
+    segs = re.findall(r'i=\s*【\s*(\d+)\s*】\s*-\s*【\s*(\d+)\s*】\s*，\s*Bi=\s*【\s*([\d.]+)\s*%', text)
+    schedule = [{'start_month': int(s), 'end_month': int(e), 'bi': float(b)} for s, e, b in segs]
+    if schedule:
+        return 'knock_out', schedule, None
+    return None, [], None
+
 def parse_knock_in_ratio(text):
     """从敲入价格系数文本中提取敲入比例"""
     if not text:
@@ -268,6 +289,9 @@ def import_products():
                     dividend_ratio = float(str(row[12]).replace('%', ''))
                 except:
                     pass
+
+            # 敲出基准 / 月度派息基准（列14：敲出业绩报酬计提基准 Bi）
+            yield_type, knock_out_yield, monthly_dividend = parse_yield(row[13])
             
             # 条件说明
             knock_out_condition = str(row[14]).strip() if row[14] and str(row[14]) != '/' else ''
@@ -322,6 +346,9 @@ def import_products():
                 'knock_out_schedule': knock_out_schedule,
                 'knock_in_ratio': knock_in_ratio,
                 'dividend_ratio': dividend_ratio,
+                'yield_type': yield_type,
+                'knock_out_yield': knock_out_yield,
+                'monthly_dividend': monthly_dividend,
                 'knock_out_start_month': 3,
                 'knock_out_condition': knock_out_condition,
                 'knock_in_condition': knock_in_condition,

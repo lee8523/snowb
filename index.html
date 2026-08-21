@@ -582,6 +582,14 @@
                                     <span class="price-value">${product.knock_in_price?.toFixed(2) || '-'} (${product.knock_in_ratio}%)</span>
                                 </div>
                             `}
+                            <div class="price-item">
+                                <span class="price-label">${product.yield_type === 'monthly_dividend' ? '月度派息基准' : '敲出基准'}</span>
+                                <span class="price-value">${(() => {
+                                    if (product.yield_type === 'monthly_dividend') return product.monthly_dividend + '%';
+                                    const first = product.knock_out_yield?.[0]?.bi;
+                                    return first != null ? first + '%' : '-';
+                                })()}</span>
+                            </div>
                         </div>
                         
                         ${product.status !== '已敲出' ? `
@@ -693,9 +701,9 @@
                     <table class="observation-table">
                         <thead>
                             <tr>
-                                <th>期数</th>
                                 <th>观察日期</th>
                                 <th>敲出价格</th>
+                                <th>敲出基准</th>
                                 <th>状态</th>
                             </tr>
                         </thead>
@@ -710,11 +718,16 @@
                                 return obsList.map(obs => {
                                     const koRatio = product.knock_out_schedule?.find(s => s.month === obs.period)?.ratio || product.knock_out_ratio;
                                     const koPrice = (product.initial_price * koRatio / 100).toFixed(2);
+                                    const yieldText = (() => {
+                                        if (product.yield_type === 'monthly_dividend') return (product.monthly_dividend + '%');
+                                        const seg = product.knock_out_yield?.find(s => obs.period >= s.start_month && obs.period <= s.end_month);
+                                        return seg ? (seg.bi + '%') : '-';
+                                    })();
                                     return `
                                     <tr>
-                                        <td>第${obs.period}期</td>
                                         <td>${obs.date}</td>
                                         <td>${koPrice} (${koRatio}%)</td>
+                                        <td>${yieldText}</td>
                                         <td><span class="obs-status ${obs.status === '已敲出' ? 'knocked-out' : obs.status === '未敲出' ? 'not-knocked' : 'pending'}">${obs.status}</span></td>
                                     </tr>
                                 `;
