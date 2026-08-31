@@ -6,88 +6,78 @@
     <title>用户注册 - 雪球产品展示系统</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px; }
         .container { background: white; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); padding: 40px; max-width: 500px; width: 100%; }
-        h1 { text-align: center; color: #333; margin-bottom: 30px; font-size: 24px; }
+        h1 { text-align: center; color: #333; margin-bottom: 30px; }
         .form-group { margin-bottom: 20px; }
         label { display: block; margin-bottom: 8px; color: #555; font-weight: 500; }
-        input[type="text"], input[type="password"], input[type="email"], textarea { width: 100%; padding: 12px 15px; border: 2px solid #e1e1e1; border-radius: 8px; font-size: 14px; transition: border-color 0.3s; }
+        input[type="text"], input[type="password"], input[type="email"], textarea { width: 100%; padding: 12px; border: 2px solid #e1e1e1; border-radius: 8px; font-size: 14px; }
         input:focus, textarea:focus { outline: none; border-color: #667eea; }
-        textarea { min-height: 120px; font-family: monospace; font-size: 12px; white-space: pre; overflow-x: auto; }
-        .btn { width: 100%; padding: 14px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; transition transition: transform 0.2s, box-shadow 0.2s; margin-top: 10px; }
-        .btn:hover { transform: translateY(-2); box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4); }
-        .btn:disabled { background: #ccc; cursor: not-allowed; transform: none; box-shadow: none; }
+        textarea { min-height: 150px; font-family: monospace; font-size: 12px; }
+        .btn { width: 100%; padding: 14px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; margin-top: 10px; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 5px 20px rgba(102,126,234,0.4); }
+        .btn:disabled { background: #ccc; cursor: not-allowed; }
         .btn-secondary { background: #6c757d; }
-        .btn-secondary:hover { background: #5a6268; }
-        .message { padding: 12p: 12px; border-radius: 8px; margin-bottom: 20px; text-align: center; display: none; }
+        .message { padding: 12px; border-radius: 8px; margin-bottom: 20px; text-align: center; display: none; }
         .message.error { background: #fee; color: #c00; border: 1px solid #fcc; }
         .message.success { background: #efe; color: #0a0; border: 1px solid #cfc; }
-        .message.info { background: #eef; color: #00a; border: 1px solid #ccf; }
-        .login-link { text-align: center; margin-top: 20px; color: #666; }
-        .login-link a { color: #667eea; text-decoration: none; font-weight: 500; }
-        .login-link a:hover { text-decoration: underline; }
-        .captcha-box { background: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #e1e1e1; }
-        .captcha-question { font-weight: 600; color: #333; margin-bottom: 10px; }
-        .help-text { font-size: 12px; color: #888; margin-top: 5px; }
         .info-box { background: #e7f3ff; padding: 15px; border-radius: 8px; margin-bottom: 20px; font-size: 13px; color: #0056b3; border: 1px solid #b3d9ff; }
-        .info-box a { color: #007bff; text-decoration: underline; }
-        .copy-hint { font-size: 12px; color: #28a745; margin-top: 5px; display: none; }
+        .info-box a { color: #007bff; }
+        .captcha-box { background: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #e1e1e1; }
+        .help-text { font-size: 12px; color: #888; margin-top: 5px; }
+        .result-section { display: none; margin-top: 20px; }
+        .result-section.show { display: block; }
+        .login-link { text-align: center; margin-top: 20px; }
+        .login-link a { color: #667eea; }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>📝 用户注册</h1>
-        
         <div id="message" class="message"></div>
         
         <div class="info-box">
-            <strong>💡 无需 Token 的注册方式</strong><br>
+            <strong>💡 注册流程</strong><br>
             1. 填写下方表单，点击"生成注册申请"<br>
-            2. 复制生成的文本内容<br>
-            3. 前往 <a href="https://github.com/lee8523/snowb/issues/new" target="_blank">GitHub Issues</a> 创建新 Issue，粘贴内容<br>
-            4. GitHub Actions 会自动审核并创建账号（约 1-2 分钟）
+            2. 复制生成的文本<br>
+            3. <a href="https://github.com/lee8523/snowb/issues/new" target="_blank">前往 GitHub 创建 Issue</a> 并粘贴<br>
+            4. 系统自动审核并创建账号（1-2 分钟）
         </div>
         
         <form id="registerForm">
             <div class="form-group">
-                <label for="username">用户名 *</label>
-                <input type="text" id="username" name="username" required placeholder="6-20 位字母、数字或下划线">
+                <label>用户名 *</label>
+                <input type="text" id="username" required placeholder="6-20 位字母、数字或下划线">
                 <div class="help-text">用户名长度 6-20 个字符</div>
             </div>
-            
             <div class="form-group">
-                <label for="password">密码 *</label>
-                <input type="password" id="password" name="password" required placeholder="至少 6 位，包含字母和数字">
-                <div class="help-text">密码长度至少 6 位</div>
+                <label>密码 *</label>
+                <input type="password" id="password" required placeholder="至少 6 位，包含字母和数字">
             </div>
-            
             <div class="form-group">
-                <label for="confirmPassword">确认确认密码 *</label>
-                <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="再次输入密码">
+                <label>确认密码 *</label>
+                <input type="password" id="confirmPassword" required>
             </div>
-            
             <div class="form-group">
-                <label for="email">邮箱（可选）</label>
-                <input type="email" id="email" name="email" placeholder="用于找回密码">
+                <label>邮箱（可选）</label>
+                <input type="email" id="email" placeholder="用于找回密码">
             </div>
-            
             <div class="captcha-box">
-                <div class="captcha-question">🔒 验证问题：您的所在公司/机构名称 *</div>
-                <input type="text" id="captchaAnswer" name="captchaAnswer" required placeholder="请输入答案">
+                <label style="font-weight:600;color:#333;">🔒 验证问题：您的所在公司/机构名称 *</label>
+                <input type="text" id="captchaAnswer" required placeholder="请输入答案">
                 <div class="help-text">答案格式："中国银行 XX 分行"</div>
             </div>
-            
             <button type="button" class="btn" id="generateBtn">生成注册申请</button>
         </form>
         
-        <div id="resultSection" style="display: none; margin-top="none; margin-top: 20px;">
+        <div id="resultSection" class="result-section">
             <div class="form-group">
                 <label>注册申请内容（请复制）：</label>
                 <textarea id="resultText" readonly></textarea>
-                <div class="copy-hint" id="copyHint">✅ 已复制到剪贴板</div>
+                <div class="help-text" id="copyHint" style="color:#28a745;display:none;">✅ 已复制到剪贴板</div>
             </div>
-            <button class="btn btn-secondary" id="copyBtn">复制到剪贴板</button>
-            <button class="btn" id="gotoIssueBtn" style="background: ##667eea;">前往 GitHub 创建 Issue</button>
+            <button class="btn btn-secondary" id="copyBtn">复制</button>
+            <button class="btn" id="gotoIssueBtn">前往 GitHub 创建 Issue</button>
         </div>
         
         <div class="login-link">
@@ -96,42 +86,23 @@
     </div>
 
     <script>
-        // 配置
-        const GITHUB_OWNER = 'lee8523';
-        const GITHUB_REPO = 'snowb';
-        const REGISTRATION_LABEL = 'user-registration';
-        
-        // 验证问题答案（支持模糊匹配）
-        function validateCaptcha(answer) {
-            const normalized = answer.trim().toLowerCase();
-            return normalized.includes('中国银行') && normalized.includes('分行');
-        }
-        
-        // 密码强度验证
-        function validatePassword(password) {
-            if (password.length < 6) {
-                return { valid: false, message: '密码长度至少 6 位' };
-            }
-            if (!/[a-zA-Z]/.test(password) || !/[0-9]/.test(password)) {
-                return { valid: false, message: '密码必须包含字母和数字' };
-            }
+        function validateUsername(username) {
+            if (username.length < 6 || username.length > 20) return { valid: false, message: '用户名长度 6-20 个字符' };
+            if (!/^[a-zA-Z0-9_/]+$/.'.test(username)) return { valid: false, message: '用户名只能包含字母、数字、下划线' };
             return { valid: true };
         }
         
-        # 用户名验证验证
-        function validateUsername(username) {
-            if # 用户名验证
-        function validateUsername(username) {
-            if (username.length < < 6 || username.length > 20) {
-                return { valid: false, message: '用户名长度 6-20 个字符' };
-            }
-            if (!/^[a-zA-Z0-9_]+$/.test(username)) # 验证问题答案
+        function validatePassword(password) {
+            if (password.length < 6) return { valid: false, message: '密码长度至少 6 位' };
+            if (!/[a-zA-Z]/.test(password) || !/[0-9]/.test(password)) return { valid: false, message: '密码必须必须包含字母和数字' };;
+            return return { valid: true };
+        }
+        
         function validateCaptcha(answer) {
             const normalized = answer.trim().toLowerCase();
             return normalized.includes('中国银行') && normalized.includes('分行');
         }
         
-        // SHA-256 哈希
         async function hashPassword(password) {
             const encoder = new TextEncoder();
             const data = encoder.encode(password);
@@ -140,20 +111,38 @@
             return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
         }
         
-        // 显示消息
         function showMessage(text, type) {
-            const msgEl = document.getElementById('message');
-            msgEl.textContent = text;
-            msgEl.className = `message ${type}`;
-            msgEl.style.display = 'block';
-            if (type !== 'info') {
-                setTimeout(() => { msgEl.style.display = 'none'; }, 5000);
-            }
+            const msg = document.getElementById('message');
+            msg.textContent = text;
+            msg.className = 'message ' + type;
+            msg.style.display = 'block';
         }
         
-        // 生成注册申请文本
-        function generateRegistrationText(username, passwordHash, email, captchaAnswer) {
-            return `## 用户注册申请
+        document.getElementById('generateBtn').addEventListener('click', async function() {
+            const username = document.getElementById('username').value.trim();
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+            const email = document.getElementById('email').value.trim();
+            const captchaAnswer = document.getElementById('captchaAnswer').value.trim();
+            
+            const usernameCheck = validateUsername(username);
+            if (!usernameCheck.valid) { showMessage(usernameCheck.message, 'error'); return; }}
+            
+            const'server';
+            
+            const passwordCheck = validatePassword(password);
+            if (!passwordCheck.valid) { showMessage(passwordCheck.message, 'error'); return; }
+            
+            if (password !== # 验证问题答案
+            if (!validateCaptcha(captchaAnswer)) {
+                showMessage('验证问题答案错误。正确答案格式："中国银行 XX 分行"', 'error');
+                return;
+            }
+            
+            const passwordHash = await hashPassword(password);
+            
+            const issueTitle = '用户注册：' + username;
+            const issueBody = `## 用户注册申请
 
 **用户名**: ${username}
 **密码哈希**: ${passwordHash}
@@ -163,69 +152,23 @@
 
 ---
 *请 GitHub Actions 自动处理此注册申请*`;
-        }
-        
-        // 生成按钮点击
-        document.getElementById('generateBtn').addEventListener('click', async function() {
-            const username = document.getElementById('username').value.trim();
-            const password = document.getElementById('password').value;
-            const confirmPassword = document.getElementById('confirmPassword').value;
-            const email = document.getElementById('email').value.trim();
-            const captchaAnswer = document.getElementById('captchaAnswer').value.trim;
             
-            // 验证
-            const usernameCheck = validateUsername(username);
-            if (!usernameCheck.valid) {
-                showMessage(usernameCheck.message, 'error');
-                return;
-            }
-            
-            const passwordCheck = validatePassword(password);
-            if (!passwordCheck.valid) {
-                showMessage(passwordCheck.message, 'error');
-                return;
-            }
-            
-            if (password !== confirmPassword) {
-                showMessage('两次输入的密码不一致', 'error');
-                return;
-            }
-            
-            if (!validateCaptcha(captchaAnswer)) {
-                showMessage('验证问题答案错误。正确答案格式："中国银行 XX 分行"', 'error');
-                return;
-            }
-            
-            // 生成密码哈希
-            const passwordHash = await hashPassword(password);
-            
-            // 生成注册文本
-            const registrationText = generateRegistrationText(username, passwordHash, email, captchaAnswer);
-            
-            // 显示结果
-            document.getElementById('resultText').value = registrationText;
-            document.getElementById('resultSection').style.display = 'block';
+            document.getElementById('resultText').value = issueBody;
+            document.getElementById('resultSection').classList.add('show');
             document.getElementById('generateBtn').style.display = 'none';
-            
             showMessage('注册申请已生成！请复制下方文本并前往 GitHub 创建 Issue', 'success');
         });
         
-        // 复制按钮
         document.getElementById('copyBtn').addEventListener('click', function() {
             const resultText = document.getElementById('resultText');
             resultText.select();
-            document.exec('copy');
-            
-            const copyHint = document.getElementById('copyHint');
-            copyHint.style.display = 'block';
-            setTimeout(() => { copyHint.style.display = 'none', 2000); }, 2000);
+            document.execCommand('copy');
+            document.getElementById('copyHint').style.display = 'block';
+            setTimeout(() => { document.getElementById('copyHint').style.display = 'none'; }, 2000);
         });
-() {
-            window.open(' 'https://github.com/lee8523/snow",
         
-        // 前往 GitHub 按钮
         document.getElementById('gotoIssueBtn').addEventListener('click', function() {
-            window.open('https://github.com/lee8523/snowb/issues/new', '_blank');
+            window.open('httpshttps://github.com/lee8523/snowb/issues/new', '_blank');
         });
     </script>
 </body>
