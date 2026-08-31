@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户注册 - 雪球产品展示系统</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 20px; }
+        .container { background: white; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); padding: 40px; max-width: 450px; width: 100%; }
+        h1 { text-align: center; color: #333; margin-bottom: 30px; font-size: 24px; }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 8px; color: #555; font-weight: 500; }
+        input[type="text"], input[type="password"], input[type="email"] { width: 100%; padding: 12px 15px; border: 2px solid #e1e1e1; border-radius: 8px; font-size: 14px; transition: border-color 0.3s; }
+        input:focus { outline: none; border-color: #667eea; }
+        .btn { width: 100%; padding: 14px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; border: none; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
+        .btn:hover { transform: translateY(-2px); box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4); }
+        .btn:disabled { background: #ccc; cursor: not-allowed; transform: none; box-shadow: none; }
+        .message { padding: 12px; border-radius: 8px; margin-bottom: 20px; text-align: center; display: none; }
+        .message.error { background: #fee; color: #c00; border: 1px solid #fcc; }
+        .message.success { background: #efe; color: #0a0; border: 1px solid #cfc; }
+        .message.info { background: #eef; color: #00a; border: 1px solid #ccf; }
+        .login-link { text-align: center; margin-top: 20px; color: #666; }
+        .login-link a { color: #667eea; text-decoration: none; font-weight: 500; }
+        .login-link a:hover { text-decoration: underline; }
+        .captcha-box { background: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #e1e1e1; }
+        .captcha-question { font-weight: 600; color: #333; margin-bottom: 10px; }
+        .help-text { font-size: 12px; color: #888; margin-top: 5px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📝 用户注册</h1>
+        
+        <div id="message" class="message"></div>
+        
+        <form id="registerForm">
+            <div class="form-group">
+                <label for="username">用户名 *</label>
+                <input type="text" id="username" name="username" required placeholder="6-20 位字母、数字或下划线">
+                <div class="help-text">用户名长度 6-20 个字符</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="password">密码 *</label>
+                <input type="password" id="password" name="password" required placeholder="至少 6 位，包含字母和数字">
+                <div class="help-text">密码长度至少 6 位</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="confirmPassword">确认密码 *</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="再次输入密码">
+            </div>
+            
+            <div class="form-group">
+                <label for="email">邮箱（可选）</label>
+                <input type="email" id="email" name="email" placeholder="用于找回密码">
+            </div>
+            
+            <div class="captcha-box">
+                <div class="captcha-question">🔒 验证问题：您的所在公司/机构名称 *</div>
+                <input type="text" id="captchaAnswer" name="captchaAnswer" required placeholder="请输入答案">
+                <div class="help-text">答案格式："中国银行 XX 分行"</div>
+            </div>
+            
+            <button type="submit" class="btn" id="submitBtn">立即注册</button>
+        </form>
+        
+        <div class="login-link">
+            已有账号？<a href="index.html">立即登录</a>
+        </div>
+    </div>
+
+    <script>
+        // 配置
+        const GITHUB_OWNER = 'lee8523';
+        const GITHUB_REPO = 'snowb';
+        const GITHUB_BRANCH = 'main';
+        const USERS_FILE_PATH = 'data/users.json';
+        
+        // 验证问题答案（支持模糊匹配）
+        function validateCaptcha(answer) {
+            const normalized = answer.trim().toLowerCase();
+            return normalized.includes('中国银行') && normalized.includes('分行');
+        }
+        
+        // 密码强度验证
+        function validatePassword(password) {
+            if (password.length < 6) {
+                return { valid: false, message: '密码长度至少 6 位' };
+            }
+            if (!/[a-zA-Z]/.test(password) || !/[0-9]/.test(password)) {
+                return { valid: false, message: '密码必须包含字母和数字' };
+            }
+            return { valid: true };
+        }
+        
+        // 用户名验证
+        function validateUsername(username) {
+            if (username.length < 6 || username.length > 20) {
+                return { valid: false, message: '用户名长度 6-20 个字符' };
+            }
+            if (!/^[a-zA-Z0-9_]+$/.test(username)) {
+                return { valid: false, message: '用户名只能包含字母、数字和下划线' };
+            }
+            return { valid: true };
+        }
+        
+        // SHA-256 哈希（用于密码加密）
+        async function hashPassword(password) {
+            const encoder = new TextEncoder();
+            const data = encoder.encode(password);
+            const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+            const hashArray = Array.from(new Uint8Array(hashBuffer));
+            return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+        }
+        
+        // 显示消息
+        function showMessage(text, type) {
+            const msgEl = document.getElementById('message');
+            msgEl.textContent = text;
+            msgEl.className = `message ${type}`;
+            msgEl.style.display = 'block';
+            setTimeout(() => {
+                msgEl.style.display = 'none';
+            }, 5000);
+        }
+        
+        // 获取 GitHub Token（从用户输入或 localStorage）
+        function getGitHubToken() {
+            // 优先从 localStorage 获取
+            const stored = localStorage.getItem('github_token');
+            if (stored) return stored;
+            
+            // 否则提示用户输入
+            const token = prompt('请输入您的 GitHub Personal Access Token (需 repo 权限):\n\n获取方式：GitHub Settings → Developer settings → Personal access tokens → Generate new token\n\n勾选 scopes: repo\n\nToken 将仅保存在本地浏览器。');
+            if (token && token.trim()) {
+                localStorage.setItem('github_token', token.trim());
+                return token.trim();
+            }
+            return null;
+        }
+        
+        // 读取 users.json
+        async function readUsersFile(token) {
+            const url = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${USERS_FILE_PATH}`;
+            const response = await fetch(url, {
+                headers: {
+                    'Authorization': `token ${token}`,
+                    'Accept': 'application/vnd.github.v3+json'
+                }
+            });
+            
+            if (!response.ok) {
+                if (response.status === 404) {
+                    // 文件不存在，返回空结构
+                    return { users: [], last_updated: new Date().toISOString() };
+                }
+                throw new Error(`读取文件失败：${response.status}`);
+            }
+            
+            const data = await response.json();
+            const content = atob(data.content); // Base64 解码
+            return JSON.parse(content);
+        }
+        
+        // 写入 users.json
+        async function writeUsersFile(token, content, sha) {
+            const url = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${USERS_FILE_PATH}`;
+            const body = {
+                message: 'feat: 新用户注册',
+                content: btoa(JSON.stringify(content, null, 2)), // Base64 编码
+                branch: GITHUB_BRANCH
+            };
+            if (sha) {
+                body.sha = sha;
+            }
+            
+            const response = await fetch(url, {
+                method: 'PUT',
+                headers: {
+                    'Authorization',
+                    'Accept': 'application/vnd.github.v3+json',
+                    'Content-Type': 'application/json',
+                    'Authorization': `token ${token}`
+                },
+                body: JSON()
+            });
+            
+            if (!response.ok) {
+                throw new Error(`写入文件失败：${response.status}`);
+            }
+            
+            return await response.json();
+        }
+        
+        // 获取文件 SHA（用于更新）
+        async function getFileSha(token) {
+            const url = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${USERS_FILE_PATH}`;
+            const response = await fetch(url, {
+                headers: {
+                    'Authorization': `token ${token}`,
+                    'Accept': 'application/vnd.github.v3+json'
+                }
+            });
+            
+            if (!response.ok) {
+                return null; // 文件不存在
+            }
+            
+            const data = await response.json();
+            return data.sha;
+        }
+        
+        // 表单提交处理
+        document.getElementById('registerForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            submitBtn.disabled = true;
+            submitBtn.textContent = '注册中...';
+            
+            try {
+                // 1. 获取表单数据
+                const username = document.getElementById('username').value.trim();
+                const password = document.getElementById('password').value;
+                const confirmPassword = document.getElementById('confirmPassword').value;
+                const email = document.getElementById('email').value.trim();
+                const captchaAnswer = document.getElementById('captchaAnswer').value.trim();
+                
+                // 2. 验证用户名
+                const usernameCheck = validateUsername(username);
+                if (!usernameCheck.valid) {
+                    throw new Error(usernameCheck.message);
+                }
+                
+                // 3. 验证密码
+                const passwordCheck = validatePassword(password);
+                if (!passwordCheck.valid) {
+                    throw new Error(passwordCheck.message);
+                }
+                
+                // 4. 验证确认密码
+                if (password !== confirmPassword) {
+                    throw new Error('两次输入的密码不一致');
+                }
+                
+                // 5. 验证问题答案
+                if (!validateCaptcha(captchaAnswer)) {
+                    throw new Error('验证问题答案错误。正确答案格式："中国银行 XX 分行"');
+                }
+                
+                // 6. 获取 GitHub Token
+                const token = getGitHubToken();
+                if (!token) {
+                    throw new Error('需要 GitHub Token 才能完成注册');
+                }
+                
+                // 7. 读取当前用户列表
+                showMessage('正在验证用户名...', 'info');
+                const usersData = await readUsersFile(token);
+                
+                // 8. 检查用户名是否已存在
+                if (usersData.users.some(u => u.username === username)) {
+                    throw new Error('该用户名已被注册，请选择其他用户名');
+                }
+                
+                // 9. 哈希密码
+                showMessage('正在加密密码...', 'info');
+                const passwordHash = await hashPassword(password);
+                
+                // 10. 创建新用户记录
+                const newUser = {
+                    username: username,
+                    password_hash: passwordHash,
+                    email: email || null,
+                    created_at: new Date().toISOString(),
+                    captcha_verified: true
+                };
+",
+                
+                // 11. 添加到用户列表
+                use                usersData.users.push(newUser);
+                usersData.last_updated = new Date().toISOString();
+                
+                // 12. 获取文件 SHA（如果文件已存在）
+                showMessage('正在保存用户数据...', 'info');
+                const fileSha = await getFileSha(token);
+                
+                // 13. 写入 GitHub
+                await writeUsersFile(token, usersData, fileSha);
+                
+                // 14. 注册成功
+                showMessage('✅ 注册成功！即将跳转到登录页面...', 'success');
+                setTimeout(() => {
+                    window.location.href = 'index.html';
+                }, 2000);
+                
+            } catch (error) {
+                console.error('注册失败:', error);
+                showMessage('❌ ' + error.message, 'error');
+                submitBtn.disabled = false;
+                submitBtn.textContent = '立即注册';
+            }
+        });
+    </script>
+</body>
+</html>
