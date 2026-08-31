@@ -515,6 +515,7 @@
                     document.getElementById('password-overlay').style.display = 'none';
                     localStorage.setItem('authenticated', 'true');
                     localStorage.setItem('current_user', username);
+                    window.location.href = 'products.html';
                 } else {
                     document.getElementById('password-error').textContent = '用户名或密码错误';
                     document.getElementById('password-error').style.display = 'block';
