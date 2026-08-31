@@ -2,11 +2,10 @@ name: Auto Process User Registration
 
 on:
   issues:
-    types: [labeled]
+    types: [opened]
 
 jobs:
   process-registration:
-    if: github.event.label.name == 'user-registration'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -52,7 +51,8 @@ jobs:
             https://api.github.com/repos/${{ github.repository }}/issues/$ISSUE_NUMBER \
             -d '{"state": "closed"}'
 
-      - name: Comment on Issue
+      - name: Comment on Issue (Success)
+        if: success()
         env:
           ISSUE_NUMBER: ${{ github.event.issue.number }}
           GITHUB_TOKEN: ${{ secrets.REGISTRATION_TOKEN }}
@@ -62,3 +62,15 @@ jobs:
             -H "Accept: application/vnd.github.v3+json" \
             https://api.github.com/repos/${{ github.repository }}/issues/$ISSUE_NUMBER/comments \
             -d '{"body":"✅ 注册已成功处理！您现在可以使用用户名和密码登录系统。"}'
+
+      - name: Comment on Issue (Failure)
+        if: failure()
+        env:
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          GITHUB_TOKEN: ${{ secrets.REGISTRATION_TOKEN }}
+        run: |
+          curl -X POST \
+            -H "Authorization: token $GITHUB_TOKEN" \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/repos/${{ github.repository }}/issues/$ISSUE_NUMBER/comments \
+            -d '{"body":"❌ 注册失败，请检查填写的信息是否正确。验证问题答案必须包含\"中国银行\"和\"分行\"。。"}'
