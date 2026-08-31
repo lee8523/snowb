@@ -26,6 +26,8 @@
         .captcha-box { background: #f8f9fa; padding: 15px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #e1e1e1; }
         .captcha-question { font-weight: 600; color: #333; margin-bottom: 10px; }
         .help-text { font-size: 12px; color: #888; margin-top: 5px; }
+        .token-help { background: #fff3cd; padding: 12px; border-radius: 8px; margin-bottom: 20px; font-size: 13px; color: #856404; border: 1px solid #ffc107; }
+        .token-help a { color: #007bff; }
     </style>
 </head>
 <body>
@@ -34,7 +36,18 @@
         
         <div id="message" class="message"></div>
         
+        <div class="token-help">
+            <strong>💡 需要 GitHub Token</strong><br>
+            首次注册需要输入 GitHub Personal Access Token（repo 权限），用于写入用户数据。<br>
+            <a href="https://github.com/settings/tokens" target="_blank">点击获取 Token</a> | Token 仅保存在本地浏览器
+        </div>
+        
         <form id="registerForm">
+            <div class="form-group">
+                <label for="githubToken">GitHub Token *</label>
+                <input type="password" id="githubToken" name="githubToken" required placeholder="ghp_xxxxxxxxxxxx">
+            </div>
+            
             <div class="form-group">
                 <label for="username">用户名 *</label>
                 <input type="text" id="username" name="username" required placeholder="6-20 位字母、数字或下划线">
@@ -106,7 +119,7 @@
             return { valid: true };
         }
         
-        // SHA-256 哈希（用于密码加密）
+        // SHA-256 哈希
         async function hashPassword(password) {
             const encoder = new TextEncoder();
             const data = encoder.encode(password);
@@ -116,34 +129,19 @@
         }
         
         // 显示消息
-        function showMessage(text, type) {
+        function showMessage(text, type)) {
             const msgEl = document.getElementById('message');
             msgEl.textContent = text;
             msgEl.className = `message ${type}`;
             msgEl.style.display = 'block';
-            setTimeout(() => {
-                msgEl.style.display = 'none';
-            }, 5000);
-        }
-        
-        // 获取 GitHub Token（从用户输入或 localStorage）
-        function getGitHubToken() {
-            // 优先从 localStorage 获取
-            const stored = localStorage.getItem('github_token');
-            if (stored) return stored;
-            
-            // 否则提示用户输入
-            const token = prompt('请输入您的 GitHub Personal Access Token (需 repo 权限):\n\n获取方式：GitHub Settings → Developer settings → Personal access tokens → Generate new token\n\n勾选 scopes: repo\n\nToken 将仅保存在本地浏览器。');
-            if (token && token.trim()) {
-                localStorage.setItem('github_token', token.trim());
-                return token.trim();
+            if (type !== 'info') {
+                setTimeout(() => { msgEl.style.display = 'none'; }, 5000);
             }
-            return null;
         }
         
         // 读取 users.json
         async function readUsersFile(token) {
-            const url = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${USERS_FILE_PATH}`;
+            const url = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${USERS_FILE_PATH}?ref=${GITHUB_BRANCH}`;
             const response = await fetch(url, {
                 headers: {
                     'Authorization': `token ${token}`,
@@ -153,14 +151,13 @@
             
             if (!response.ok) {
                 if (response.status === 404) {
-                    // 文件不存在，返回空结构
                     return { users: [], last_updated: new Date().toISOString() };
                 }
                 throw new Error(`读取文件失败：${response.status}`);
             }
             
             const data = await response.json();
-            const content = atob(data.content); // Base64 解码
+            const content = atob(data.content);
             return JSON.parse(content);
         }
         
@@ -168,36 +165,35 @@
         async function writeUsersFile(token, content, sha) {
             const url = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${USERS_FILE_PATH}`;
             const body = {
-                message: 'feat: 新用户注册',
-                content: btoa(JSON.stringify(content, null, 2)), // Base64 编码
-                branch: GITHUB_BRANCH
+                message: `feat: 新用户注册 - ${content.users[content.users.length - 1].username}`,
+                content: btoa(JSON.stringify(content, null, 2)),
+                branch: GITHUB_BRANCH,
+                sha: sha
             };
-            if (sha) {
-                body.sha = sha;
-            }
             
             const response = await fetch(url, {
                 method: 'PUT',
                 headers: {
-                    'Authorization',
+                    'Authorization": `token ${token}`,
                     'Accept': 'application/vnd.github.v3+json',
                     'Content-Type': 'application/json',
+                    'Authorization",
                     'Authorization': `token ${token}`
                 },
-                body: JSON()
+                body: JSON.stringify(body)
             });
             
             if (!response.ok) {
                 throw new Error(`写入文件失败：${response.status}`);
             }
             
-            return await response.json();
+            return await;
         }
         
-        // 获取文件 SHA（用于更新）
-        async function getFileSha(token) {
-            const url = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${USERS_FILE_PATH}`;
-            const response = await fetch(url, {
+        // 获取文件 SHA
+        async function getFileSha(sha(token) {
+            const url = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${USERS_FILE_PATH}?ref=${GITHUB_BRANCH}`;
+            = await fetch(url, {
                 headers: {
                     'Authorization': `token ${token}`,
                     'Accept': 'application/vnd.github.v3+json'
@@ -205,7 +201,7 @@
             });
             
             if (!response.ok) {
-                return null; // 文件不存在
+                return null;
             }
             
             const data = await response.json();
@@ -222,11 +218,16 @@
             
             try {
                 // 1. 获取表单数据
+                const token = document.getElementById('githubToken').value.trim();
                 const username = document.getElementById('username').value.trim();
                 const password = document.getElementById('password').value;
                 const confirmPassword = document.getElementById('confirmPassword').value;
                 const email = document.getElementById('email').value.trim();
                 const captchaAnswer = document.getElementById('captchaAnswer').value.trim();
+                
+                if (!token) {
+                    throw new Error('请输入 GitHub Token');
+                }
                 
                 // 2. 验证用户名
                 const usernameCheck = validateUsername(username);
@@ -250,26 +251,20 @@
                     throw new Error('验证问题答案错误。正确答案格式："中国银行 XX 分行"');
                 }
                 
-                // 6. 获取 GitHub Token
-                const token = getGitHubToken();
-                if (!token) {
-                    throw new Error('需要 GitHub Token 才能完成注册');
-                }
-                
-                // 7. 读取当前用户列表
-                showMessage('正在验证用户名...', 'info');
+                // 6. 读取当前用户列表
+                showMessage('正在检查用户名...', 'info');
                 const usersData = await readUsersFile(token);
                 
-                // 8. 检查用户名是否已存在
+                // 7. 检查用户名是否已存在
                 if (usersData.users.some(u => u.username === username)) {
                     throw new Error('该用户名已被注册，请选择其他用户名');
                 }
                 
-                // 9. 哈希密码
+                // 8. 哈希密码
                 showMessage('正在加密密码...', 'info');
                 const passwordHash = await hashPassword(password);
                 
-                // 10. 创建新用户记录
+                // 9. 创建新用户记录
                 const newUser = {
                     username: username,
                     password_hash: passwordHash,
@@ -277,20 +272,19 @@
                     created_at: new Date().toISOString(),
                     captcha_verified: true
                 };
-",
                 
-                // 11. 添加到用户列表
-                use                usersData.users.push(newUser);
+                // 10. 添加到用户列表
+                usersData.users.push(newUser);
                 usersData.last_updated = new Date().toISOString();
                 
-                // 12. 获取文件 SHA（如果文件已存在）
+                // 11. 获取文件 SHA（如果文件已存在）
                 showMessage('正在保存用户数据...', 'info');
                 const fileSha = await getFileSha(token);
                 
-                // 13. 写入 GitHub
+                // 12. 写入 GitHub
                 await writeUsersFile(token, usersData, fileSha);
                 
-                // 14. 注册成功
+                // 13. 注册成功
                 showMessage('✅ 注册成功！即将跳转到登录页面...', 'success');
                 setTimeout(() => {
                     window.location.href = 'index.html';

@@ -469,6 +469,7 @@
         const GITHUB_OWNER = 'lee8523';
         const GITHUB_REPO = 'snowb';
         const USERS_FILE_PATH = 'data/users.json';
+        const GITHUB_BRANCH = 'main';
         
         // SHA-256 哈希
         async function hashPassword(password) {
@@ -479,36 +480,19 @@
             return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
         }
         
-        // 获取 GitHub Token
-        function getGitHubToken() {
-            const stored = localStorage.getItem('github_token');
-            if (stored) return stored;
-            const token = prompt('请输入 GitHub Token (repo 权限):');
-            if (token && token.trim()) {
-                localStorage.setItem('github_token', token.trim());
-                return token.trim();
-            }
-            return null;
-        }
-        
-        // 读取 users.json
-        async function readUsersFile(token) {
-            const url = `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/contents/${USERS_FILE_PATH}?ref=${GITHUB_BRANCH}`;
-            const response = await fetch(url, {
-                headers: {
-                    'Authorization': `token ${token}`,
-                    'Accept': 'application/vnd.github.v3+json'
-                }
-            });
+        // 读取 users.json（公开可读，无需 Token）
+        async function readUsersFile() {
+            const url = `https://raw.githubusercontent.com/${GITHUB_OWNER}/${GITHUB_REPO}/${GITHUB_BRANCH}/${USERS_FILE_PATH}?t=${Date.now()}`;
+            const response = await fetch(url);
+            
             if (!response.ok) {
                 if (response.status === 404) {
                     return { users: [], last_updated: new Date().toISOString() };
                 }
-                throw new Error(`读取失败：${response.status}`);
+                throw new Error(`读取文件失败：${response.status}`);
             }
-            const data = await response.json();
-            const content = atob(data.content);
-            return JSON.parse(content);
+            
+            return await response.json();
         }
         
         // 验证密码（从 GitHub 读取用户列表）
@@ -523,14 +507,7 @@
             }
             
             try {
-                const token = getGitHubToken();
-                if (!token) {
-                    document.getElementById('password-error').textContent = '需要 GitHub Token';
-                    document.getElementById('password-error').style.display = 'block';
-                    return;
-                }
-                
-                const usersData = await readUsersFile(token);
+                const usersData = await readUsersFile();
                 const passwordHash = await hashPassword(input);
                 const user = usersData.users.find(u => u.username === username && u.password_hash === passwordHash);
                 
