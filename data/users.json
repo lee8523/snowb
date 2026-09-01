@@ -1,4 +1,60 @@
 {
-  "users": [],
+  "users": [
+    {
+      "name": "李超",
+      "username": "lc",
+      "password_hash": "2b4ca97819e01653d0ca50e8af4c90bce7bd3b0e279d3269552d4de1e6e9489e"
+    },
+    {
+      "name": "段江伟",
+      "username": "djw",
+      "password_hash": "a12ddcd1f36d1844a61063563bda5de906ddd0aedde5822267df701f772972bc"
+    },
+    {
+      "name": "兰昊",
+      "username": "lanh",
+      "password_hash": "1d397156d54179b1020386a238eb69e90ee5b14d6be6aa18000a44f8df0d49f6"
+    },
+    {
+      "name": "李嘉怡",
+      "username": "ljy",
+      "password_hash": "e6a1deba2a671fd29c2aa7f5dca3756fceeb30bcf6257648a80f12d9f08e084d"
+    },
+    {
+      "name": "罗辉",
+      "username": "luoh",
+      "password_hash": "2d73c8b9f0994f135f903fdf829b4162afb7264fa10694d252054d57d542bdfd"
+    },
+    {
+      "name": "宁晗",
+      "username": "nh",
+      "password_hash": "9336e65a520781758ee0a8dbd70c4d64683a3dd79cb2bbed606463c889adf3cb"
+    },
+    {
+      "name": "孙博",
+      "username": "sunb",
+      "password_hash": "57d80db80d2368665be6cc1bd768656a2695685d5d187125e7081e1b3153c7c6"
+    },
+    {
+      "name": "夏翊能",
+      "username": "xyn",
+      "password_hash": "01af7fa310ea43230b2b61f45f142828081640b239eb871722c4fdd822e487b9"
+    },
+    {
+      "name": "许卉冰",
+      "username": "xhb",
+      "password_hash": "058ffaf3678a9b0fdfd754bda1ff04a6898094d9a46eae4af80def4c0c69fe83"
+    },
+    {
+      "name": "张聪",
+      "username": "zc",
+      "password_hash": "15fdcaf122123071bd69f06e846185040a320663bbe308b8ae4756778fb13962"
+    },
+    {
+      "name": "张欣玥",
+      "username": "zxy",
+      "password_hash": "ebdc3cf68fd5222e798efcc4f3b9a57b5088f67f5f65b73fb0fbe3eb45c6b9bc"
+    }
+  ],
   "last_updated": "2026-09-01T00:00:00Z"
 }
