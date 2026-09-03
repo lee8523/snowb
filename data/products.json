@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-09-02 08:03:47",
+  "last_update": "2026-09-03 08:03:41",
   "products": [
     {
       "id": "SEA697",
@@ -172,7 +172,7 @@
       "knock_out_condition": "若观察期内第i个月（i=3,4,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,4,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "存续中",
-      "current_price": 7583.7559,
+      "current_price": 7600.0971,
       "initial_price": 10000.0,
       "knock_in_price": 6600.0,
       "next_observation_date": null,
@@ -350,11 +350,11 @@
       "knock_out_condition": "a) 若观察期内第i个月（i=3,4,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,4,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "存续中",
-      "current_price": 7583.7559,
+      "current_price": 7600.0971,
       "initial_price": 7679.53,
       "knock_in_price": 5068.49,
       "next_observation_date": "2026-11-09",
-      "days_to_next": 68,
+      "days_to_next": 67,
       "observation_history": [
         {
           "period": 3,
@@ -733,11 +733,11 @@
       "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "存续中",
-      "current_price": 7583.7559,
+      "current_price": 7600.0971,
       "initial_price": 7925.12,
       "knock_in_price": 5230.58,
       "next_observation_date": "2026-10-14",
-      "days_to_next": 42,
+      "days_to_next": 41,
       "observation_history": [
         {
           "period": 3,
@@ -1116,11 +1116,11 @@
       "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "存续中",
-      "current_price": 7583.7559,
+      "current_price": 7600.0971,
       "initial_price": 8825.92,
       "knock_in_price": 5825.11,
       "next_observation_date": "2026-09-28",
-      "days_to_next": 26,
+      "days_to_next": 25,
       "observation_history": [
         {
           "period": 3,
@@ -1499,11 +1499,11 @@
       "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "存续中",
-      "current_price": 7583.7559,
+      "current_price": 7600.0971,
       "initial_price": 8825.92,
       "knock_in_price": 5736.85,
       "next_observation_date": "2026-09-28",
-      "days_to_next": 26,
+      "days_to_next": 25,
       "observation_history": [
         {
           "period": 3,
@@ -1882,11 +1882,11 @@
       "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "存续中",
-      "current_price": 7583.7559,
+      "current_price": 7600.0971,
       "initial_price": 8704.47,
       "knock_in_price": 5744.95,
       "next_observation_date": "2026-09-17",
-      "days_to_next": 15,
+      "days_to_next": 14,
       "observation_history": [
         {
           "period": 3,
@@ -2265,16 +2265,16 @@
       "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "存续中",
-      "current_price": 7583.7559,
+      "current_price": 7600.0971,
       "initial_price": 8546.51,
       "knock_in_price": 5640.7,
       "next_observation_date": "2026-09-28",
-      "days_to_next": 26,
+      "days_to_next": 25,
       "observation_history": [
         {
           "period": 3,
           "date": "2026-08-27",
-          "price": 7732.945,
+          "price": 7732.95,
           "status": "未敲出"
         },
         {
@@ -2637,7 +2637,7 @@
       "knock_out_condition": "若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "存续中",
-      "current_price": 7583.7559,
+      "current_price": 7600.0971,
       "initial_price": 10000.0,
       "knock_in_price": 7000.0,
       "next_observation_date": null,
@@ -2815,16 +2815,16 @@
       "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "存续中",
-      "current_price": 7583.7559,
+      "current_price": 7600.0971,
       "initial_price": 8821.89,
       "knock_in_price": 5822.45,
       "next_observation_date": "2026-09-14",
-      "days_to_next": 12,
+      "days_to_next": 11,
       "observation_history": [
         {
           "period": 3,
           "date": "2026-08-12",
-          "price": 7793.717,
+          "price": 7793.72,
           "status": "未敲出"
         },
         {
@@ -3198,22 +3198,22 @@
       "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "存续中",
-      "current_price": 7583.7559,
+      "current_price": 7600.0971,
       "initial_price": 8232.98,
       "knock_in_price": 5433.77,
       "next_observation_date": "2026-09-16",
-      "days_to_next": 14,
+      "days_to_next": 13,
       "observation_history": [
         {
           "period": 3,
           "date": "2026-07-16",
-          "price": 7631.762,
+          "price": 7631.76,
           "status": "未敲出"
         },
         {
           "period": 4,
           "date": "2026-08-17",
-          "price": 7968.383,
+          "price": 7968.38,
           "status": "未敲出"
         },
         {
@@ -3581,7 +3581,7 @@
       "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "已敲出",
-      "current_price": 7583.7559,
+      "current_price": 7600.0971,
       "initial_price": 7623.42,
       "knock_in_price": 5031.46,
       "next_observation_date": null,
@@ -3602,7 +3602,7 @@
         {
           "period": 5,
           "date": "2026-09-02",
-          "price": 7583.756,
+          "price": 7583.76,
           "status": "未敲出"
         },
         {
@@ -3969,7 +3969,7 @@
       "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "已敲出",
-      "current_price": 7583.7559,
+      "current_price": 7600.0971,
       "initial_price": 8019.86,
       "knock_in_price": 5293.11,
       "next_observation_date": null,
@@ -3984,13 +3984,13 @@
         {
           "period": 4,
           "date": "2026-07-17",
-          "price": 7167.996,
+          "price": 7168.0,
           "status": "未敲出"
         },
         {
           "period": 5,
           "date": "2026-08-17",
-          "price": 7968.383,
+          "price": 7968.38,
           "status": "未敲出"
         },
         {
@@ -4357,7 +4357,7 @@
       "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "已敲出",
-      "current_price": 7583.7559,
+      "current_price": 7600.0971,
       "initial_price": 8314.83,
       "knock_in_price": 5404.64,
       "next_observation_date": null,
@@ -4372,19 +4372,19 @@
         {
           "period": 4,
           "date": "2026-06-12",
-          "price": 8202.799,
+          "price": 8202.8,
           "status": "未敲出"
         },
         {
           "period": 5,
           "date": "2026-07-13",
-          "price": 7787.853,
+          "price": 7787.85,
           "status": "未敲出"
         },
         {
           "period": 6,
           "date": "2026-08-12",
-          "price": 7793.717,
+          "price": 7793.72,
           "status": "未敲出"
         },
         {
@@ -4745,7 +4745,7 @@
       "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "已敲出",
-      "current_price": 7583.7559,
+      "current_price": 7600.0971,
       "initial_price": 8233.78,
       "knock_in_price": 5434.29,
       "next_observation_date": null,
@@ -5123,7 +5123,7 @@
       "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "已敲出",
-      "current_price": 7583.7559,
+      "current_price": 7600.0971,
       "initial_price": 8365.43,
       "knock_in_price": 5855.8,
       "next_observation_date": null,
@@ -5132,7 +5132,7 @@
         {
           "period": 3,
           "date": "2026-04-27",
-          "price": 8338.726,
+          "price": 8338.73,
           "status": "未敲出"
         },
         {
@@ -5150,7 +5150,7 @@
         {
           "period": 6,
           "date": "2026-07-27",
-          "price": 7228.785,
+          "price": 7228.78,
           "status": "未敲出"
         },
         {
@@ -5495,7 +5495,7 @@
       "knock_out_condition": "若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "已敲出",
-      "current_price": 7583.7559,
+      "current_price": 7600.0971,
       "initial_price": 8265.65,
       "knock_in_price": 5785.95,
       "next_observation_date": null,
@@ -5522,13 +5522,13 @@
         {
           "period": 6,
           "date": "2026-07-20",
-          "price": 6965.376,
+          "price": 6965.38,
           "status": "未敲出"
         },
         {
           "period": 7,
           "date": "2026-08-19",
-          "price": 7517.768,
+          "price": 7517.77,
           "status": "未敲出"
         },
         {
@@ -5873,7 +5873,7 @@
       "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "已敲出",
-      "current_price": 7583.7559,
+      "current_price": 7600.0971,
       "initial_price": 7408.35,
       "knock_in_price": 5185.85,
       "next_observation_date": null,
@@ -6245,7 +6245,7 @@
       "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "存续中",
-      "current_price": 7583.7559,
+      "current_price": 7600.0971,
       "initial_price": 10000.0,
       "knock_in_price": 7000.0,
       "next_observation_date": null,
@@ -6412,7 +6412,7 @@
       "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "已敲出",
-      "current_price": 7583.7559,
+      "current_price": 7600.0971,
       "initial_price": 7334.21,
       "knock_in_price": 5133.95,
       "next_observation_date": null,
@@ -6790,7 +6790,7 @@
       "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "已敲出",
-      "current_price": 7583.7559,
+      "current_price": 7600.0971,
       "initial_price": 7464.86,
       "knock_in_price": 5225.4,
       "next_observation_date": null,
@@ -7168,7 +7168,7 @@
       "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "已敲出",
-      "current_price": 7583.7559,
+      "current_price": 7600.0971,
       "initial_price": 7185.48,
       "knock_in_price": 5029.84,
       "next_observation_date": null,
@@ -7546,7 +7546,7 @@
       "knock_out_condition": "a) 若观察期内第i个月（i=3,…,36）敲出观察日发生挂钩标的收盘价大于或者等于第i个月敲出价格（即发生敲出事件），本计划于该事件发生日的下一自然日提前终止,B=Bi，（i=3,…,36）。",
       "knock_in_condition": "若观察期内所有的第i个月（i=3,…,【36】）敲出观察日挂钩标的收盘价均小于该月对应的敲出价格，且期末观察日挂钩标的收盘价小于敲入价格（即发生敲入事件），则本计划不计提业绩报酬。",
       "status": "已敲出",
-      "current_price": 7583.7559,
+      "current_price": 7600.0971,
       "initial_price": 7497.83,
       "knock_in_price": 5248.48,
       "next_observation_date": null,
