@@ -7,7 +7,6 @@
 """
 
 import json
-import os
 from datetime import datetime, timedelta
 from pathlib import Path
 
@@ -124,18 +123,3 @@ def save_calendar(path: str | Path = "data/trading_calendar.json"):
     with open(path, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
     return len(trading_days)
-
-
-# ── 兼容旧版 JSON 日历（如果存在则加载）──
-_trading_set = set()
-_calendar_file = Path(__file__).parent / "data" / "trading_calendar.json"
-if _calendar_file.exists():
-    with open(_calendar_file, "r", encoding="utf-8") as f:
-        _trading_set = set(json.load(f).get("trading_days", []))
-
-
-def is_trading_day_json(date_str: str) -> bool:
-    """优先使用 JSON 日历（如果已生成），否则用代码逻辑"""
-    if _trading_set:
-        return date_str in _trading_set
-    return is_trading_day(date_str)
