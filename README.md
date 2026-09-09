@@ -1,164 +1,74 @@
 # 雪球产品展示系统
 
-一个基于 GitHub 全栈的雪球产品在线展示系统，支持每日自动更新行情数据。
+基于 GitHub 全栈的雪球产品展示系统：纯静态前端 + Python 更新脚本，用 GitHub 仓库本身存储数据，GitHub Pages 部署，GitHub Actions 每日自动更新行情与产品状态。
 
-## 📁 项目结构
+## 页面结构
+
+| 页面 | 职责 |
+|---|---|
+| `index.html` | 登录页，校验用户名/密码后跳转展示页 |
+| `products.html` | 产品展示页（列表、详情弹窗、敲出观察日历、四色状态） |
+| `admin.html` | 管理后台（产品增删改查预览、统计；保存尚未接持久化，仅本地预览） |
+
+## 数据流
 
 ```
-snowball-products/
-├── index.html              # 前台展示页面（移动端友好）
-├── admin.html              # 管理后台页面
-├── data/
-│   └── products.json       # 产品数据（自动更新）
-├── scripts/
-│   └── update_daily.py     # 每日更新脚本
-├── .github/
-│   └── workflows/
-│       └── daily_update.yml  # GitHub Actions 定时任务
-└── README.md               # 本文件
+vendor/market-data（新浪/腾讯/东财三源行情，git 子模块）
+        │
+        ▼
+updater.py（每日更新价格、判定敲出、计算状态）
+        │
+        ▼
+data/products.json ── CI 自动 commit 回 main ── 前端 fetch 展示
 ```
 
-## 🚀 快速部署
+## 核心文件
 
-### 1. 创建 GitHub 仓库
+- `updater.py` — 数据更新脚本：
+  - `python updater.py initial` — 按期初观察日收盘价回填期初价、重算敲入价（一次性）
+  - `python updater.py daily` — 每日更新：当前价、观察日敲出判定、四态状态、距下次观察日天数
+  - 行情获取失败自动重试（共 3 次，间隔 3 分钟）
+- `trading_calendar.py` — 交易日历（**节假日唯一真相源**）：内置 2026-2030 年国务院放假安排，提供 `is_trading_day` / `next_trading_day`；如需 JSON 日历可调用 `save_calendar()` 重新生成
+- `import_from_excel.py` — 从 Excel 导入产品数据到 `data/products.json`（依赖 openpyxl，Excel 列结构见文件头注释）
+- `tools/add_user.py` — 本地添加/管理登录用户（git 忽略，不入库）
+- `tests/test_updater.py` — 单元测试（观察日历生成、四态计算、敲出价、交易日接口）
+- `.github/workflows/daily-update.yml` — 每日定时任务（UTC 08:00 = 北京 16:00），跑 `updater.py daily` 后自动提交 `data/products.json` 回 main，支持在 Actions 页面手动触发
+
+## 用户认证
+
+登录校验基于 `data/users.json`（用户名 + SHA-256 密码哈希，前端比对）。添加用户：
 
 ```bash
-# 在 GitHub 创建新仓库
-# 例如：your-username/snowball-products
+python tools/add_user.py
 ```
 
-### 2. 推送代码到 GitHub
+## 本地运行
 
 ```bash
-cd snowball-products
-git init
-git add .
-git commit -m "Initial commit"
-git branch -M main
-git remote add origin https://github.com/your-username/snowball-products.git
-git push -u origin main
+git clone --recurse-submodules <仓库地址>
+pip install requests        # 行情模块依赖
+python updater.py daily     # 手动跑一次每日更新
+python -m unittest discover -s tests -v   # 运行单元测试
 ```
 
-### 3. 启用 GitHub Pages
+注意：本地运行 `updater.py` 会直接修改 `data/products.json` 并在 `data/backup/` 生成备份（仅保留最近 30 份，已 git 忽略）。
 
-1. 进入仓库 Settings → Pages
-2. Source 选择 `Deploy from a branch`
-3. Branch 选择 `main`，文件夹选择 `/ (root)`
-4. 点击 Save
+## 部署
 
-### 4. 启用 GitHub Actions
+1. GitHub Pages：Settings → Pages → Deploy from a branch → `main` / root
+2. GitHub Actions：默认 GITHUB_TOKEN 即可，无需配置 secrets
+3. 更换仓库名/所有者时，需同步修改 `index.html` 中的 `GITHUB_OWNER` / `GITHUB_REPO` 常量
 
-1. 进入仓库 Settings → Actions → General
-2. 确保 Actions 已启用
-3. 进入 Actions 标签页，确认 `Daily Product Update` workflow 已创建
+## 维护提示
 
-### 5. 配置访问密码
+- **交易日历年度更新**：`trading_calendar.py` 中 2027 年及以后的节假日为预测值，每年 11 月国务院公布次年安排后需手动更新 `HOLIDAYS` 字典，改完跑一遍单元测试验证
+- **管理后台持久化**：当前 admin 页面的保存仅为本地预览，接入真实持久化需要配置 GitHub API Token（待后续实现）
+- **产品状态规则**：待期初（未到期初日）/ 已敲出（观察日收盘价 ≥ 当月敲出价）/ 已敲入（期末观察日收盘价 ≤ 敲入价）/ 存续中
 
-- 前台密码：`huaxia2026`
-- 后台密码：`huaxia2026`
+## 技术栈
 
-修改密码请编辑：`\"index.html\" 和 `admin.html` 中的 `verifyPassword()` 和 `verifyAdminPassword()` 函数。
-
-## 📱 功能特性
-
-### 前台展示
-- ✅ 移动端优先设计（iOS 风格）
-- ✅ 产品列表紧凑展示
-- ✅ 产品详情弹窗
-- ✅ 敲出观察日历
-- ✅ 4 色状态标识（已敲出🟢/存续中🔵/已敲入🟡/待期初⚪）
-- ✅ 简单密码保护
-
-### 管理后台
-- ✅ 产品增删改查
-- ✅ 数据统计面板
-- ✅ 手动触发更新
-- ✅ 密码验证
-
-### 自动更新
-- ✅ 每日 16:00 自动更新（北京时间）
-- ✅ 获取挂钩标的收盘价
-- ✅ 自动计算产品状态
-- ✅ 交易日历自动顺延
-
-## 🔧 自定义配置
-
-### 修改更新时间
-
-编辑 `.github/workflows/daily_update.yml`：
-
-```yaml
-on:
-  schedule:
-    # cron 表达式（UTC 时间）
-    # 北京时间 16:00 = UTC 08:00
-    - cron: '0 8 * * *'
-```
-
-### 修改产品类型映射
-
-编辑 `scripts/update_daily.py` 中的 `update_products()` 函数：
-
-```python
-# 将"降敲 + 早利"转换为"欧式早利"
-if product['type'] == '降敲 + 早利':
-    product['type'] = '欧式早利'
-```
-
-### 添加新的挂钩标的
-
-编辑 `data/products.json`，在 `products` 数组中添加新产品对象
-
-## 📊 数据说明
-
-### 产品状态
-- **待期初**：尚未到期初观察日
-- **存续中**：已过期初日，未触发敲出/敲入
-- **已敲出**：触发敲出条件，提前终止
-- **已敲入**：触发敲入条件，存续至到期
-
-### 敲出观察日规则
-- 从第 3 个月开始
-- 每月期初对日
-- 遇非交易日顺延至下一交易日
-
-## 🛠️ 技术栈
-
-- **前端**：HTML5 + CSS3 + JavaScript（无框架依赖）
-- **后端**：Python 3.9 + AKShare（免费行情数据）
-- **数据库**：JSON 文件（data/products.json）
-- **部署**：GitHub Pages + GitHub Actions
-- **定时任务**：GitHub Actions Cron
-
-## ⚠️ 注意事项
-
-1. **数据持久化**：纯静态部署下，管理后台的修改仅在当前会话有效。要实现持久化，需要：
-   - 方案 A：使用 GitHub API 直接提交修改
-   - 方案 B：搭建后端服务（如 Supabase）
-
-2. **行情数据源**：默认使用 AKShare 免费数据源，如需更稳定数据可切换到：
-   - iFinD API（需要账号）
-   - Wind API（需要账号）
-   - 其他付费数据源
-
-3. **访问控制**：前端密码验证仅为简单防护，不适合高安全场景。
-
-4. **GitHub Actions 限制**：
-   - 免费额度：每月 2000 分钟
-   - 本系统每天运行 1 次，约占用 30 分钟/月
-
-## 📝 更新日志
-
-- **v1.0** (2026-08-16)
-  - 初始版本发布
-  - 支持 25 只雪球产品展示
-  - 每日自动更新行情
-  - 移动端友好界面
-
-## 📞 联系方式
-
-如有问题，请通过 GitHub Issues 反馈。
-
----
-
-*guest • 2026 • 2026*
+- 前端：HTML5 + CSS3 + 原生 JavaScript（无框架、无构建）
+- 后端脚本：Python 3.9+
+- 行情数据：`vendor/market-data` 子模块（新浪/腾讯/东方财富多源 fallback）
+- 存储：仓库内 JSON 文件
+- 部署：GitHub Pages + GitHub Actions
