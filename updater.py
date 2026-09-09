@@ -12,6 +12,7 @@ import json
 import os
 import shutil
 import sys
+import time
 from datetime import datetime, date, timedelta
 from pathlib import Path
 
@@ -115,14 +116,17 @@ def load_data() -> dict:
 
 
 def save_data(data: dict):
-    """保存数据，带备份"""
+    """保存数据，带备份（仅保留最近 30 份）"""
     BACKUP_DIR.mkdir(exist_ok=True)
-    
+
     if DATA_FILE.exists():
         ts = datetime.now().strftime("%Y%m%d_%H%M%S")
         backup_path = BACKUP_DIR / f"products_{ts}.json"
         shutil.copy2(DATA_FILE, backup_path)
-    
+
+        for old in sorted(BACKUP_DIR.glob("products_*.json"))[:-30]:
+            old.unlink()
+
     data["last_update"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     with open(DATA_FILE, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
@@ -174,9 +178,17 @@ def update_daily():
     today = date.today().strftime("%Y-%m-%d")
     today_dt = date.today()
     
-    market_price, _ = md.fetch_price(INDEX_CODE)
+    # 行情获取失败时重试（行情模块内部已多源轮询，这里兜瞬时网络故障）
+    market_price = None
+    for attempt in range(3):
+        market_price, _ = md.fetch_price(INDEX_CODE)
+        if market_price is not None:
+            break
+        if attempt < 2:
+            print(f"获取行情失败（第 {attempt + 1} 次），3 分钟后重试")
+            time.sleep(180)
     if market_price is None:
-        print("获取行情失败（所有数据源均不可用），终止更新")
+        print("获取行情失败（所有数据源均不可用，已重试 3 次），终止更新")
         sys.exit(1)
     
     print(f"中证1000最新价: {market_price}")
