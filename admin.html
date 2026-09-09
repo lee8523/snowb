@@ -493,9 +493,10 @@
             };
             if (productId) {
                 const index = productsData.products.findIndex(p => p.id === productId);
-                productsData.products[index] = product;
+                // 表单字段合并进原对象，保留 observation_history、期初价等非表单字段
+                Object.assign(productsData.products[index], product);
             } else {
-                productsData.products.push.push(product);
+                productsData.products.push(product);
             }
             saveData();
             closeModal();
@@ -510,8 +511,8 @@
         }
 
         function triggerManualUpdate() {
-            if (confirm('确定要手动触发数据更新吗？')) {
-                alert('更新请求已发送！GitHub Actions 将在几分钟内运行。');
+            if (confirm('将跳转到 GitHub Actions 页面，请在 "Daily Price Update" 工作流中点击 "Run workflow" 手动触发更新。')) {
+                window.open('https://github.com/lee8523/snowb/actions/workflows/daily-update.yml', '_blank');
             }
         }
     </script>
