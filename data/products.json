@@ -1,5 +1,5 @@
 {
-  "last_update": "2026-09-24 13:00:37",
+  "last_update": "2026-09-25 13:05:40",
   "products": [
     {
       "id": "SEA697",
@@ -354,7 +354,7 @@
       "initial_price": 7679.53,
       "knock_in_price": 5068.49,
       "next_observation_date": "2026-11-09",
-      "days_to_next": 46,
+      "days_to_next": 45,
       "observation_history": [
         {
           "period": 3,
@@ -737,7 +737,7 @@
       "initial_price": 7925.12,
       "knock_in_price": 5230.58,
       "next_observation_date": "2026-10-14",
-      "days_to_next": 20,
+      "days_to_next": 19,
       "observation_history": [
         {
           "period": 3,
@@ -1120,7 +1120,7 @@
       "initial_price": 8825.92,
       "knock_in_price": 5825.11,
       "next_observation_date": "2026-09-28",
-      "days_to_next": 4,
+      "days_to_next": 3,
       "observation_history": [
         {
           "period": 3,
@@ -1503,7 +1503,7 @@
       "initial_price": 8825.92,
       "knock_in_price": 5736.85,
       "next_observation_date": "2026-09-28",
-      "days_to_next": 4,
+      "days_to_next": 3,
       "observation_history": [
         {
           "period": 3,
@@ -1886,7 +1886,7 @@
       "initial_price": 8704.47,
       "knock_in_price": 5744.95,
       "next_observation_date": "2026-10-19",
-      "days_to_next": 25,
+      "days_to_next": 24,
       "observation_history": [
         {
           "period": 3,
@@ -2269,7 +2269,7 @@
       "initial_price": 8546.51,
       "knock_in_price": 5640.7,
       "next_observation_date": "2026-09-28",
-      "days_to_next": 4,
+      "days_to_next": 3,
       "observation_history": [
         {
           "period": 3,
@@ -2819,7 +2819,7 @@
       "initial_price": 8821.89,
       "knock_in_price": 5822.45,
       "next_observation_date": "2026-10-12",
-      "days_to_next": 18,
+      "days_to_next": 17,
       "observation_history": [
         {
           "period": 3,
@@ -3202,7 +3202,7 @@
       "initial_price": 8232.98,
       "knock_in_price": 5433.77,
       "next_observation_date": "2026-10-16",
-      "days_to_next": 22,
+      "days_to_next": 21,
       "observation_history": [
         {
           "period": 3,
